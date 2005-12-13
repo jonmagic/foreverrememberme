@@ -1,0 +1,39 @@
+<div class="column-right">
+    <h2>Step 1: Signing Up</h2>
+    <p>Signing up is easy!</p>
+    <p>Just enter your e-mail address, which you will use to login into your account in the future.<br />(example: "jon@yahooz.com")</p> 
+    <p>Then your first and last name.</p>
+    <p>Finally enter your desired password (twice) and then click the Signup button.</p>
+</div>
+
+<div class="column-left">
+    <div id="signupbox">
+        <div style="padding:10px">
+            <%= start_form_tag :action=> "signup" %>
+            <div title="Account signup" id="signupform" class="form">
+              <h3>Signup</h3>
+              <%= error_messages_for 'user' %>
+  
+              <label for="user_login">E-mail Address (desired login):</label><br/>
+              <%= text_field "user", "login", :size => 30 %><br/>
+              <label for="user_firstname">First Name:</label><br/>
+              <%= text_field "user", "firstname", :size => 30 %><br/>
+              <label for="user_lastname">Last Name:</label><br/>
+              <%= text_field "user", "lastname", :size => 30 %><br/>  
+              <label for="user_password">Choose password:</label><br/>
+              <%= password_field "user", "password", :size => 30 %><br/>
+              <label for="user_password_confirmation">Confirm password:</label><br/>
+              <%= password_field "user", "password_confirmation", :size => 30 %><br/>
+              <%= hidden_field "user", "role", "value" => "1" %>
+
+            <input type="submit" value="Signup &#187;" class="primary" />
+            </div>
+            <%= end_form_tag %>
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+    	// <![CDATA[
+    	 Rico.Corner.round('signupbox');
+    	// ]]>
+    </script>
+</div>

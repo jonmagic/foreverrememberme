@@ -1,0 +1,38 @@
+nil
+  [4;36;1mSQL (0.000848)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.030151)[0m   [0mSELECT * FROM comments WHERE (comments.id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000926)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000719)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Load (0.005184)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000899)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000802)[0m   [0;1mBEGIN[0m
+  [4;35;1mPicture Load (0.003079)[0m   [0mSELECT * FROM pictures WHERE (pictures.id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.001454)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000728)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.005576)[0m   [0;1mSELECT * FROM users WHERE (login = 'bob' AND password = '9a91e1d8d95b6315991a88121bb0aa9f03ba0dfc') LIMIT 1[0m
+  [4;35;1mSQL (0.000897)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000832)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.005976)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.031922)[0m   [0;1mSELECT * FROM users WHERE (login = 'x') LIMIT 1[0m
+  [4;35;1mUser Load (0.005806)[0m   [0mSELECT * FROM users WHERE (login = 'hugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhugebobhug') LIMIT 1[0m
+  [4;36;1mUser Load (0.004807)[0m   [0;1mSELECT * FROM users WHERE (login = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.004865)[0m   [0mSELECT * FROM users WHERE (login = 'okbob') LIMIT 1[0m
+  [4;36;1mSQL (0.001569)[0m   [0;1mINSERT INTO users (`updated_at`, `role`, `firstname`, `lastname`, `login`, `password`, `created_at`) VALUES('2005-12-12 15:24:17', NULL, NULL, NULL, 'okbob', '98740ff87bade6d895010bceebbd9f718e7856bb', '2005-12-12 15:24:17')[0m
+  [4;35;1mSQL (0.001130)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000864)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.027828)[0m   [0mSELECT * FROM users WHERE (login = 'existingbob') LIMIT 1[0m
+  [4;36;1mSQL (0.000987)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000896)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.004341)[0m   [0;1mSELECT * FROM users WHERE (login = 'nonexistingbob') LIMIT 1[0m
+  [4;35;1mSQL (0.001754)[0m   [0mINSERT INTO users (`updated_at`, `role`, `firstname`, `lastname`, `login`, `password`, `created_at`) VALUES('2005-12-12 15:24:17', NULL, NULL, NULL, 'nonexistingbob', '98740ff87bade6d895010bceebbd9f718e7856bb', '2005-12-12 15:24:17')[0m
+  [4;36;1mSQL (0.000900)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000846)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.005419)[0m   [0;1mSELECT * FROM users WHERE (login = 'nonbob') LIMIT 1[0m
+  [4;35;1mUser Load (0.004361)[0m   [0mSELECT * FROM users WHERE (login = 'nonbob') LIMIT 1[0m
+  [4;36;1mUser Load (0.004448)[0m   [0;1mSELECT * FROM users WHERE (login = 'nonbob') LIMIT 1[0m
+  [4;35;1mUser Load (0.006724)[0m   [0mSELECT * FROM users WHERE (login = 'nonbob') LIMIT 1[0m
+  [4;36;1mSQL (0.012681)[0m   [0;1mINSERT INTO users (`updated_at`, `role`, `firstname`, `lastname`, `login`, `password`, `created_at`) VALUES('2005-12-12 15:24:17', NULL, NULL, NULL, 'nonbob', '98740ff87bade6d895010bceebbd9f718e7856bb', '2005-12-12 15:24:17')[0m
+  [4;35;1mSQL (0.000940)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000846)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.004628)[0m   [0mSELECT * FROM users WHERE (login = 'nonexistingbob') LIMIT 1[0m
+  [4;36;1mSQL (0.000902)[0m   [0;1mROLLBACK[0m

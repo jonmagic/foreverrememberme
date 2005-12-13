@@ -1,0 +1,17 @@
+<div class="column-right">
+    <% if @session[:user].nil? %>
+        <h2>How do I make a Memorial</h2>
+        <p>on Forever Remember Me? It only takes a few simple steps to create a memorial. The first step is to signup for an account.</p>
+        <p style="text-align:center"><%= link_to "Signup for an account", { :controller => "user", :action => "signup" } %></p><br />
+        <h2>Already have an account?</h2>
+    <% end %>
+    <% if !@session[:user].nil? %>
+        <h2>Account Options</h2>
+    <% end %>
+    <%= render_partial 'userbox' %>
+</div>
+<div class="column-left">
+    <h2>How do I find a loved one</h2>
+    <p> with Forever Remember Me? Use the search box below. You can search for them by typing their first name and last name, or just by last name. You can even search by entering their hometown in the search box.</p>
+    <%= render_partial 'searchbox' %>
+</div>

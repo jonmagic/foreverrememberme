@@ -1,0 +1,30 @@
+<hr />
+<div class="column-right"> 
+	<div id="leavecomment">
+	    <div style="padding:10px">
+            <h3>Leave a comment:</h3>
+        	<%= form_tag :action => "comment", :id => @memorial %>
+        	    <div title="Comments" id="commentform" class="form">
+        		    <p>Name: <%= text_field "comment", "name" %></p>
+            		<p>E-mail: <%= text_field "comment", "email" %></p>
+            		<h4>Note:</h4>
+            		<textarea id="comment_note" name="comment[note]" rows="15" cols="34"></textarea>
+            		<br />
+            		<%= submit_tag "Post Comment" %>
+            	</div>
+        	</form>
+    	</div>
+	</div>
+    <script type="text/javascript" charset="utf-8">
+    	// <![CDATA[
+    	 Rico.Corner.round('leavecomment');
+    	// ]]>
+    </script>
+</div>
+<div class="column-left">
+	<h3>Comments</h3>
+	<% for comments in @memorial.comments %>
+		Name: <%= comments.name %><br />
+		Note: <%= comments.note %><br /><br />
+	<% end %>
+</div>

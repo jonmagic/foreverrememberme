@@ -1,0 +1,25 @@
+<%= render :partial => "memorial", :object => @memorial %>
+
+<%= link_to 'Edit', :action => 'edit', :id => @memorial %> |
+<%= link_to 'Back', :action => 'manage' %>
+<hr />
+
+<% if @owner > 0 %>
+<div class="column-right">
+    <%= render :partial => "uploadpictures", :object => @memorial %>
+</div>
+<div class="column-left">
+    <h3>Pictures</h3>
+    <%= render :partial => "owner_picture_view", :object => @memorial %>
+
+</div>
+<% end %>
+
+<% if @owner < 1 %>
+    <h3>Pictures</h3>
+    <%= render :partial => "public_picture_view", :object => @memorial %>
+<% end %>
+
+<div class="clearer"></div>
+
+<%= render :partial => "comments", :object => @memorial %>

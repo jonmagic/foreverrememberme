@@ -1,0 +1,24 @@
+<div class="column-right">
+	<span class="memorial-show-name"><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></span>
+    <p></p>
+	<p><%= @memorial.message %></p>
+    <div id="memorial-show-details">
+        <div style="padding:10px">
+            <b>Date of Birth:</b> <%= @memorial.date_of_birth %><br />
+            <b>Date of Death:</b> <%= @memorial.date_of_death %><br />	
+            <b>Hometown:</b> <%= @memorial.hometown %><br />
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+    	// <![CDATA[
+    	 Rico.Corner.round('memorial-show-details');
+    	// ]]>
+    </script>
+</div>
+
+<div class="column-left">
+	<img alt="<%= @memorial.image %>" width="300" class="picture-memorial" src="<%= @memorial.image %>" />
+</div>
+<br style="clear:both"/>
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+		
+		<title>Forever Remember Me</title>
+		
+		<meta name="ROBOTS" content="ALL" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta name="MSSmartTagsPreventParsing" content="true" />
+		<meta name="Copyright" content="(c) 2005 Copyright content:  Copyright design: Jonathan Hoyt" />
+		<!-- (c) Copyright 2005 by Jonathan Hoyt All Rights Reserved. -->
+		
+		<meta name="Keywords" content="__KEYWORDS__" />
+		<meta name="Description" content="__DESCRIPTION__" />
+
+ 		<%= stylesheet_link_tag 'public' %>
+ 		<%= stylesheet_link_tag 'scaffold' %>   
+ 		
+ 	    <%= javascript_include_tag "prototype" %>	
+        <%= javascript_include_tag "scriptaculous" %>
+        <%= javascript_include_tag "rico" %>
+        <%= javascript_include_tag "external" %>
+		<script type="text/javascript"></script>
+
+        <base href="" />
+		
+	</head>
+	
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1 style="position:relative;text-align:right;z-index:1;margin-right:50px"><%= link_to "Forever Remember Me", { :controller => "memorial", :action => 'index' } %></h1>
+        </div>
+        <div id="container">
+            <div class="clearer"></div>
+            <div id="banner">
+                <h4 class="subtitle">A place for remembering those we love.</h4>
+            </div>            
+            <div id="notice">
+                <span style="color: green"><%= flash[:notice] %></span>
+            </div>
+            <div id="content">
+                <%= @content_for_layout %>
+            </div>
+            <div class="clearer"></div>
+        </div>
+        <div id="footer">
+            <a href="http://validator.w3.org/check?uri=referer">
+                <img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" />
+            </a>
+            <a href="http://www.spreadfirefox.com/">
+                <img style="border:0" alt="Upgrade to Firefox 1.5!" title="Upgrade to Firefox 1.5!" src="http://sfx-images.mozilla.org/affiliates/products/firefox/upgrade_1_5_4682.jpg"/>
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/">
+              <img style="border:0;width:88px;height:31px"
+                   src="http://jigsaw.w3.org/css-validator/images/vcss" 
+                   alt="Valid CSS!" />
+             </a>
+        </div>
+    </div>
+</body>
+</html>

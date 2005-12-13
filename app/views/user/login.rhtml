@@ -1,0 +1,40 @@
+
+
+<div class="column-right">
+    <h2>Need Help Logging In?</h2>
+    <p>Enter the username you used when you signed up.<br />(example: "jonnyhoyt")</p>
+    <p>Then enter your password and click the Login button.</p> 
+</div>
+
+<div class="column-left">
+    <div id="signupbox">
+        <div style="padding:10px">
+            <%= start_form_tag :action=> "login" %>
+
+            <div title="Account login" id="loginform" class="form">
+                <h3>Please login</h3>
+
+                <% if @flash['notice'] %>
+                  <div id="message"><%= @flash['notice'] %></div>
+                <% end %>
+
+                <label for="user_login">Login:</label><br/>
+                <input type="text" name="user_login" id="user_login" size="30" value=""/><br/>
+
+                <label for="user_password">Password:</label><br/>
+                <input type="password" name="user_password" id="user_password" size="30"/>
+
+                <br/>
+                <input type="submit" name="login" value="Login &#187;" class="primary" />
+
+            </div>
+
+            <%= end_form_tag %>
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+    	// <![CDATA[
+    	 Rico.Corner.round('signupbox');
+    	// ]]>
+    </script>
+</div>
