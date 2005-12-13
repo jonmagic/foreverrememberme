@@ -10,7 +10,7 @@
 # correspond to. The deploy_to path must be the path on each machine that will
 # form the root of the application path.
 
-set :application, "foreverrememberme"
+set :application, "4ever"
 set :repository, "https://sarge.sabretechllc.com/public/#{application}/trunk"
 
 # =============================================================================
@@ -22,16 +22,16 @@ set :repository, "https://sarge.sabretechllc.com/public/#{application}/trunk"
 # be used to single out a specific subset of boxes in a particular role, like
 # :primary => true.
 
-role :web, "www.programmingright.com"
-role :app, "www.programmingright.com"
-role :db,  "www.programmingright.com"
+role :web, "www.foreverrememberme.com"
+role :app, "www.foreverrememberme.com"
+role :db,  "www.foreverrememberme.com"
 
 
 # =============================================================================
 # OPTIONAL VARIABLES
 # =============================================================================
-set :deploy_to, "/home/proright/apps" # defaults to "/u/apps/#{application}"
-set :user, "proright"            # defaults to the currently logged in user
+set :deploy_to, "/home/forever/apps" # defaults to "/u/apps/#{application}"
+set :user, "forever"            # defaults to the currently logged in user
 # set :scm, :darcs               # defaults to :subversion
 # set :svn, "/path/to/svn"       # defaults to searching the PATH
 # set :darcs, "/path/to/darcs"   # defaults to searching the PATH
@@ -93,7 +93,7 @@ task :helper_demo do
 
   buffer = render("maintenance.rhtml", :deadline => ENV['UNTIL'])
   put buffer, "#{shared_path}/system/maintenance.html", :mode => 0644
-  sudo "killall -USR1 dispatch.fcgi"
+#  sudo "killall -USR1 dispatch.fcgi"
   run "#{release_path}/script/spin"
   delete "#{shared_path}/system/maintenance.html"
 end
@@ -106,11 +106,21 @@ desc "A task demonstrating the use of transactions."
 task :long_deploy do
   transaction do
     update_code
-    disable_web
     symlink
     migrate
   end
-
-  restart
-  enable_web
 end
+
+desc "This task sets up all my particular symlinks"
+
+task :after_symlink do
+  run "rm -rf #{release_path}/config"
+  run "cp -r ~/pro_config/production_v1/config #{release_path}/"
+  run "rm #{release_path}/public/picture"
+  run "ln -s ~/files/picture #{release_path}/public/picture"
+end
+
+desc "Don't restart the web server"
+  task :restart, :roles => :app do
+    run ""
+  end

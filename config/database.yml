@@ -1,23 +1,18 @@
 development:
   adapter: mysql
-  database: proright_4ever
-  username: proright_4ever
-  password: pr0gr4m
+  database: 4everRememberME_v1_dev
+  username: root
+  password:
   host: localhost
   port: 3306
 
 test:
   adapter: mysql
-  database: proright_4ever_test
-  username: proright_4ever
-  password: pr0gr4m
+  database: 4everRememberME_v1_test
+  username: root
+  password:
   host: localhost
   port: 3306
 
 production:
-  adapter: mysql
-  database: proright_4ever
-  username: proright_4ever
-  password: pr0gr4m
-  host: localhost
-  port: 3306
+  development
