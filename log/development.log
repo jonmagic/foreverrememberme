@@ -5028,3 +5028,2693 @@ Rendered memorial/_owner_picture_view (0.34501)
   [4;36;1mComment Load (0.003518)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
 Rendered memorial/_comments (0.02115)
 Completed in 0.46014 (2 reqs/sec) | Rendering: 0.14137 (30%) | DB: 0.28158 (61%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.005297)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:35:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.013035)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005246)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00841)
+Rendered memorial/_uploadpictures (0.01920)
+  [4;36;1mPicture Load (0.008830)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.007921)[0m   [0mSHOW FIELDS FROM pictures[0m
+
+
+ActionView::TemplateError (undefined local variable or method `picture' for #<#<Class:0x2650378>:0x265010c>) on line #9 of app/views/memorial/_owner_picture_view.rhtml:
+6:             <div class="picture-thumb"><%= image_tag url_for_file_column "picture", "image", "thumb" %></div>
+7:         </a>
+8:         <div class="picture-options">
+9:             <%= link_to 'Delete', :action => 'destroy_picture', :id => picture %>
+10:         </div>
+11:         <input id="memorial_image" name="memorial[image]" type="radio" value="<%= url_for_file_column "picture", "image", "medium" %>" />
+12:         </div>
+
+    #{RAILS_ROOT}/app/views/memorial/_owner_picture_view.rhtml:9
+    #{RAILS_ROOT}/app/views/memorial/_owner_picture_view.rhtml:3:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/has_many_association.rb:90:in `method_missing'
+    #{RAILS_ROOT}/app/views/memorial/_owner_picture_view.rhtml:3
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:220:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `measure'
+    /usr/local/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:230:in `render'
+    #{RAILS_ROOT}/app/views/memorial/show.rhtml:13
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:655:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:220:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.006504)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:35:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006017)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006075)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00808)
+Rendered memorial/_uploadpictures (0.00571)
+  [4;35;1mPicture Load (0.003583)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004848)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.18407)
+  [4;35;1mComment Load (0.016824)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.04690)
+Completed in 0.33646 (2 reqs/sec) | Rendering: 0.23919 (71%) | DB: 0.06060 (18%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005251)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-13 23:36:21) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"32", "controller"=>"memorial"}
+  [4;35;1mPicture Load (0.003024)[0m   [0mSELECT * FROM pictures WHERE (pictures.id = '32') LIMIT 1[0m
+  [4;36;1mSQL (0.001039)[0m   [0;1mBEGIN[0m
+  [4;35;1mPicture Columns (0.003685)[0m   [0mSHOW FIELDS FROM pictures[0m
+  [4;36;1mPicture Destroy (0.030764)[0m   [0;1m DELETE FROM pictures
+ WHERE id = 32
+[0m
+  [4;35;1mSQL (0.000990)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/32
+Completed in 0.08881 (11 reqs/sec) | DB: 0.04475 (50%) | 302 Found [http://0.0.0.0/memorial/destroy_picture/32]
+  [4;36;1mUser Columns (0.006005)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:36:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"32", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005115)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '32') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial with ID=32):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:412:in `find'
+    .//app/controllers/memorial_controller.rb:11:in `show'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.006722)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:37:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006272)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.011481)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00768)
+Rendered memorial/_uploadpictures (0.00551)
+  [4;35;1mPicture Load (0.003329)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004327)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03067)
+  [4;35;1mComment Load (0.006207)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01572)
+Completed in 0.14066 (7 reqs/sec) | Rendering: 0.06154 (43%) | DB: 0.04946 (35%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005549)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:38:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.008471)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005841)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00729)
+Rendered memorial/_uploadpictures (0.00498)
+  [4;35;1mPicture Load (0.003844)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.010656)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03443)
+  [4;35;1mComment Load (0.003541)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01659)
+Completed in 0.15242 (6 reqs/sec) | Rendering: 0.06161 (40%) | DB: 0.03790 (24%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005060)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-13 23:38:28) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"31", "controller"=>"memorial"}
+  [4;35;1mPicture Load (0.003489)[0m   [0mSELECT * FROM pictures WHERE (pictures.id = '31') LIMIT 1[0m
+  [4;36;1mSQL (0.001166)[0m   [0;1mBEGIN[0m
+  [4;35;1mPicture Columns (0.003699)[0m   [0mSHOW FIELDS FROM pictures[0m
+  [4;36;1mPicture Destroy (0.001590)[0m   [0;1m DELETE FROM pictures
+ WHERE id = 31
+[0m
+  [4;35;1mSQL (0.000984)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show
+Completed in 0.06201 (16 reqs/sec) | DB: 0.01599 (25%) | 302 Found [http://0.0.0.0/memorial/destroy_picture/31]
+  [4;36;1mUser Columns (0.006352)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:38:28) [GET]
+  Parameters: {"action"=>"show", "controller"=>"memorial"}
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial without an ID):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:407:in `find'
+    .//app/controllers/memorial_controller.rb:11:in `show'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.040768)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:38:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005268)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005780)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01010)
+Rendered memorial/_uploadpictures (0.00528)
+  [4;36;1mPicture Load (0.003222)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004643)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02360)
+  [4;36;1mComment Load (0.003665)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01370)
+Completed in 0.12523 (7 reqs/sec) | Rendering: 0.05956 (47%) | DB: 0.06970 (55%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.005352)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:39:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005576)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005298)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00739)
+Rendered memorial/_uploadpictures (0.00498)
+  [4;36;1mPicture Load (0.003448)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.003711)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02265)
+  [4;36;1mComment Load (0.003727)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01327)
+Completed in 0.12309 (8 reqs/sec) | Rendering: 0.05384 (43%) | DB: 0.02711 (22%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004875)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:39:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005513)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005497)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.04645)
+Rendered memorial/_uploadpictures (0.03601)
+  [4;36;1mPicture Load (0.065188)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004098)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.33144)
+  [4;36;1mComment Load (0.003645)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01375)
+Completed in 0.71874 (1 reqs/sec) | Rendering: 0.43370 (60%) | DB: 0.08882 (12%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004949)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:39:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005661)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005528)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00864)
+Rendered memorial/_uploadpictures (0.00771)
+  [4;36;1mPicture Load (0.003168)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004034)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02624)
+  [4;36;1mComment Load (0.003705)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01245)
+Completed in 0.38319 (2 reqs/sec) | Rendering: 0.31319 (81%) | DB: 0.02705 (7%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004499)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:39:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.008279)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005447)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00740)
+Rendered memorial/_uploadpictures (0.00445)
+  [4;36;1mPicture Load (0.003640)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.003774)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02278)
+  [4;36;1mComment Load (0.003862)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01308)
+Completed in 0.11906 (8 reqs/sec) | Rendering: 0.05267 (44%) | DB: 0.02950 (24%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.027503)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:39:48) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.005201)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:41:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005621)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006058)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01491)
+Rendered memorial/_uploadpictures (0.01175)
+  [4;35;1mPicture Load (0.012222)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.003743)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.04946)
+  [4;35;1mComment Load (0.003519)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01369)
+Completed in 0.22756 (4 reqs/sec) | Rendering: 0.08646 (37%) | DB: 0.06387 (28%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005737)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:41:36) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.005176)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-13 23:41:39) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"29", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.004922)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '29') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial with ID=29):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:412:in `find'
+    .//app/controllers/memorial_controller.rb:78:in `destroy_picture'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.005198)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:42:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005121)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005263)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00801)
+Rendered memorial/_uploadpictures (0.00478)
+  [4;36;1mPicture Load (0.006840)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.003770)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02565)
+  [4;36;1mComment Load (0.003893)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01238)
+Completed in 0.12339 (8 reqs/sec) | Rendering: 0.05242 (42%) | DB: 0.04592 (37%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004895)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:42:47) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.005650)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-13 23:42:50) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"29", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005017)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '29') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial with ID=29):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:412:in `find'
+    .//app/controllers/memorial_controller.rb:78:in `destroy_picture'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.004500)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-13 23:43:28) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"29", "controller"=>"memorial"}
+  [4;35;1mPicture Load (0.009241)[0m   [0mSELECT * FROM pictures WHERE (pictures.id = '29') LIMIT 1[0m
+  [4;36;1mSQL (0.001105)[0m   [0;1mBEGIN[0m
+  [4;35;1mPicture Columns (0.003673)[0m   [0mSHOW FIELDS FROM pictures[0m
+  [4;36;1mPicture Destroy (0.001553)[0m   [0;1m DELETE FROM pictures
+ WHERE id = 29
+[0m
+  [4;35;1mSQL (0.000956)[0m   [0mCOMMIT[0m
+  [4;36;1mMemorial Load (0.004562)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '29') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial with ID=29):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:412:in `find'
+    .//app/controllers/memorial_controller.rb:79:in `destroy_picture'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.004627)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:43:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005536)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005471)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00911)
+Rendered memorial/_uploadpictures (0.00544)
+  [4;36;1mPicture Load (0.003055)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+Rendered memorial/_owner_picture_view (0.01016)
+  [4;35;1mComment Load (0.004329)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01749)
+Completed in 0.11674 (8 reqs/sec) | Rendering: 0.05118 (43%) | DB: 0.06417 (54%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005129)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#upload (for 127.0.0.1 at 2005-12-13 23:44:02) [POST]
+  Parameters: {"commit"=>"Upload", "action"=>"upload", "id"=>"10", "controller"=>"memorial", "picture"=>{"image_temp"=>"", "memorial_id"=>"10", "image"=>#<StringIO:0x255f838>}}
+  [4;35;1mMemorial Load (0.006191)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005333)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mPicture Load (0.002879)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004440)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mSQL (0.012902)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.008894)[0m   [0;1mINSERT INTO pictures (`memorial_id`, `image`, `created_at`) VALUES(10, 'jonmagic.jpg', '2005-12-13 23:44:03')[0m
+  [4;35;1mSQL (0.020754)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 0.89222 (1 reqs/sec) | DB: 0.06652 (7%) | 302 Found [http://0.0.0.0/memorial/upload/10]
+  [4;36;1mUser Columns (0.004569)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:44:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005871)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005292)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00757)
+Rendered memorial/_uploadpictures (0.00466)
+  [4;35;1mPicture Load (0.007027)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004583)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02664)
+  [4;35;1mComment Load (0.004366)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01377)
+Completed in 0.14096 (7 reqs/sec) | Rendering: 0.05380 (38%) | DB: 0.03171 (22%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.068252)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:44:07) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.004495)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-13 23:44:21) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"33", "controller"=>"memorial"}
+  [4;36;1mPicture Load (0.003248)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.id = '33') LIMIT 1[0m
+  [4;35;1mSQL (0.001036)[0m   [0mBEGIN[0m
+  [4;36;1mPicture Columns (0.003869)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mPicture Destroy (0.001735)[0m   [0m DELETE FROM pictures
+ WHERE id = 33
+[0m
+  [4;36;1mSQL (0.001288)[0m   [0;1mCOMMIT[0m
+  [4;35;1mMemorial Load (0.005067)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '33') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial with ID=33):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:412:in `find'
+    .//app/controllers/memorial_controller.rb:79:in `destroy_picture'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.004643)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:44:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006263)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005228)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00750)
+Rendered memorial/_uploadpictures (0.00481)
+  [4;35;1mPicture Load (0.003013)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+Rendered memorial/_owner_picture_view (0.01354)
+  [4;36;1mComment Load (0.004796)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01949)
+Completed in 0.11538 (8 reqs/sec) | Rendering: 0.05235 (45%) | DB: 0.11293 (97%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004991)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:44:32) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.005019)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#upload (for 127.0.0.1 at 2005-12-13 23:45:53) [POST]
+  Parameters: {"commit"=>"Upload", "action"=>"upload", "id"=>"10", "controller"=>"memorial", "picture"=>{"image_temp"=>"", "memorial_id"=>"10", "image"=>#<StringIO:0x279ce98>}}
+  [4;35;1mMemorial Load (0.005493)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005441)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mPicture Load (0.002777)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004316)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mSQL (0.010104)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.001728)[0m   [0;1mINSERT INTO pictures (`memorial_id`, `image`, `created_at`) VALUES(10, 'jonmagic.jpg', '2005-12-13 23:45:54')[0m
+  [4;35;1mSQL (0.012302)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 0.89087 (1 reqs/sec) | DB: 0.05217 (5%) | 302 Found [http://0.0.0.0/memorial/upload/10]
+  [4;36;1mUser Columns (0.005698)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:45:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005961)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006466)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.12227)
+Rendered memorial/_uploadpictures (0.00661)
+  [4;35;1mPicture Load (0.003930)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.005081)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02675)
+  [4;35;1mComment Load (0.003849)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01798)
+Completed in 0.26507 (3 reqs/sec) | Rendering: 0.18086 (68%) | DB: 0.03098 (11%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005080)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:46:00) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.018957)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-13 23:46:05) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"34", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.004607)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '34') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial with ID=34):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:412:in `find'
+    .//app/controllers/memorial_controller.rb:78:in `destroy_picture'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.007329)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:46:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.033112)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005245)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.24233)
+Rendered memorial/_uploadpictures (0.00491)
+  [4;36;1mPicture Load (0.003976)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.003747)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02196)
+  [4;36;1mComment Load (0.004032)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01586)
+Completed in 0.41388 (2 reqs/sec) | Rendering: 0.29544 (71%) | DB: 0.08608 (20%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.049608)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:46:20) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.005134)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:50:45) [GET]
+  Parameters: {}
+
+
+SyntaxError (./script/../config/../app/controllers/memorial_controller.rb:79: syntax error
+    flash[:notice] = "Your Picture Was Removed."
+         ^):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:39:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:22:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:134:in `load_file!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:97:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:80:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:80:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:72:in `const_missing'
+    routing.rb:234:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:234:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:458:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.005243)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:50:50) [GET]
+  Parameters: {}
+
+
+SyntaxError (./script/../config/../app/controllers/memorial_controller.rb:79: syntax error
+    flash[:notice] = "Your Picture Was Removed."
+         ^):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:39:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:22:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:134:in `load_file!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:97:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:80:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:80:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:72:in `const_missing'
+    routing.rb:234:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:234:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:458:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.005082)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:51:05) [GET]
+  Parameters: {}
+
+
+SyntaxError (./script/../config/../app/controllers/memorial_controller.rb:79: syntax error
+    redirect_to :action => "show", :id => params[:id]    
+               ^):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:39:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:22:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:134:in `load_file!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:97:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:80:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:80:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:72:in `const_missing'
+    routing.rb:234:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:234:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:458:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.005552)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:51:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005424)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.018129)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00827)
+Rendered memorial/_uploadpictures (0.00524)
+  [4;36;1mPicture Load (0.003477)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004287)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02193)
+  [4;36;1mComment Load (0.004223)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01358)
+Completed in 0.14511 (6 reqs/sec) | Rendering: 0.05601 (38%) | DB: 0.10616 (73%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.107504)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-13 23:51:41) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.004545)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-13 23:51:44) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"34", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005688)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '34') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial with ID=34):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:412:in `find'
+    .//app/controllers/memorial_controller.rb:78:in `destroy_picture'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.004835)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-13 23:54:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006488)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005574)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00729)
+Rendered memorial/_uploadpictures (0.00501)
+  [4;35;1mPicture Load (0.003750)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004240)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.23412)
+  [4;35;1mComment Load (0.003536)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.04794)
+Completed in 0.36951 (2 reqs/sec) | Rendering: 0.29968 (81%) | DB: 0.14616 (39%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.004645)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-13 23:54:09) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"34", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.004773)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '34') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial with ID=34):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:412:in `find'
+    .//app/controllers/memorial_controller.rb:78:in `destroy_picture'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.005464)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:00:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005326)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005358)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mMemorial Load (0.005336)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00793)
+Rendered memorial/_uploadpictures (0.00678)
+  [4;36;1mPicture Load (0.012303)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004101)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03116)
+  [4;36;1mComment Load (0.003698)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01352)
+Completed in 0.14310 (6 reqs/sec) | Rendering: 0.05769 (40%) | DB: 0.05100 (35%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004946)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-14 00:01:05) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"34", "controller"=>"memorial"}
+  [4;36;1mPicture Load (0.003008)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.id = '34') LIMIT 1[0m
+  [4;35;1mSQL (0.000976)[0m   [0mBEGIN[0m
+  [4;36;1mPicture Columns (0.004040)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mPicture Destroy (0.001608)[0m   [0m DELETE FROM pictures
+ WHERE id = 34
+[0m
+  [4;36;1mSQL (0.000962)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show
+Completed in 0.06462 (15 reqs/sec) | DB: 0.01554 (24%) | 302 Found [http://0.0.0.0/memorial/destroy_picture/34]
+  [4;35;1mUser Columns (0.004656)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:01:06) [GET]
+  Parameters: {"action"=>"show", "controller"=>"memorial"}
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial without an ID):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:407:in `find'
+    .//app/controllers/memorial_controller.rb:11:in `show'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.007751)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:01:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006303)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005111)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mMemorial Load (0.005346)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01123)
+Rendered memorial/_uploadpictures (0.00538)
+  [4;36;1mPicture Load (0.002825)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+Rendered memorial/_owner_picture_view (0.01062)
+  [4;35;1mComment Load (0.004721)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01365)
+Completed in 0.12037 (8 reqs/sec) | Rendering: 0.04818 (40%) | DB: 0.03671 (30%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.004768)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:01:35) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.007436)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#upload (for 127.0.0.1 at 2005-12-14 00:01:45) [POST]
+  Parameters: {"commit"=>"Upload", "action"=>"upload", "id"=>"10", "controller"=>"memorial", "picture"=>{"image_temp"=>"", "memorial_id"=>"10", "image"=>#<StringIO:0x25b35b4>}}
+  [4;36;1mMemorial Load (0.005984)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006878)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mPicture Load (0.003431)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.003991)[0m   [0mSHOW FIELDS FROM pictures[0m
+  [4;36;1mSQL (0.030249)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.001697)[0m   [0mINSERT INTO pictures (`memorial_id`, `image`, `created_at`) VALUES(10, 'jonmagic.jpg', '2005-12-14 00:01:46')[0m
+  [4;36;1mSQL (0.001074)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 1.17588 (0 reqs/sec) | DB: 0.06551 (5%) | 302 Found [http://0.0.0.0/memorial/upload/10]
+  [4;35;1mUser Columns (0.005849)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:01:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007561)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006293)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mMemorial Load (0.006870)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00884)
+Rendered memorial/_uploadpictures (0.00756)
+  [4;35;1mPicture Load (0.004029)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004963)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02592)
+  [4;35;1mComment Load (0.005866)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01555)
+Completed in 0.16406 (6 reqs/sec) | Rendering: 0.06476 (39%) | DB: 0.04143 (25%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.071535)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:01:51) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.005584)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-14 00:01:52) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"35", "controller"=>"memorial"}
+  [4;36;1mPicture Load (0.003126)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.id = '35') LIMIT 1[0m
+  [4;35;1mSQL (0.000985)[0m   [0mBEGIN[0m
+  [4;36;1mPicture Columns (0.003787)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mPicture Destroy (0.001721)[0m   [0m DELETE FROM pictures
+ WHERE id = 35
+[0m
+  [4;36;1mSQL (0.000964)[0m   [0;1mCOMMIT[0m
+
+
+NameError (undefined local variable or method `memorial_id_is' for #<MemorialController:0x2595ed8>):
+    .//app/controllers/memorial_controller.rb:103:in `read_memorial_id'
+    .//app/controllers/memorial_controller.rb:80:in `destroy_picture'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.005072)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:02:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.011127)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005350)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mMemorial Load (0.005679)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01776)
+Rendered memorial/_uploadpictures (0.00509)
+  [4;35;1mPicture Load (0.002723)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+Rendered memorial/_owner_picture_view (0.01636)
+  [4;36;1mComment Load (0.003843)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.02226)
+Completed in 0.21432 (4 reqs/sec) | Rendering: 0.10067 (46%) | DB: 0.12150 (56%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004844)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:02:17) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.005041)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#upload (for 127.0.0.1 at 2005-12-14 00:02:23) [POST]
+  Parameters: {"commit"=>"Upload", "action"=>"upload", "id"=>"10", "controller"=>"memorial", "picture"=>{"image_temp"=>"", "memorial_id"=>"10", "image"=>#<StringIO:0x25b40b8>}}
+  [4;35;1mMemorial Load (0.006137)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005507)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mPicture Load (0.002959)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004057)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mSQL (0.008336)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.001755)[0m   [0;1mINSERT INTO pictures (`memorial_id`, `image`, `created_at`) VALUES(10, 'jonmagic.jpg', '2005-12-14 00:02:24')[0m
+  [4;35;1mSQL (0.008797)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 1.06291 (0 reqs/sec) | DB: 0.04743 (4%) | 302 Found [http://0.0.0.0/memorial/upload/10]
+  [4;36;1mUser Columns (0.005647)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:02:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.010450)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006776)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mMemorial Load (0.006667)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00922)
+Rendered memorial/_uploadpictures (0.00585)
+  [4;36;1mPicture Load (0.005106)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.005375)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02925)
+  [4;36;1mComment Load (0.004205)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01519)
+Completed in 0.18533 (5 reqs/sec) | Rendering: 0.06402 (34%) | DB: 0.04423 (23%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.027702)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:02:29) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.004655)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-14 00:02:31) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"36", "controller"=>"memorial"}
+  [4;35;1mPicture Load (0.003236)[0m   [0mSELECT * FROM pictures WHERE (pictures.id = '36') LIMIT 1[0m
+  [4;36;1mSQL (0.000971)[0m   [0;1mBEGIN[0m
+  [4;35;1mPicture Columns (0.091439)[0m   [0mSHOW FIELDS FROM pictures[0m
+  [4;36;1mPicture Destroy (0.002061)[0m   [0;1m DELETE FROM pictures
+ WHERE id = 36
+[0m
+  [4;35;1mSQL (0.001144)[0m   [0mCOMMIT[0m
+
+
+NameError (uninitialized class variable @@memorial_id_is in MemorialController):
+    .//app/controllers/memorial_controller.rb:103:in `read_memorial_id'
+    .//app/controllers/memorial_controller.rb:80:in `destroy_picture'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.004602)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:05:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005988)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006505)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01124)
+Rendered memorial/_uploadpictures (0.00479)
+  [4;35;1mPicture Load (0.002787)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+Rendered memorial/_owner_picture_view (0.01067)
+  [4;36;1mComment Load (0.004130)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01430)
+Completed in 0.11702 (8 reqs/sec) | Rendering: 0.05063 (43%) | DB: 0.15522 (132%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.013449)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:05:14) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.005913)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#upload (for 127.0.0.1 at 2005-12-14 00:05:17) [POST]
+  Parameters: {"commit"=>"Upload", "action"=>"upload", "id"=>"10", "controller"=>"memorial", "picture"=>{"image_temp"=>"", "memorial_id"=>"10", "image"=>#<StringIO:0x2788e34>}}
+  [4;35;1mMemorial Load (0.006395)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006479)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mPicture Load (0.002706)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004187)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mSQL (0.008213)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.001543)[0m   [0;1mINSERT INTO pictures (`memorial_id`, `image`, `created_at`) VALUES(10, 'jonmagic.jpg', '2005-12-14 00:05:18')[0m
+  [4;35;1mSQL (0.014415)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 0.92326 (1 reqs/sec) | DB: 0.06330 (6%) | 302 Found [http://0.0.0.0/memorial/upload/10]
+  [4;36;1mUser Columns (0.005094)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:05:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006580)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.008916)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00892)
+Rendered memorial/_uploadpictures (0.00616)
+  [4;35;1mPicture Load (0.003600)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.005442)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02708)
+  [4;35;1mComment Load (0.007102)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01786)
+Completed in 0.15662 (6 reqs/sec) | Rendering: 0.06559 (41%) | DB: 0.03673 (23%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.015281)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:05:31) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.004416)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-14 00:05:33) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"37", "controller"=>"memorial"}
+  [4;36;1mPicture Load (0.003291)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.id = '37') LIMIT 1[0m
+  [4;35;1mSQL (0.001048)[0m   [0mBEGIN[0m
+  [4;36;1mPicture Columns (0.003777)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mPicture Destroy (0.001874)[0m   [0m DELETE FROM pictures
+ WHERE id = 37
+[0m
+  [4;36;1mSQL (0.000957)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/manage
+Completed in 0.06506 (15 reqs/sec) | DB: 0.03064 (47%) | 302 Found [http://0.0.0.0/memorial/destroy_picture/37]
+  [4;35;1mUser Columns (0.004755)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#manage (for 127.0.0.1 at 2005-12-14 00:05:34) [GET]
+  Parameters: {"action"=>"manage", "controller"=>"memorial"}
+  [4;36;1mMemorial Columns (0.006858)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mMemorial Load (0.006582)[0m   [0mSELECT * FROM memorials WHERE (memorials.`user_id` = 1 ) [0m
+Rendering  within layouts/memorial
+Rendering memorial/manage
+Rendered memorial/_userbox (0.00310)
+Rendered memorial/_managebar (0.00740)
+Rendered memorial/_activememorials (0.01073)
+Completed in 0.08545 (11 reqs/sec) | Rendering: 0.02800 (32%) | DB: 0.01819 (21%) | 200 OK [http://0.0.0.0/memorial/manage]
+  [4;36;1mUser Columns (0.004782)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:05:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005404)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.009804)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00730)
+Rendered memorial/_uploadpictures (0.00495)
+  [4;35;1mPicture Load (0.002727)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+Rendered memorial/_owner_picture_view (0.01053)
+  [4;36;1mComment Load (0.004617)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01459)
+Completed in 0.11377 (8 reqs/sec) | Rendering: 0.04602 (40%) | DB: 0.02733 (24%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004665)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:05:56) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.004494)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:12:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.010254)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005480)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01564)
+Rendered memorial/_uploadpictures (0.00464)
+  [4;35;1mPicture Load (0.002810)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+Rendered memorial/_owner_picture_view (0.02290)
+  [4;36;1mComment Load (0.087850)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.20287)
+Completed in 0.42101 (2 reqs/sec) | Rendering: 0.26426 (62%) | DB: 0.11555 (27%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.060708)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:12:44) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.004888)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#upload (for 127.0.0.1 at 2005-12-14 00:12:49) [POST]
+  Parameters: {"commit"=>"Upload", "action"=>"upload", "id"=>"10", "controller"=>"memorial", "picture"=>{"image_temp"=>"", "memorial_id"=>"10", "image"=>#<StringIO:0x25d28b0>}}
+  [4;35;1mMemorial Load (0.005472)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005374)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mPicture Load (0.002751)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004140)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mSQL (0.021052)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.031778)[0m   [0;1mINSERT INTO pictures (`memorial_id`, `image`, `created_at`) VALUES(10, 'jonmagic.jpg', '2005-12-14 00:12:49')[0m
+  [4;35;1mSQL (0.013009)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 1.29380 (0 reqs/sec) | DB: 0.14917 (11%) | 302 Found [http://0.0.0.0/memorial/upload/10]
+  [4;36;1mUser Columns (0.005394)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:12:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.016014)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005621)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01142)
+Rendered memorial/_uploadpictures (0.00646)
+  [4;35;1mPicture Load (0.004171)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.008878)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.05009)
+  [4;35;1mComment Load (0.004798)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01719)
+Completed in 0.20016 (4 reqs/sec) | Rendering: 0.08695 (43%) | DB: 0.04488 (22%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.036690)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:13:01) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.005339)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:13:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005598)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005452)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00818)
+Rendered memorial/_uploadpictures (0.00526)
+  [4;36;1mPicture Load (0.003592)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.080014)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.27103)
+  [4;36;1mComment Load (0.011085)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.02034)
+Completed in 0.38111 (2 reqs/sec) | Rendering: 0.22959 (60%) | DB: 0.14777 (38%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.202565)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:13:19) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.004757)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:13:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005242)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006163)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00892)
+Rendered memorial/_uploadpictures (0.00958)
+  [4;35;1mPicture Load (0.003157)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.003723)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+
+
+ActionView::TemplateError (undefined local variable or method `picture' for #<#<Class:0x254fc80>:0x254fb2c>) on line #9 of app/views/memorial/_owner_picture_view.rhtml:
+6:     </a>
+7:     <div class="picture-options">
+8:         <%= link_to 'Delete', :action => 'destroy_picture', :id => @picture %><br />
+9:         <% picture.inspect %>
+10:     </div>
+11:     </div>
+12: <% end %>
+
+    #{RAILS_ROOT}/app/views/memorial/_owner_picture_view.rhtml:9
+    #{RAILS_ROOT}/app/views/memorial/_owner_picture_view.rhtml:2:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/has_many_association.rb:90:in `method_missing'
+    #{RAILS_ROOT}/app/views/memorial/_owner_picture_view.rhtml:2
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:220:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `measure'
+    /usr/local/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:230:in `render'
+    #{RAILS_ROOT}/app/views/memorial/show.rhtml:13
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:655:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:220:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.004839)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:13:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005669)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005475)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00737)
+Rendered memorial/_uploadpictures (0.00508)
+  [4;36;1mPicture Load (0.003492)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004083)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03797)
+  [4;36;1mComment Load (0.009251)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.05776)
+Completed in 0.39513 (2 reqs/sec) | Rendering: 0.31670 (80%) | DB: 0.03969 (10%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.047685)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:14:03) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.005918)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:14:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005230)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005524)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00747)
+Rendered memorial/_uploadpictures (0.00499)
+  [4;35;1mPicture Load (0.189774)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.029508)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+
+
+ActionView::TemplateError (undefined method `picture' for #<Memorial:0x252e760>) on line #9 of app/views/memorial/_owner_picture_view.rhtml:
+6:     </a>
+7:     <div class="picture-options">
+8:         <%= link_to 'Delete', :action => 'destroy_picture', :id => @picture %><br />
+9:         <% @memorial.picture.methods %>
+10:     </div>
+11:     </div>
+12: <% end %>
+
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:1501:in `method_missing'
+    #{RAILS_ROOT}/app/views/memorial/_owner_picture_view.rhtml:9
+    #{RAILS_ROOT}/app/views/memorial/_owner_picture_view.rhtml:2:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/has_many_association.rb:90:in `method_missing'
+    #{RAILS_ROOT}/app/views/memorial/_owner_picture_view.rhtml:2
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:220:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `measure'
+    /usr/local/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:230:in `render'
+    #{RAILS_ROOT}/app/views/memorial/show.rhtml:13
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:655:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:220:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.004917)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:14:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.006240)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006215)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00846)
+Rendered memorial/_uploadpictures (0.00473)
+  [4;36;1mPicture Load (0.004032)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.006564)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.25391)
+  [4;36;1mComment Load (0.003806)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.03167)
+Completed in 0.39775 (2 reqs/sec) | Rendering: 0.30167 (75%) | DB: 0.25106 (63%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.200912)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:14:55) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.004630)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:15:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005232)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005500)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00800)
+Rendered memorial/_uploadpictures (0.00582)
+  [4;35;1mPicture Load (0.003198)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.003751)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03406)
+  [4;35;1mComment Load (0.003543)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.03836)
+Completed in 0.28568 (3 reqs/sec) | Rendering: 0.21792 (76%) | DB: 0.22677 (79%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005949)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:15:58) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.004939)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-14 00:16:30) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"10", "controller"=>"memorial", "picture"=>"38"}
+  [4;36;1mPicture Load (0.003037)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.id = '38') LIMIT 1[0m
+  [4;35;1mSQL (0.001134)[0m   [0mBEGIN[0m
+  [4;36;1mPicture Columns (0.005044)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mPicture Destroy (0.001545)[0m   [0m DELETE FROM pictures
+ WHERE id = 38
+[0m
+  [4;36;1mSQL (0.000956)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show
+Completed in 0.06106 (16 reqs/sec) | DB: 0.02260 (37%) | 302 Found [http://0.0.0.0/memorial/destroy_picture/10?picture=38]
+  [4;35;1mUser Columns (0.004608)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:16:31) [GET]
+  Parameters: {"action"=>"show", "controller"=>"memorial"}
+
+
+ActiveRecord::RecordNotFound (Couldn't find Memorial without an ID):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:407:in `find'
+    .//app/controllers/memorial_controller.rb:11:in `show'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.004799)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:16:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006557)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005345)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00829)
+Rendered memorial/_uploadpictures (0.00542)
+  [4;35;1mPicture Load (0.003222)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+Rendered memorial/_owner_picture_view (0.01285)
+  [4;36;1mComment Load (0.003517)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01295)
+Completed in 0.11127 (8 reqs/sec) | Rendering: 0.04937 (44%) | DB: 0.02805 (25%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.005651)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:16:47) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.004629)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#upload (for 127.0.0.1 at 2005-12-14 00:17:43) [POST]
+  Parameters: {"commit"=>"Upload", "action"=>"upload", "id"=>"10", "controller"=>"memorial", "picture"=>{"image_temp"=>"", "memorial_id"=>"10", "image"=>#<StringIO:0x2791ee4>}}
+  [4;35;1mMemorial Load (0.005768)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005398)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mPicture Load (0.002726)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004912)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+  [4;35;1mSQL (0.011014)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.001702)[0m   [0;1mINSERT INTO pictures (`memorial_id`, `image`, `created_at`) VALUES(10, 'jonmagic.jpg', '2005-12-14 00:17:43')[0m
+  [4;35;1mSQL (0.028560)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 0.90406 (1 reqs/sec) | DB: 0.07036 (7%) | 302 Found [http://0.0.0.0/memorial/upload/10]
+  [4;36;1mUser Columns (0.005525)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:17:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006977)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006087)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00910)
+Rendered memorial/_uploadpictures (0.00607)
+  [4;35;1mPicture Load (0.004442)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.007791)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02742)
+  [4;35;1mComment Load (0.003929)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01401)
+Completed in 0.14782 (6 reqs/sec) | Rendering: 0.05904 (39%) | DB: 0.03475 (23%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.134366)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:17:47) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.012881)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#destroy_picture (for 127.0.0.1 at 2005-12-14 00:17:50) [GET]
+  Parameters: {"action"=>"destroy_picture", "id"=>"10", "controller"=>"memorial", "picture"=>"39"}
+  [4;36;1mMemorial Load (0.005552)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mPicture Load (0.003201)[0m   [0mSELECT * FROM pictures WHERE (pictures.id = '39') LIMIT 1[0m
+  [4;36;1mSQL (0.000971)[0m   [0;1mBEGIN[0m
+  [4;35;1mPicture Columns (0.004585)[0m   [0mSHOW FIELDS FROM pictures[0m
+  [4;36;1mPicture Destroy (0.001643)[0m   [0;1m DELETE FROM pictures
+ WHERE id = 39
+[0m
+  [4;35;1mSQL (0.000938)[0m   [0mCOMMIT[0m
+  [4;36;1mMemorial Columns (0.008324)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 0.08517 (11 reqs/sec) | DB: 0.17246 (202%) | 302 Found [http://0.0.0.0/memorial/destroy_picture/10?picture=39]
+  [4;35;1mUser Columns (0.004856)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-14 00:17:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005384)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005087)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00889)
+Rendered memorial/_uploadpictures (0.00468)
+  [4;36;1mPicture Load (0.003154)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+Rendered memorial/_owner_picture_view (0.00882)
+  [4;35;1mComment Load (0.003638)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01697)
+Completed in 0.11709 (8 reqs/sec) | Rendering: 0.05444 (46%) | DB: 0.02212 (18%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.004587)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-14 00:17:52) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/picture/image/31/sabretech_mockup_1-medium.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)

@@ -10,6 +10,7 @@ class MemorialController < ApplicationController
   def show
     @memorial = Memorial.find(params[:id])
     is_owner
+
   end
 
   def search
@@ -63,15 +64,27 @@ class MemorialController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy_memorial
     Memorial.find(params[:id]).destroy
     redirect_to :action => 'manage'
   end
   
-  def upload
+# My lovely Picture methods, just nice little ones to make pictures do things...
+  
+  def picture_upload
     Memorial.find(params[:id]).pictures.create(params[:picture])
     flash[:notice] = "Added Your Picture."
     redirect_to :action => "show", :id => params[:id]
+  end
+  
+  def picture_destroy
+    @memorial = Memorial.find(params[:id])
+    Picture.find(params[:picture]).destroy
+    redirect_to :action => "show", :id => @memorial
+  end
+  
+  def picture_set_as_main
+    
   end
   
   private
