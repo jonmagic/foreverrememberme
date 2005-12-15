@@ -1,15 +1,16 @@
 <div title="Main Picture Select" id="selectyourmainpicture" class="form">
 <% for @picture in @memorial.pictures %>
     <div class="picture-thumbwrapper">
-    <a href="<%= url_for_file_column "picture", "image" %>" rel="external">
         <div class="picture-background">
-            <%= image_tag url_for_file_column "picture", "image", "thumb" %>
+            <a href="<%= url_for_file_column "picture", "image" %>" rel="external">
+                <%= image_tag url_for_file_column "picture", "image", "thumb" %>
+            </a>
             <ul class="picture-options">
                 <li><%= link_to 'Set Main', :action => 'picture_update', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
                 <li><%= link_to 'Delete', :action => 'picture_delete', :id => @memorial, :picture => @picture %></li>
             </ul>
         </div>
-    </a>
+
     </div>
 <% end %>
 <div class="clearer"></div>

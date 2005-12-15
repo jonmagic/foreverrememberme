@@ -12793,3 +12793,59 @@ Rendered memorial/_owner_picture_view (0.06232)
   [4;36;1mComment Load (0.003680)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
 Rendered memorial/_comments (0.01889)
 Completed in 0.29024 (3 reqs/sec) | Rendering: 0.12689 (43%) | DB: 0.04953 (17%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004571)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2005-12-15 16:45:46) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"user"}
+Redirected to http://0.0.0.0:3000/memorial
+Completed in 0.00539 (185 reqs/sec) | DB: 0.00457 (84%) | 302 Found [http://0.0.0.0/user/logout]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 16:45:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007558)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.005855)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00181)
+Rendered memorial/_searchbox (0.00226)
+Completed in 0.15698 (6 reqs/sec) | Rendering: 0.05924 (37%) | DB: 0.01341 (8%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 16:45:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007763)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.009774)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001234)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.001884)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 5, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-15 16:45:56' WHERE id = 1[0m
+  [4;36;1mSQL (0.001074)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.00717)
+Rendered memorial/_memorial (0.00072)
+  [4;35;1mPicture Load (0.003052)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_public_picture_view (0.01912)
+  [4;36;1mComment Load (0.007128)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.006352)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.03550)
+Completed in 0.30858 (3 reqs/sec) | Rendering: 0.07445 (24%) | DB: 0.03826 (12%) | 200 OK [http://0.0.0.0/memorial/show/1]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 16:46:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007559)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.015112)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001019)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.001916)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 6, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-15 16:46:05' WHERE id = 1[0m
+  [4;36;1mSQL (0.001039)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.03191)
+Rendered memorial/_memorial (0.00104)
+  [4;35;1mPicture Load (0.003024)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_public_picture_view (0.00809)
+  [4;36;1mComment Load (0.005080)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.012533)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.03176)
+Completed in 0.43513 (2 reqs/sec) | Rendering: 0.15219 (34%) | DB: 0.04728 (10%) | 200 OK [http://0.0.0.0/memorial/show/1]
