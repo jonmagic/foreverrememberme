@@ -12849,3 +12849,323 @@ Rendered memorial/_public_picture_view (0.00809)
   [4;35;1mComment Columns (0.012533)[0m   [0mSHOW FIELDS FROM comments[0m
 Rendered memorial/_comments (0.03176)
 Completed in 0.43513 (2 reqs/sec) | Rendering: 0.15219 (34%) | DB: 0.04728 (10%) | 200 OK [http://0.0.0.0/memorial/show/1]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 17:05:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.014513)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.006729)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00236)
+Rendered memorial/_searchbox (0.00206)
+Completed in 0.11226 (8 reqs/sec) | Rendering: 0.03463 (30%) | DB: 0.02124 (18%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 17:05:36) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"search", "q"=>"depp", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007017)[0m   [0;1mSELECT * from memorials WHERE (LOWER(firstname) LIKE '%depp%' OR LOWER(lastname) LIKE '%depp%' OR LOWER(hometown) LIKE '%depp%') ORDER by created_at DESC[0m
+Rendering  within layouts/memorial
+Rendering memorial/search
+Rendered memorial/_searchbox (0.01159)
+  [4;35;1mMemorial Columns (0.005285)[0m   [0mSHOW FIELDS FROM memorials[0m
+Completed in 0.18767 (5 reqs/sec) | Rendering: 0.07443 (39%) | DB: 0.01230 (6%) | 200 OK [http://0.0.0.0/memorial/search]
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 17:05:44) [GET]
+  Parameters: {"action"=>"search", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/search
+Rendered memorial/_searchbox (0.00228)
+Completed in 0.41341 (2 reqs/sec) | Rendering: 0.12637 (30%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/memorial/search]
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 17:06:08) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"search", "q"=>"depp", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.017729)[0m   [0;1mSELECT * from memorials WHERE (LOWER(firstname) LIKE '%depp%' OR LOWER(lastname) LIKE '%depp%' OR LOWER(hometown) LIKE '%depp%') ORDER by created_at DESC[0m
+Rendering  within layouts/memorial
+Rendering memorial/search
+Rendered memorial/_searchbox (0.00257)
+  [4;35;1mMemorial Columns (0.061995)[0m   [0mSHOW FIELDS FROM memorials[0m
+Completed in 0.66796 (1 reqs/sec) | Rendering: 0.07560 (11%) | DB: 0.07972 (11%) | 200 OK [http://0.0.0.0/memorial/search]
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 17:06:17) [GET]
+  Parameters: {"action"=>"search", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/search
+Rendered memorial/_searchbox (0.09079)
+Completed in 0.45828 (2 reqs/sec) | Rendering: 0.18033 (39%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/memorial/search]
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 17:06:29) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"search", "q"=>"bob", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.024241)[0m   [0;1mSELECT * from memorials WHERE (LOWER(firstname) LIKE '%bob%' OR LOWER(lastname) LIKE '%bob%' OR LOWER(hometown) LIKE '%bob%') ORDER by created_at DESC[0m
+Rendering  within layouts/memorial
+Rendering memorial/search
+Rendered memorial/_searchbox (0.00270)
+  [4;35;1mMemorial Columns (0.006767)[0m   [0mSHOW FIELDS FROM memorials[0m
+Completed in 0.15428 (6 reqs/sec) | Rendering: 0.03657 (23%) | DB: 0.03101 (20%) | 200 OK [http://0.0.0.0/memorial/search]
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 17:06:53) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"search", "q"=>"usa", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.028426)[0m   [0;1mSELECT * from memorials WHERE (LOWER(firstname) LIKE '%usa%' OR LOWER(lastname) LIKE '%usa%' OR LOWER(hometown) LIKE '%usa%') ORDER by created_at DESC[0m
+Rendering  within layouts/memorial
+Rendering memorial/search
+Rendered memorial/_searchbox (0.00242)
+  [4;35;1mMemorial Columns (0.021124)[0m   [0mSHOW FIELDS FROM memorials[0m
+Completed in 0.13683 (7 reqs/sec) | Rendering: 0.02196 (16%) | DB: 0.04955 (36%) | 200 OK [http://0.0.0.0/memorial/search]
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 17:07:03) [GET]
+  Parameters: {"action"=>"search", "controller"=>"memorial"}
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 17:07:04) [GET]
+  Parameters: {"action"=>"search", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/search
+Rendering  within layouts/memorial
+Rendered memorial/_searchbox (0.00231)
+Rendering memorial/search
+Completed in 0.90391 (1 reqs/sec) | Rendering: 0.42649 (47%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/memorial/search]
+Rendered memorial/_searchbox (0.00409)
+Completed in 0.54792 (1 reqs/sec) | Rendering: 0.21775 (39%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/memorial/search]
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 17:07:05) [GET]
+  Parameters: {"action"=>"search", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/search
+Rendered memorial/_searchbox (0.00301)
+Completed in 0.46652 (2 reqs/sec) | Rendering: 0.31367 (67%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/memorial/search]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 17:09:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.089638)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005611)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001515)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.005159)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 10, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 17:09:32' WHERE id = 10[0m
+  [4;36;1mSQL (0.001192)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.00802)
+Rendered memorial/_memorial (0.00069)
+  [4;35;1mPicture Load (0.004433)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004814)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_public_picture_view (0.03370)
+  [4;35;1mComment Load (0.004010)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01310)
+Completed in 0.50076 (1 reqs/sec) | Rendering: 0.09507 (18%) | DB: 0.11637 (23%) | 200 OK [http://0.0.0.0/memorial/show/10]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 17:09:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.011947)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.006901)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00212)
+Rendered memorial/_searchbox (0.01479)
+Completed in 0.17779 (5 reqs/sec) | Rendering: 0.05425 (30%) | DB: 0.01885 (10%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 17:10:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.008190)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.005720)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00216)
+Rendered memorial/_searchbox (0.00245)
+Completed in 0.15305 (6 reqs/sec) | Rendering: 0.04293 (28%) | DB: 0.01391 (9%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 17:10:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.032331)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.013466)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00210)
+Rendered memorial/_searchbox (0.00260)
+Completed in 0.15369 (6 reqs/sec) | Rendering: 0.03830 (24%) | DB: 0.04580 (29%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 17:10:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.022362)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.006416)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00187)
+Rendered memorial/_searchbox (0.00206)
+Completed in 0.18472 (5 reqs/sec) | Rendering: 0.05974 (32%) | DB: 0.02878 (15%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 17:11:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.025963)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.012276)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00207)
+Rendered memorial/_searchbox (0.00480)
+Completed in 0.16553 (6 reqs/sec) | Rendering: 0.02747 (16%) | DB: 0.03824 (23%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing UserController#login (for 127.0.0.1 at 2005-12-15 17:12:00) [POST]
+  Parameters: {"user_login"=>"jonmagic", "action"=>"login", "controller"=>"user", "user_password"=>"vrcade", "login"=>"Login \302\273"}
+  [4;36;1mUser Load (0.004616)[0m   [0;1mSELECT * FROM users WHERE (login = 'jonmagic' AND password = '52e6920634be2e1d947c3023d922d425ea4fd8e2') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/memorial/manage
+  [4;35;1mUser Columns (0.004603)[0m   [0mSHOW FIELDS FROM users[0m
+Completed in 0.03146 (31 reqs/sec) | DB: 0.00922 (29%) | 302 Found [http://0.0.0.0/user/login]
+  [4;36;1mUser Columns (0.012470)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#manage (for 127.0.0.1 at 2005-12-15 17:12:01) [GET]
+  Parameters: {"action"=>"manage", "controller"=>"memorial"}
+  [4;35;1mMemorial Columns (0.012334)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mMemorial Load (0.023467)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.`user_id` = 1 ) [0m
+Rendering  within layouts/memorial
+Rendering memorial/manage
+Rendered memorial/_userbox (0.00858)
+Rendered memorial/_manage_your_memorials (0.01568)
+Rendered memorial/_activememorials (0.01846)
+Completed in 0.24548 (4 reqs/sec) | Rendering: 0.07561 (30%) | DB: 0.04827 (19%) | 200 OK [http://0.0.0.0/memorial/manage]
+  [4;35;1mUser Columns (0.004503)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#manage (for 127.0.0.1 at 2005-12-15 17:12:23) [GET]
+  Parameters: {"action"=>"manage", "controller"=>"memorial"}
+  [4;36;1mMemorial Columns (0.005259)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mMemorial Load (0.024510)[0m   [0mSELECT * FROM memorials WHERE (memorials.`user_id` = 1 ) [0m
+Rendering  within layouts/memorial
+Rendering memorial/manage
+Rendered memorial/_userbox (0.00315)
+Rendered memorial/_manage_your_memorials (0.00234)
+Rendered memorial/_activememorials (0.02415)
+Completed in 0.17148 (5 reqs/sec) | Rendering: 0.05214 (30%) | DB: 0.03427 (19%) | 200 OK [http://0.0.0.0/memorial/manage]
+  [4;36;1mUser Columns (0.004497)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#manage (for 127.0.0.1 at 2005-12-15 17:12:54) [GET]
+  Parameters: {"action"=>"manage", "controller"=>"memorial"}
+  [4;35;1mMemorial Columns (0.005495)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mMemorial Load (0.035637)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.`user_id` = 1 ) [0m
+Rendering  within layouts/memorial
+Rendering memorial/manage
+Rendered memorial/_userbox (0.00446)
+Rendered memorial/_manage_your_memorials (0.00229)
+Rendered memorial/_activememorials (0.01957)
+Completed in 0.20273 (4 reqs/sec) | Rendering: 0.05921 (29%) | DB: 0.04563 (22%) | 200 OK [http://0.0.0.0/memorial/manage]
+  [4;35;1mUser Columns (0.018268)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 17:13:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.025100)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '11') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005922)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001002)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.004061)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-15 01:41:09', `views` = 7, `date_of_birth` = '1992-04-11', `lastname` = 'Bat', `message` = 'Doh', `date_of_death` = '2005-12-15', `hometown` = 'Doh, USA', `image` = NULL, `user_id` = 1, `firstname` = 'Ding', `updated_at` = '2005-12-15 17:13:05' WHERE id = 11[0m
+  [4;36;1mSQL (0.001031)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.01132)
+Rendered memorial/_manage_this_memorial (0.00249)
+Rendered memorial/_manage_your_memorials (0.00203)
+Rendered memorial/_memorial_details (0.00763)
+Rendered memorial/_memorial (0.00077)
+Rendered memorial/_uploadpictures (0.04596)
+  [4;35;1mPicture Load (0.017434)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 11) [0m
+Rendered memorial/_owner_picture_view (0.04271)
+  [4;36;1mComment Load (0.003602)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 11) [0m
+Rendered memorial/_comments (0.02223)
+Completed in 0.43068 (2 reqs/sec) | Rendering: 0.22383 (51%) | DB: 0.07642 (17%) | 200 OK [http://0.0.0.0/memorial/show/11]
+  [4;35;1mUser Columns (0.064868)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 17:13:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005697)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '11') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005644)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001018)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002254)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-15 01:41:09', `views` = 8, `date_of_birth` = '1992-04-11', `lastname` = 'Bat', `message` = 'Doh', `date_of_death` = '2005-12-15', `hometown` = 'Doh, USA', `image` = NULL, `user_id` = 1, `firstname` = 'Ding', `updated_at` = '2005-12-15 17:13:15' WHERE id = 11[0m
+  [4;36;1mSQL (0.001119)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.01684)
+Rendered memorial/_manage_this_memorial (0.00327)
+Rendered memorial/_manage_your_memorials (0.00219)
+Rendered memorial/_memorial_details (0.08509)
+Rendered memorial/_memorial (0.00098)
+Rendered memorial/_uploadpictures (0.00557)
+  [4;35;1mPicture Load (0.003423)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 11) [0m
+Rendered memorial/_owner_picture_view (0.00909)
+  [4;36;1mComment Load (0.003804)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 11) [0m
+Rendered memorial/_comments (0.01439)
+Completed in 0.37363 (2 reqs/sec) | Rendering: 0.18553 (49%) | DB: 0.08783 (23%) | 200 OK [http://0.0.0.0/memorial/show/11]
+  [4;35;1mUser Columns (0.009215)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#picture_upload (for 127.0.0.1 at 2005-12-15 17:13:58) [POST]
+  Parameters: {"commit"=>"Upload", "action"=>"picture_upload", "id"=>"11", "controller"=>"memorial", "picture"=>{"image_temp"=>"", "memorial_id"=>"11", "image"=>#<File:/tmp/CGI20161.1>}}
+  [4;36;1mMemorial Load (0.017665)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '11') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005595)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mPicture Load (0.003412)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 11) [0m
+  [4;35;1mPicture Columns (0.003706)[0m   [0mSHOW FIELDS FROM pictures[0m
+  [4;36;1mSQL (0.018389)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.026027)[0m   [0mINSERT INTO pictures (`memorial_id`, `image`, `created_at`) VALUES(11, 'jonmagic.jpg', '2005-12-15 17:13:59')[0m
+  [4;36;1mSQL (0.001045)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/11
+Completed in 1.84565 (0 reqs/sec) | DB: 0.08505 (4%) | 302 Found [http://0.0.0.0/memorial/picture_upload/11]
+  [4;35;1mUser Columns (0.005111)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 17:14:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.006250)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '11') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006382)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000962)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.001999)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-15 01:41:09', `views` = 9, `date_of_birth` = '1992-04-11', `lastname` = 'Bat', `message` = 'Doh', `date_of_death` = '2005-12-15', `hometown` = 'Doh, USA', `image` = NULL, `user_id` = 1, `firstname` = 'Ding', `updated_at` = '2005-12-15 17:14:01' WHERE id = 11[0m
+  [4;36;1mSQL (0.001040)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00422)
+Rendered memorial/_manage_this_memorial (0.00279)
+Rendered memorial/_manage_your_memorials (0.00225)
+Rendered memorial/_memorial_details (0.00765)
+Rendered memorial/_memorial (0.00083)
+Rendered memorial/_uploadpictures (0.01540)
+  [4;35;1mPicture Load (0.003588)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 11) [0m
+  [4;36;1mPicture Columns (0.004890)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02792)
+  [4;35;1mComment Load (0.011417)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 11) [0m
+Rendered memorial/_comments (0.02111)
+Completed in 0.33074 (3 reqs/sec) | Rendering: 0.09346 (28%) | DB: 0.04164 (12%) | 200 OK [http://0.0.0.0/memorial/show/11]
+  [4;36;1mUser Columns (0.209628)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 17:14:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.025079)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '11') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.036325)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001442)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.012015)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-15 01:41:09', `views` = 10, `date_of_birth` = '1992-04-11', `lastname` = 'Bat', `message` = 'Doh', `date_of_death` = '2005-12-15', `hometown` = 'Doh, USA', `image` = NULL, `user_id` = 1, `firstname` = 'Ding', `updated_at` = '2005-12-15 17:14:10' WHERE id = 11[0m
+  [4;35;1mSQL (0.001024)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00314)
+Rendered memorial/_manage_this_memorial (0.00281)
+Rendered memorial/_manage_your_memorials (0.00202)
+Rendered memorial/_memorial_details (0.00784)
+Rendered memorial/_memorial (0.00069)
+Rendered memorial/_uploadpictures (0.01400)
+  [4;36;1mPicture Load (0.003350)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 11) [0m
+  [4;35;1mPicture Columns (0.006326)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.02628)
+  [4;36;1mComment Load (0.011256)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 11) [0m
+Rendered memorial/_comments (0.02038)
+Completed in 0.60658 (1 reqs/sec) | Rendering: 0.09431 (15%) | DB: 0.30645 (50%) | 200 OK [http://0.0.0.0/memorial/show/11]

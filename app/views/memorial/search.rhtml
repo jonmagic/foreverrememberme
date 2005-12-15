@@ -1,3 +1,9 @@
+<div class="column-right">
+    <br />
+    <%= render_partial 'searchbox' %>
+</div>
+
+<div class="column-left">
 <h2>Search Results</h2>
 <% if @memorials.to_a.empty? -%>
 
@@ -21,10 +27,11 @@ for memorial in @memorials
                 </a>
             </span>
             <br />
-    		<p><%= h(truncate(memorial.message, 200)) %></p>
+    		<p><%= h(truncate(memorial.message, 80)) %></p>
     		<div class="clearer"></div>
         </div>
     </div>
 <% end %>
 
 <% end -%>
+</div>

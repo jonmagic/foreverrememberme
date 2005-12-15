@@ -94,7 +94,7 @@ padding: 37px 0 0 35px;
 #banner {
 	position:relative;
 	z-index:0;
-	margin: -50px 0 0 35px;
+	margin: -50px 0 20px 35px;
 	height: 210px;
 	voice-family: "\"}\""; 
    voice-family:inherit;

@@ -1,12 +1,8 @@
 <div class="column-right">
     <% if @owner > 0 %>
-        <br />
         <%= render :partial => "userbox" %><br />           
         <%= render :partial => "manage_this_memorial" %><br />      
         <%= render :partial => "manage_your_memorials" %><br />     
-    <% end %>
-    <% if @owner < 1 %>
-        <br />
     <% end %>
     <%= render :partial => "memorial_details", :object => @memorial %>
 </div>
