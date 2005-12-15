@@ -2,11 +2,14 @@
 <% for @picture in @memorial.pictures %>
     <div class="picture-thumbwrapper">
     <a href="<%= url_for_file_column "picture", "image" %>" rel="external">
-        <div class="picture-thumb"><%= image_tag url_for_file_column "picture", "image", "thumb" %></div>
+        <div class="picture-background">
+            <%= image_tag url_for_file_column "picture", "image", "thumb" %>
+            <ul class="picture-options">
+                <li><%= link_to 'Set Main', :action => 'picture_update', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
+                <li><%= link_to 'Delete', :action => 'picture_delete', :id => @memorial, :picture => @picture %></li>
+            </ul>
+        </div>
     </a>
-    <div class="picture-options">
-        <%= link_to 'Delete', :action => 'destroy_picture', :id => @memorial, :picture => @picture %><br />
-    </div>
     </div>
 <% end %>
 <div class="clearer"></div>

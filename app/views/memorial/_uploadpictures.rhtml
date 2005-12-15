@@ -5,7 +5,7 @@
 <p>You can also set the image as the main image for this memorial by selecting the radio button below the image and then click the Set Main Picture button.</p>
 <div id="uploadpictures">
     <div style="padding:10px">
-        <%= form_tag ({:action => "upload", :id => @memorial}, :multipart => true) %>
+        <%= form_tag ({:action => "picture_upload", :id => @memorial}, :multipart => true) %>
         <div title="Upload Pictures" id="picturefreakinupload" class="form">
             <p><label for="memorial_image">Choose An Image:</label><br/>
             <%= file_column_field "picture", "image", :size => "25" %></p>
