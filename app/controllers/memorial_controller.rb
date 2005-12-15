@@ -12,7 +12,7 @@ class MemorialController < ApplicationController
     @memorial = Memorial.find(params[:id])
     @memorial.views += 1
     @memorial.save
-    @owner = 0
+    is_owner
   end
 
   def search
