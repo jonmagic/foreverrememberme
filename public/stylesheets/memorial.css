@@ -40,7 +40,7 @@ h2 {
 	color: #5BB3C4;
 	font-weight: normal;
 	line-height: 130%;
-	margin: 0.5em 0 0.5em 0;
+	margin: 0.5em 0 0.1em 0;
 }
 
 h3 {
@@ -96,7 +96,6 @@ padding: 37px 0 0 35px;
 	z-index:0;
 	margin: -50px 0 0 35px;
 	height: 210px;
-	background: url("../images/banner-flower1.jpg") no-repeat;
 	voice-family: "\"}\""; 
    voice-family:inherit;
 	margin-top: -35px;
@@ -106,7 +105,12 @@ html>body #banner {
   margin-top: -50px;
 }
 
+.heading {
+	display: none;
+}
+
 .subtitle {
+	display: none;
 	float:right;
 	margin: 3em 50px 0 400px;
 	padding: 5px;
@@ -178,6 +182,29 @@ html>body #banner {
 .column-left {
 	padding: 1px 10px 0 0;
 	width: 330px;
+}
+
+/************* Index ***************/
+
+.index-recent-memorials {
+	
+}
+
+.index-recent-memorial {
+	padding-left: 10px;
+}
+
+.index-recent-memorials a, .index-recent-memorials a:link, .index-recent-memorials a:visited  {
+	text-decoration: none;
+}
+
+.index-recent-memorials a:hover {
+	font-weight: bold;
+}
+
+.index-quote {
+	text-align: center;
+	font-style: italic;
 }
 
 /************* Manage Index *************/

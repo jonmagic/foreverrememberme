@@ -33,11 +33,12 @@
 <body>
     <div id="wrapper">
         <div id="header">
-            <h1 style="position:relative;text-align:right;z-index:1;margin-right:50px"><%= link_to "Forever Remember Me", { :controller => "memorial", :action => 'index' } %></h1>
+            <h1 class="heading"><%= link_to "Forever Remember Me", { :controller => "memorial", :action => 'index' } %></h1>
         </div>
         <div id="container">
             <div class="clearer"></div>
             <div id="banner">
+                <a href="/memorial"><%= image_tag "banner-maninwoods.jpg" %></a>
                 <h4 class="subtitle">A place for remembering those we love.</h4>
             </div>            
             <div id="notice">

@@ -1,4 +1,13 @@
+<br />
+<h4 class="index-quote">LOOK BACK AT THE TIME WE CHERISHED TOGETHER AND REMEMBER ME ALWAYS AS I DO YOU</h4>
+
 <div class="column-right">
+    <div class="index-recent-memorials">
+        <h2>Recent Memorials</h2>
+        <% for memorial in @memorials %>
+            <a href="/memorial/show/<%= memorial.id %>"><span class="index-recent-memorial"><%= memorial.firstname %> <b><%= memorial.lastname %></b></span></a><br />
+        <% end %>
+    </div>
     <% if @session[:user].nil? %>
         <h2>How do I make a Memorial</h2>
         <p>on Forever Remember Me? It only takes a few simple steps to create a memorial. The first step is to signup for an account.</p>

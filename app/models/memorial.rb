@@ -11,5 +11,9 @@ class Memorial < ActiveRecord::Base
       []
     end
   end
+  
+  def self.most_recent
+    find_by_sql(["SELECT * from memorials LIMIT 5"])
+  end
 
 end

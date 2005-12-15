@@ -11626,3 +11626,817 @@ Rendered memorial/_public_picture_view (0.02506)
   [4;36;1mComment Load (0.003981)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
 Rendered memorial/_comments (0.01410)
 Completed in 0.24913 (4 reqs/sec) | Rendering: 0.05907 (23%) | DB: 0.04832 (19%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.046845)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:07:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.02756)
+Rendered memorial/_searchbox (0.02642)
+Completed in 0.12979 (7 reqs/sec) | Rendering: 0.11793 (90%) | DB: 0.04685 (36%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.005328)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:09:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:09:28) [GET]
+Rendering memorial/index
+Rendered memorial/_userbox (0.00331)
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendered memorial/_searchbox (0.03048)
+Completed in 0.20675 (4 reqs/sec) | Rendering: 0.12410 (60%) | DB: 0.00533 (2%) | 200 OK [http://0.0.0.0/memorial]
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mUser Columns (0.053375)[0m   [0;1mSHOW FIELDS FROM users[0m
+Rendered memorial/_userbox (0.17043)
+Rendered memorial/_searchbox (0.00234)
+Completed in 0.46782 (2 reqs/sec) | Rendering: 0.19951 (42%) | DB: 0.05338 (11%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-15 10:09:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+
+
+ArgumentError (undefined class/module User):
+    /usr/local/lib/ruby/1.8/pstore.rb:163:in `load'
+    /usr/local/lib/ruby/1.8/pstore.rb:163:in `load'
+    /usr/local/lib/ruby/1.8/pstore.rb:118:in `transaction'
+    /usr/local/lib/ruby/1.8/cgi/session/pstore.rb:90:in `update'
+    /usr/local/lib/ruby/1.8/cgi/session/pstore.rb:97:in `close'
+    /usr/local/lib/ruby/1.8/cgi/session.rb:330:in `close'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:914:in `close_session'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:372:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.004855)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-15 10:09:36) [GET]
+  Parameters: {}
+
+
+TypeError (User cannot be referred):
+    /usr/local/lib/ruby/1.8/pstore.rb:159:in `dump'
+    /usr/local/lib/ruby/1.8/pstore.rb:159:in `dump'
+    /usr/local/lib/ruby/1.8/pstore.rb:138:in `transaction'
+    /usr/local/lib/ruby/1.8/cgi/session/pstore.rb:90:in `update'
+    /usr/local/lib/ruby/1.8/cgi/session/pstore.rb:97:in `close'
+    /usr/local/lib/ruby/1.8/cgi/session.rb:166:in `callback'
+    /usr/local/lib/ruby/1.8/cgi/session.rb:165:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/validations.rb:682:in `|'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/validations.rb:682:in `write_inheritable_set'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/validations.rb:240:in `validate_on_create'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/validations.rb:290:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/validations.rb:290:in `validates_each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/validations.rb:490:in `validates_uniqueness_of'
+    /app/models/user.rb:53
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:39:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:22:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /lib/login_system.rb:1
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:39:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:22:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    .//app/controllers/application.rb:1
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:207:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:39:in `require_or_load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:22:in `depend_on'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:178:in `require_dependency'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:134:in `load_file!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:97:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:80:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:80:in `const_load!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:71:in `prepare_application'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:37:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.004967)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:09:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.07660)
+Rendered memorial/_searchbox (0.00630)
+Completed in 0.10417 (9 reqs/sec) | Rendering: 0.09886 (94%) | DB: 0.00982 (9%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.006208)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:11:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00338)
+Rendered memorial/_searchbox (0.00232)
+Completed in 0.04535 (22 reqs/sec) | Rendering: 0.03967 (87%) | DB: 0.00621 (13%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.004804)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:15:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00384)
+Rendered memorial/_searchbox (0.00244)
+Completed in 0.05754 (17 reqs/sec) | Rendering: 0.05192 (90%) | DB: 0.00480 (8%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.079826)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-15 10:15:55) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/images/banner-maninwoods.png"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.004855)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:18:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00397)
+Rendered memorial/_searchbox (0.00259)
+
+
+ActionView::TemplateError (undefined method `first' for {:src=>"banner-maninwoods"}:Hash) on line #36 of app/views/layouts/memorial.rhtml:
+33: <body>
+34:     <div id="wrapper">
+35:         <div id="header">
+36:             <%= image_tag :src => "banner-maninwoods" %>
+37:             <h1 class="heading"><%= link_to "Forever Remember Me", { :controller => "memorial", :action => 'index' } %></h1>
+38:         </div>
+39:         <div id="container">
+
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/helpers/asset_tag_helper.rb:149:in `compute_public_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/helpers/asset_tag_helper.rb:121:in `image_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/helpers/asset_tag_helper.rb:136:in `image_tag'
+    #{RAILS_ROOT}/app/views/layouts/memorial.rhtml:36
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:226:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.005108)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:18:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00453)
+Rendered memorial/_searchbox (0.00233)
+Completed in 0.04875 (20 reqs/sec) | Rendering: 0.04284 (87%) | DB: 0.00511 (10%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.004511)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:19:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00394)
+Rendered memorial/_searchbox (0.00236)
+Completed in 0.05806 (17 reqs/sec) | Rendering: 0.03896 (67%) | DB: 0.00451 (7%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.023634)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:20:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00508)
+Rendered memorial/_searchbox (0.00230)
+ERROR: compiling _run_html_layouts_memorial RAISED compile error
+script/../config/../app/views/layouts/memorial.rhtml:36: syntax error
+_erbout.concat "            "; _erbout.concat(( link_to '<%= image_tag "banner-maninwoods.jpg" ).to_s); _erbout.concat "', { :controller => \"memorial\", :action => \"index\" } %>\n"
+                                                                                                                                             ^
+script/../config/../app/views/layouts/memorial.rhtml:69: syntax error
+Function body: def _run_html_layouts_memorial(local_assigns)
+_erbout = ''; _erbout.concat "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
+_erbout.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \n"
+_erbout.concat "\t\"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">\n"
+_erbout.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n"
+_erbout.concat "\t<head>\n"
+_erbout.concat "\t\t<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n"
+_erbout.concat "\t\t<meta http-equiv=\"Content-Language\" content=\"en-us\" />\n"
+_erbout.concat "\t\t\n"
+_erbout.concat "\t\t<title>Forever Remember Me</title>\n"
+_erbout.concat "\t\t\n"
+_erbout.concat "\t\t<meta name=\"ROBOTS\" content=\"ALL\" />\n"
+_erbout.concat "\t\t<meta http-equiv=\"imagetoolbar\" content=\"no\" />\n"
+_erbout.concat "\t\t<meta name=\"MSSmartTagsPreventParsing\" content=\"true\" />\n"
+_erbout.concat "\t\t<meta name=\"Copyright\" content=\"(c) 2005 Copyright content:  Copyright design: Jonathan Hoyt\" />\n"
+_erbout.concat "\t\t<!-- (c) Copyright 2005 by Jonathan Hoyt All Rights Reserved. -->\n"
+_erbout.concat "\t\t\n"
+_erbout.concat "\t\t<meta name=\"Keywords\" content=\"__KEYWORDS__\" />\n"
+_erbout.concat "\t\t<meta name=\"Description\" content=\"__DESCRIPTION__\" />\n"
+_erbout.concat "\n"
+_erbout.concat " \t\t"; _erbout.concat(( stylesheet_link_tag 'memorial' ).to_s); _erbout.concat "\n"
+_erbout.concat " \t\t"; _erbout.concat(( stylesheet_link_tag 'scaffold' ).to_s); _erbout.concat "   \n"
+_erbout.concat " \t\t\n"
+_erbout.concat " \t    "; _erbout.concat(( javascript_include_tag "prototype" ).to_s); _erbout.concat "\t\n"
+_erbout.concat "        "; _erbout.concat(( javascript_include_tag "scriptaculous" ).to_s); _erbout.concat "\n"
+_erbout.concat "        "; _erbout.concat(( javascript_include_tag "rico" ).to_s); _erbout.concat "\n"
+_erbout.concat "        "; _erbout.concat(( javascript_include_tag "external" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t<script type=\"text/javascript\"></script>\n"
+_erbout.concat "\n"
+_erbout.concat "        <base href=\"\" />\n"
+_erbout.concat "\t\t\n"
+_erbout.concat "\t</head>\n"
+_erbout.concat "\t\n"
+_erbout.concat "<body>\n"
+_erbout.concat "    <div id=\"wrapper\">\n"
+_erbout.concat "        <div id=\"header\">\n"
+_erbout.concat "            "; _erbout.concat(( link_to '<%= image_tag "banner-maninwoods.jpg" ).to_s); _erbout.concat "', { :controller => \"memorial\", :action => \"index\" } %>\n"
+_erbout.concat "            <h1 class=\"heading\">"; _erbout.concat(( link_to "Forever Remember Me", { :controller => "memorial", :action => 'index' } ).to_s); _erbout.concat "</h1>\n"
+_erbout.concat "        </div>\n"
+_erbout.concat "        <div id=\"container\">\n"
+_erbout.concat "            <div class=\"clearer\"></div>\n"
+_erbout.concat "            <div id=\"banner\">\n"
+_erbout.concat "                <h4 class=\"subtitle\">A place for remembering those we love.</h4>\n"
+_erbout.concat "            </div>            \n"
+_erbout.concat "            <div id=\"notice\">\n"
+_erbout.concat "                <span style=\"color: green\">"; _erbout.concat(( flash[:notice] ).to_s); _erbout.concat "</span>\n"
+_erbout.concat "            </div>\n"
+_erbout.concat "            <div id=\"content\">\n"
+_erbout.concat "                "; _erbout.concat(( @content_for_layout ).to_s); _erbout.concat "\n"
+_erbout.concat "            </div>\n"
+_erbout.concat "            <div class=\"clearer\"></div>\n"
+_erbout.concat "        </div>\n"
+_erbout.concat "        <div id=\"footer\">\n"
+_erbout.concat "            <div class=\"footer-background footer\">\n"
+_erbout.concat "                <p>Copyright Sunshine Industries 2005</p>\n"
+_erbout.concat "                <a href=\"http://validator.w3.org/check?uri=referer\">\n"
+_erbout.concat "                    <img src=\"http://www.w3.org/Icons/valid-xhtml11\" alt=\"Valid XHTML 1.1\" height=\"31\" width=\"88\" />\n"
+_erbout.concat "                </a>\n"
+_erbout.concat "                <a href=\"http://jigsaw.w3.org/css-validator/\">\n"
+_erbout.concat "                  <img style=\"border:0;width:88px;height:31px\"\n"
+_erbout.concat "                       src=\"http://jigsaw.w3.org/css-validator/images/vcss\" \n"
+_erbout.concat "                       alt=\"Valid CSS!\" />\n"
+_erbout.concat "                 </a>\n"
+_erbout.concat "             </div>\n"
+_erbout.concat "        </div>\n"
+_erbout.concat "    </div>\n"
+_erbout.concat "</body>\n"
+_erbout.concat "</html>\n"
+_erbout
+end
+Backtrace: script/../config/../app/views/layouts/memorial.rhtml:69:in `module_eval'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:423:in `module_eval'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:423:in `compile_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:259:in `compile_and_render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:226:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+./script/server:3
+
+
+ActionView::TemplateError (compile error
+script/../config/../app/views/layouts/memorial.rhtml:36: syntax error
+_erbout.concat "            "; _erbout.concat(( link_to '<%= image_tag "banner-maninwoods.jpg" ).to_s); _erbout.concat "', { :controller => \"memorial\", :action => \"index\" } %>\n"
+                                                                                                                                             ^
+script/../config/../app/views/layouts/memorial.rhtml:69: syntax error) on line #36 of app/views/layouts/memorial.rhtml:
+33: <body>
+34:     <div id="wrapper">
+35:         <div id="header">
+36:             <%= link_to '<%= image_tag "banner-maninwoods.jpg" %>', { :controller => "memorial", :action => "index" } %>
+37:             <h1 class="heading"><%= link_to "Forever Remember Me", { :controller => "memorial", :action => 'index' } %></h1>
+38:         </div>
+39:         <div id="container">
+
+    #{RAILS_ROOT}/app/views/layouts/memorial.rhtml:69:in `module_eval'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:423:in `module_eval'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:423:in `compile_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:259:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:226:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.005424)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:20:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00368)
+Rendered memorial/_searchbox (0.00231)
+Completed in 0.03650 (27 reqs/sec) | Rendering: 0.03073 (84%) | DB: 0.00542 (14%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.005098)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:20:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00333)
+Rendered memorial/_searchbox (0.00231)
+Completed in 0.03317 (30 reqs/sec) | Rendering: 0.02580 (77%) | DB: 0.00510 (15%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.004394)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#search (for 127.0.0.1 at 2005-12-15 10:21:14) [POST]
+  Parameters: {"commit"=>"Search", "action"=>"search", "q"=>"bob", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.163156)[0m   [0mSELECT * from memorials WHERE (LOWER(firstname) LIKE '%bob%' OR LOWER(lastname) LIKE '%bob%' OR LOWER(hometown) LIKE '%bob%') ORDER by created_at DESC[0m
+Rendering  within layouts/memorial
+Rendering memorial/search
+  [4;36;1mMemorial Columns (0.019347)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Completed in 2.24047 (0 reqs/sec) | Rendering: 0.04482 (2%) | DB: 0.18690 (8%) | 200 OK [http://0.0.0.0/memorial/search]
+  [4;35;1mUser Columns (0.004601)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:21:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00363)
+Rendered memorial/_searchbox (0.01265)
+Completed in 0.03220 (31 reqs/sec) | Rendering: 0.02709 (84%) | DB: 0.00460 (14%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.006129)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:22:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00611)
+Rendered memorial/_searchbox (0.00266)
+Completed in 0.05999 (16 reqs/sec) | Rendering: 0.04522 (75%) | DB: 0.00613 (10%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.004662)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:23:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00365)
+Rendered memorial/_searchbox (0.01529)
+Completed in 0.05896 (16 reqs/sec) | Rendering: 0.05281 (89%) | DB: 0.00466 (7%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.004707)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:46:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.03176)
+Rendered memorial/_searchbox (0.00225)
+Completed in 0.07038 (14 reqs/sec) | Rendering: 0.06343 (90%) | DB: 0.00471 (6%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.006188)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 10:56:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00396)
+Rendered memorial/_searchbox (0.00266)
+Completed in 0.05686 (17 reqs/sec) | Rendering: 0.03782 (66%) | DB: 0.00619 (10%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.004657)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:01:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.019079)[0m   [0mSELECT * FROM memorials [0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occured while evaluating nil.each) on line #3 of app/views/memorial/index.rhtml:
+1: <div class="column-right">
+2:     <h2>Recent Memorials</h2>
+3:     <% for @memorial in @memorials %>
+4:         <%= @memorial.firstname %> <%= @memorial.lastname %>
+5:     <% end %>
+6:     <% if @session[:user].nil? %>
+
+    #{RAILS_ROOT}/app/views/memorial/index.rhtml:3
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:655:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:220:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.018707)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:06:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.029860)[0m   [0mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mMemorial Columns (0.005634)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00335)
+Rendered memorial/_searchbox (0.00224)
+Completed in 0.10648 (9 reqs/sec) | Rendering: 0.02490 (23%) | DB: 0.05420 (50%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.005682)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:06:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.028417)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.005220)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00520)
+Rendered memorial/_searchbox (0.00302)
+Completed in 0.16417 (6 reqs/sec) | Rendering: 0.05846 (35%) | DB: 0.03932 (23%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.004711)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:08:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.049187)[0m   [0mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mMemorial Columns (0.005406)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00374)
+Rendered memorial/_searchbox (0.00341)
+Completed in 0.24569 (4 reqs/sec) | Rendering: 0.06609 (26%) | DB: 0.05930 (24%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.013968)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:08:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.027294)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.005811)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00396)
+Rendered memorial/_searchbox (0.00230)
+Completed in 0.15360 (6 reqs/sec) | Rendering: 0.04666 (30%) | DB: 0.04707 (30%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.006637)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:11:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.017689)[0m   [0mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mMemorial Columns (0.005557)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00325)
+Rendered memorial/_searchbox (0.00251)
+Completed in 0.13639 (7 reqs/sec) | Rendering: 0.05310 (38%) | DB: 0.02988 (21%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.004970)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:11:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.019516)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.013930)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00362)
+Rendered memorial/_searchbox (0.00239)
+Completed in 0.15727 (6 reqs/sec) | Rendering: 0.02853 (18%) | DB: 0.03842 (24%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.004514)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:13:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.014150)[0m   [0mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mMemorial Columns (0.005181)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00531)
+Rendered memorial/_searchbox (0.00227)
+Completed in 0.12508 (7 reqs/sec) | Rendering: 0.05075 (40%) | DB: 0.02384 (19%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.004727)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:13:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.028343)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.005488)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00400)
+Rendered memorial/_searchbox (0.00228)
+Completed in 0.11323 (8 reqs/sec) | Rendering: 0.03709 (32%) | DB: 0.03856 (34%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.005363)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:14:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.022906)[0m   [0mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mMemorial Columns (0.005438)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00325)
+Rendered memorial/_searchbox (0.00240)
+Completed in 0.13741 (7 reqs/sec) | Rendering: 0.04242 (30%) | DB: 0.03371 (24%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.010505)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:16:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.024470)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.005789)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00432)
+Rendered memorial/_searchbox (0.00265)
+Completed in 0.15726 (6 reqs/sec) | Rendering: 0.07101 (45%) | DB: 0.04076 (25%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.013451)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:16:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.031527)[0m   [0mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mMemorial Columns (0.005802)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00341)
+Rendered memorial/_searchbox (0.00238)
+Completed in 0.17596 (5 reqs/sec) | Rendering: 0.06148 (34%) | DB: 0.05078 (28%) | 200 OK [http://0.0.0.0/memorial]
+  [4;35;1mUser Columns (0.006547)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:16:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.022832)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.005147)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00318)
+Rendered memorial/_searchbox (0.01297)
+Completed in 0.16920 (5 reqs/sec) | Rendering: 0.04739 (28%) | DB: 0.03453 (20%) | 200 OK [http://0.0.0.0/memorial]
+  [4;36;1mUser Columns (0.004698)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2005-12-15 11:17:19) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"user"}
+Redirected to http://0.0.0.0:3000/memorial
+Completed in 0.00544 (183 reqs/sec) | DB: 0.00470 (86%) | 302 Found [http://0.0.0.0/user/logout]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:17:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.018938)[0m   [0mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mMemorial Columns (0.005505)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00183)
+Rendered memorial/_searchbox (0.00355)
+Completed in 0.13159 (7 reqs/sec) | Rendering: 0.04686 (35%) | DB: 0.02444 (18%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:18:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.025404)[0m   [0mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mMemorial Columns (0.007207)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00197)
+Rendered memorial/_searchbox (0.00208)
+Completed in 0.12656 (7 reqs/sec) | Rendering: 0.04545 (35%) | DB: 0.03261 (25%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 11:20:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.024201)[0m   [0mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;36;1mMemorial Columns (0.005414)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00208)
+Rendered memorial/_searchbox (0.00209)
+Completed in 0.14553 (6 reqs/sec) | Rendering: 0.04440 (30%) | DB: 0.02961 (20%) | 200 OK [http://0.0.0.0/memorial]
