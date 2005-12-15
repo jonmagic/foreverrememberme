@@ -9,6 +9,8 @@ class MemorialController < ApplicationController
   
   def show
     @memorial = Memorial.find(params[:id])
+    @memorial.views += 1
+    @memorial.save
     is_owner
 
   end
