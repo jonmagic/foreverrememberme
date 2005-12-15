@@ -158,7 +158,13 @@ html>body #banner {
 #footer {
 	height: 140px;
 	background: url("../images/border-bottom.png") no-repeat;
-	padding: 40px 0 0 60px;	
+	padding: 25px 35px 0 35px;
+	text-align: center;	
+}
+
+.footer-background {
+	padding: 10px;
+	background: url("../images/grey-stripes.gif");
 }
 
 /************* Public and Manage Index **************/
@@ -221,11 +227,14 @@ html>body #banner {
 	background: #EDF5F8;
 }
 
+#memorial-hitcounter {
+	background: #eee;
+}
+
 /************* Images *************/
 .picture-background, .picture-memorial {
 	padding: 10px;
 	background: url("../images/grey-stripes.gif");
-	text-align: left;
 }
 
 .picture-thumbwrapper {

@@ -1,8 +1,19 @@
-<%= render :partial => "memorial", :object => @memorial %>
+<div class="column-right">
+    <% if @owner > 0 %>
+        <%= render :partial => "userbox" %><br />           
+        <%= render :partial => "manage_this_memorial" %><br />      
+        <%= render :partial => "manage_your_memorials" %><br />     
+    <% end %>
+    <%= render :partial => "memorial_details", :object => @memorial %>
+</div>
 
-<%= link_to 'Edit', :action => 'edit', :id => @memorial %> |
-<%= link_to 'Back', :action => 'manage' %>
-<hr />
+<div class="column-left">
+    <%= render :partial => "memorial", :object => @memorial %>
+</div>
+<br style="clear:both"/>
+<br style="clear:both"/>
+<br style="clear:both"/>
+
 
 <% if @owner > 0 %>
 <div class="column-right">
@@ -11,7 +22,6 @@
 <div class="column-left">
     <h3>Pictures</h3>
     <%= render :partial => "owner_picture_view", :object => @memorial %>
-
 </div>
 <% end %>
 
@@ -21,5 +31,9 @@
 <% end %>
 
 <div class="clearer"></div>
+<br style="clear:both"/>
+<br style="clear:both"/>
+<br style="clear:both"/>
+
 
 <%= render :partial => "comments", :object => @memorial %>

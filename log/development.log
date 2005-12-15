@@ -10951,3 +10951,678 @@ Rendered memorial/_owner_picture_view (0.00895)
   [4;35;1mComment Load (0.003721)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 11) [0m
 Rendered memorial/_comments (0.01619)
 Completed in 0.37843 (2 reqs/sec) | Rendering: 0.05434 (14%) | DB: 0.03279 (8%) | 200 OK [http://0.0.0.0/memorial/show/11]
+  [4;36;1mUser Columns (0.007322)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:48:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006304)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '11') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005326)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001173)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.001869)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-15 01:41:09', `views` = 2, `date_of_birth` = '1992-04-11', `lastname` = 'Bat', `message` = 'Doh', `date_of_death` = '2005-12-15', `hometown` = 'Doh, USA', `image` = NULL, `user_id` = 1, `firstname` = 'Ding', `updated_at` = '2005-12-15 01:48:26' WHERE id = 11[0m
+  [4;35;1mSQL (0.000981)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.03465)
+Rendered memorial/_uploadpictures (0.00586)
+  [4;36;1mPicture Load (0.003607)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 11) [0m
+Rendered memorial/_owner_picture_view (0.00878)
+  [4;35;1mComment Load (0.003962)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 11) [0m
+Rendered memorial/_comments (0.01489)
+Completed in 0.19117 (5 reqs/sec) | Rendering: 0.07261 (37%) | DB: 0.03054 (15%) | 200 OK [http://0.0.0.0/memorial/show/11]
+  [4;36;1mUser Columns (0.009539)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:48:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.047073)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.017604)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001389)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002488)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 2, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = '', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:48:42' WHERE id = 10[0m
+  [4;35;1mSQL (0.001017)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.02129)
+Rendered memorial/_uploadpictures (0.00482)
+  [4;36;1mPicture Load (0.005184)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.011290)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.08107)
+  [4;36;1mComment Load (0.043258)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.05221)
+Completed in 0.46260 (2 reqs/sec) | Rendering: 0.12516 (27%) | DB: 0.13884 (30%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004603)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-15 01:48:58) [GET]
+  Parameters: {"action"=>"edit", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.109151)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.022036)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Rendered memorial/_form (1.13807)
+Completed in 1.39591 (0 reqs/sec) | Rendering: 1.16483 (83%) | DB: 0.13579 (9%) | 200 OK [http://0.0.0.0/memorial/edit/10]
+  [4;36;1mUser Columns (0.004513)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#update (for 127.0.0.1 at 2005-12-15 01:49:20) [POST]
+  Parameters: {"commit"=>"Edit", "action"=>"update", "id"=>"10", "controller"=>"memorial", "memorial"=>{"date_of_birth(2i)"=>"9", "date_of_death(2i)"=>"3", "message"=>"In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky's preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"", "date_of_birth(3i)"=>"4", "updated_at"=>"2005-12-15 01:48:42", "date_of_death(3i)"=>"18", "lastname"=>"Bigelow", "firstname"=>"Brandy", "views"=>"0", "user_id"=>"1", "hometown"=>"Hometown, USA", "date_of_death(1i)"=>"2002", "date_of_birth(1i)"=>"1967", "created_at"=>"2005-12-12 23:21:44"}}
+  [4;35;1mMemorial Load (0.020426)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006125)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001953)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.005421)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 0, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:49:20' WHERE id = 10[0m
+  [4;35;1mSQL (0.000977)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 0.13196 (7 reqs/sec) | DB: 0.03941 (29%) | 302 Found [http://0.0.0.0/memorial/update/10]
+  [4;36;1mUser Columns (0.005184)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:49:21) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.007156)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.007008)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.003735)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002236)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 1, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:49:21' WHERE id = 10[0m
+  [4;35;1mSQL (0.007097)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00794)
+Rendered memorial/_uploadpictures (0.00599)
+  [4;36;1mPicture Load (0.003448)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.009141)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.04054)
+  [4;36;1mComment Load (0.004831)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01404)
+Completed in 0.40047 (2 reqs/sec) | Rendering: 0.06690 (16%) | DB: 0.04984 (12%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004597)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:49:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007209)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.009960)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000974)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002108)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 2, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:49:47' WHERE id = 10[0m
+  [4;36;1mSQL (0.004144)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01002)
+Rendered memorial/_uploadpictures (0.00780)
+  [4;35;1mPicture Load (0.004920)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004166)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03852)
+  [4;35;1mComment Load (0.004255)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01761)
+Completed in 0.23424 (4 reqs/sec) | Rendering: 0.11121 (47%) | DB: 0.04233 (18%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.006833)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:50:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006903)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.008522)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001056)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002060)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 3, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:50:34' WHERE id = 10[0m
+  [4;35;1mSQL (0.001407)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00792)
+Rendered memorial/_uploadpictures (0.00526)
+  [4;36;1mPicture Load (0.006596)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.003869)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.04047)
+  [4;36;1mComment Load (0.004090)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01394)
+Completed in 0.20785 (4 reqs/sec) | Rendering: 0.08717 (41%) | DB: 0.04134 (19%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.011658)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:51:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007237)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.007415)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001012)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002563)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 4, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:51:09' WHERE id = 10[0m
+  [4;36;1mSQL (0.001021)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00789)
+Rendered memorial/_uploadpictures (0.00479)
+  [4;35;1mPicture Load (0.003486)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004427)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03598)
+  [4;35;1mComment Load (0.004763)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01465)
+Completed in 0.19475 (5 reqs/sec) | Rendering: 0.07615 (39%) | DB: 0.04358 (22%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.042164)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:52:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.011807)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.007456)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000970)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002128)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 5, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:52:04' WHERE id = 10[0m
+  [4;35;1mSQL (0.001110)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00787)
+Rendered memorial/_uploadpictures (0.00520)
+  [4;36;1mPicture Load (0.004668)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.006464)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.04333)
+  [4;36;1mComment Load (0.004243)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01577)
+Completed in 0.22771 (4 reqs/sec) | Rendering: 0.10688 (46%) | DB: 0.08101 (35%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004507)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:53:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005857)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.014990)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000962)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.005028)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 6, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:53:10' WHERE id = 10[0m
+  [4;36;1mSQL (0.000959)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01136)
+Rendered memorial/_uploadpictures (0.00733)
+  [4;35;1mPicture Load (0.004266)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004841)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03385)
+  [4;35;1mComment Load (0.005805)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.03115)
+Completed in 0.22249 (4 reqs/sec) | Rendering: 0.09607 (43%) | DB: 0.04722 (21%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005445)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:53:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.010856)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005458)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001381)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002071)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 7, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:53:45' WHERE id = 10[0m
+  [4;35;1mSQL (0.001009)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00690)
+Rendered memorial/_uploadpictures (0.00543)
+  [4;36;1mPicture Load (0.004477)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004904)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.04292)
+  [4;36;1mComment Load (0.003798)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.02325)
+Completed in 0.23348 (4 reqs/sec) | Rendering: 0.08269 (35%) | DB: 0.03940 (16%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.005274)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:54:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007072)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005561)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001010)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.024178)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 8, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:54:01' WHERE id = 10[0m
+  [4;36;1mSQL (0.001004)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00722)
+Rendered memorial/_uploadpictures (0.00777)
+  [4;35;1mPicture Load (0.003523)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.009186)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.04651)
+  [4;35;1mComment Load (0.005401)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01522)
+Completed in 0.26480 (3 reqs/sec) | Rendering: 0.07676 (28%) | DB: 0.06221 (23%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.004758)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:56:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006332)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006173)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001045)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002441)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 9, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:56:14' WHERE id = 10[0m
+  [4;35;1mSQL (0.000997)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01272)
+Rendered memorial/_uploadpictures (0.00652)
+  [4;36;1mPicture Load (0.003889)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004041)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03468)
+  [4;36;1mComment Load (0.003743)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01319)
+Completed in 0.42109 (2 reqs/sec) | Rendering: 0.28748 (68%) | DB: 0.03342 (7%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.006977)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:56:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005686)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.011476)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000984)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002043)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 10, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:56:58' WHERE id = 10[0m
+  [4;36;1mSQL (0.000972)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01146)
+Rendered memorial/_uploadpictures (0.00519)
+  [4;35;1mPicture Load (0.004024)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.006019)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03961)
+  [4;35;1mComment Load (0.003964)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01335)
+Completed in 0.22085 (4 reqs/sec) | Rendering: 0.09633 (43%) | DB: 0.04214 (19%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.004844)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 01:57:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006013)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005537)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001176)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002501)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 11, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 01:57:35' WHERE id = 10[0m
+  [4;35;1mSQL (0.001016)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00678)
+Rendered memorial/_uploadpictures (0.00478)
+  [4;36;1mPicture Load (0.003769)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.003969)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.04290)
+  [4;36;1mComment Load (0.010085)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.02083)
+Completed in 0.25122 (3 reqs/sec) | Rendering: 0.09033 (35%) | DB: 0.03891 (15%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.006745)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:01:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.010024)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.008148)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001025)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002033)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 12, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:01:01' WHERE id = 10[0m
+  [4;36;1mSQL (0.001206)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.01641)
+Rendered memorial/_uploadpictures (0.00543)
+  [4;35;1mPicture Load (0.003557)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.003807)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.04776)
+  [4;35;1mComment Load (0.003984)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.02212)
+Completed in 0.25258 (3 reqs/sec) | Rendering: 0.11908 (47%) | DB: 0.04053 (16%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005008)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:01:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006561)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.007788)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000955)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.005400)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 13, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:01:41' WHERE id = 10[0m
+  [4;35;1mSQL (0.001034)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00224)
+Rendered memorial/_uploadpictures (0.00514)
+  [4;36;1mPicture Load (0.006605)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004712)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03985)
+  [4;36;1mComment Load (0.006535)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01539)
+Completed in 0.21671 (4 reqs/sec) | Rendering: 0.08445 (38%) | DB: 0.04460 (20%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.005353)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:02:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007529)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006891)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.009059)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002450)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 14, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:02:44' WHERE id = 10[0m
+  [4;36;1mSQL (0.000986)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00072)
+Rendered memorial/_uploadpictures (0.00540)
+  [4;35;1mPicture Load (0.004738)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.005251)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.14099)
+  [4;35;1mComment Load (0.006945)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.03185)
+Completed in 0.36257 (2 reqs/sec) | Rendering: 0.22768 (62%) | DB: 0.04920 (13%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.014474)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:03:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006495)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.009391)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.002391)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.018042)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 15, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:03:07' WHERE id = 10[0m
+  [4;35;1mSQL (0.001037)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial (0.00070)
+Rendered memorial/_uploadpictures (0.00578)
+  [4;36;1mPicture Load (0.014210)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004005)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.13176)
+  [4;36;1mComment Load (0.014537)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.02625)
+Completed in 0.59215 (1 reqs/sec) | Rendering: 0.30898 (52%) | DB: 0.08458 (14%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.008697)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:06:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.012892)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.016528)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001363)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002459)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 16, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:06:00' WHERE id = 10[0m
+  [4;36;1mSQL (0.000991)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00311)
+Rendered memorial/_managebar (0.00665)
+Rendered memorial/_memorial_details (0.01750)
+Rendered memorial/_memorial (0.00077)
+Rendered memorial/_uploadpictures (0.00660)
+  [4;35;1mPicture Load (0.003400)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.006665)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03707)
+  [4;35;1mComment Load (0.005792)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01623)
+Completed in 0.30716 (3 reqs/sec) | Rendering: 0.10709 (34%) | DB: 0.05879 (19%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.014625)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:08:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006038)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.011172)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000985)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.008480)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 17, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:08:43' WHERE id = 10[0m
+  [4;35;1mSQL (0.001073)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00567)
+Rendered memorial/_managebar (0.00914)
+Rendered memorial/_memorial_details (0.00810)
+Rendered memorial/_memorial (0.00069)
+Rendered memorial/_uploadpictures (0.01107)
+  [4;36;1mPicture Load (0.004634)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.007685)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.21884)
+  [4;36;1mComment Load (0.003843)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01390)
+Completed in 0.43232 (2 reqs/sec) | Rendering: 0.28989 (67%) | DB: 0.05853 (13%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.004901)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:13:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.011908)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005953)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001369)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002076)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 18, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:13:28' WHERE id = 10[0m
+  [4;36;1mSQL (0.001004)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_manage_this_memorial (0.00995)
+Rendered memorial/_manage_your_memorials (0.00915)
+Rendered memorial/_memorial_details (0.01112)
+Rendered memorial/_memorial (0.00071)
+Rendered memorial/_uploadpictures (0.00474)
+  [4;35;1mPicture Load (0.004090)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.003849)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03712)
+  [4;35;1mComment Load (0.003907)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01474)
+Completed in 0.25311 (3 reqs/sec) | Rendering: 0.12567 (49%) | DB: 0.03906 (15%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.005661)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:14:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.007878)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.008659)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000964)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002635)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 19, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:14:33' WHERE id = 10[0m
+  [4;35;1mSQL (0.000988)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00318)
+Rendered memorial/_manage_this_memorial (0.00458)
+Rendered memorial/_manage_your_memorials (0.00188)
+Rendered memorial/_memorial_details (0.00787)
+Rendered memorial/_memorial (0.00091)
+Rendered memorial/_uploadpictures (0.01169)
+  [4;36;1mPicture Load (0.003621)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004457)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.30309)
+  [4;36;1mComment Load (0.004060)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01761)
+Completed in 0.51115 (1 reqs/sec) | Rendering: 0.38613 (75%) | DB: 0.03892 (7%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;35;1mUser Columns (0.005928)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:15:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.010478)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.011544)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.002241)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002128)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 20, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:15:02' WHERE id = 10[0m
+  [4;36;1mSQL (0.001177)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.01183)
+Rendered memorial/_manage_this_memorial (0.00556)
+Rendered memorial/_manage_your_memorials (0.00221)
+Rendered memorial/_memorial_details (0.00961)
+Rendered memorial/_memorial (0.00069)
+Rendered memorial/_uploadpictures (0.00545)
+  [4;35;1mPicture Load (0.006726)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.003840)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03620)
+  [4;35;1mComment Load (0.006425)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01846)
+Completed in 0.23683 (4 reqs/sec) | Rendering: 0.10789 (45%) | DB: 0.05049 (21%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.004926)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-15 02:15:13) [GET]
+  Parameters: {"action"=>"edit", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006435)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005698)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Rendered memorial/_form (0.02411)
+Completed in 0.12504 (7 reqs/sec) | Rendering: 0.04960 (39%) | DB: 0.01706 (13%) | 200 OK [http://0.0.0.0/memorial/edit/10]
+  [4;35;1mUser Columns (0.005229)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#update (for 127.0.0.1 at 2005-12-15 02:15:26) [POST]
+  Parameters: {"commit"=>"Edit", "action"=>"update", "id"=>"10", "controller"=>"memorial", "memorial"=>{"date_of_birth(2i)"=>"9", "date_of_death(2i)"=>"3", "message"=>"In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky's preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"", "date_of_birth(3i)"=>"4", "updated_at"=>"2005-12-15 02:15:02", "date_of_death(3i)"=>"18", "lastname"=>"Bigelow", "firstname"=>"Brandy", "views"=>"0", "user_id"=>"1", "hometown"=>"Hometown, USA", "date_of_death(1i)"=>"2002", "date_of_birth(1i)"=>"1967", "created_at"=>"2005-12-12 23:21:44"}}
+  [4;36;1mMemorial Load (0.006888)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005847)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001011)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.016556)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 0, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:15:26' WHERE id = 10[0m
+  [4;36;1mSQL (0.001599)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/10
+Completed in 0.20011 (4 reqs/sec) | DB: 0.03713 (18%) | 302 Found [http://0.0.0.0/memorial/update/10]
+  [4;35;1mUser Columns (0.004793)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:15:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.006406)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.007292)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001010)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002077)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 1, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:15:27' WHERE id = 10[0m
+  [4;36;1mSQL (0.001244)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00336)
+Rendered memorial/_manage_this_memorial (0.00268)
+Rendered memorial/_manage_your_memorials (0.00191)
+Rendered memorial/_memorial_details (0.00850)
+Rendered memorial/_memorial (0.00095)
+Rendered memorial/_uploadpictures (0.00963)
+  [4;35;1mPicture Load (0.004320)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;36;1mPicture Columns (0.004257)[0m   [0;1mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_owner_picture_view (0.03598)
+  [4;35;1mComment Load (0.003883)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01695)
+Completed in 0.21742 (4 reqs/sec) | Rendering: 0.09934 (45%) | DB: 0.03528 (16%) | 200 OK [http://0.0.0.0/memorial/show/10]
+  [4;36;1mUser Columns (0.009439)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2005-12-15 02:15:40) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"user"}
+Redirected to http://0.0.0.0:3000/memorial
+Completed in 0.00536 (186 reqs/sec) | DB: 0.00944 (176%) | 302 Found [http://0.0.0.0/user/logout]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-15 02:15:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+Rendering  within layouts/memorial
+Rendering memorial/index
+Rendered memorial/_userbox (0.00238)
+Rendered memorial/_searchbox (0.01340)
+Completed in 0.12651 (7 reqs/sec) | Rendering: 0.05510 (43%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:15:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.024378)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.014510)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001094)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002392)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 2, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:15:46' WHERE id = 10[0m
+  [4;35;1mSQL (0.001465)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.01294)
+Rendered memorial/_memorial (0.00083)
+  [4;36;1mPicture Load (0.003802)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.003817)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_public_picture_view (0.03912)
+  [4;36;1mComment Load (0.003607)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01275)
+Completed in 0.27794 (3 reqs/sec) | Rendering: 0.06944 (24%) | DB: 0.05507 (19%) | 200 OK [http://0.0.0.0/memorial/show/10]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:16:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.008798)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006023)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001135)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002048)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 3, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:16:11' WHERE id = 10[0m
+  [4;35;1mSQL (0.000976)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.01843)
+Rendered memorial/_memorial (0.00069)
+  [4;36;1mPicture Load (0.003552)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.006311)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_public_picture_view (0.04952)
+  [4;36;1mComment Load (0.004930)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01423)
+Completed in 0.22372 (4 reqs/sec) | Rendering: 0.08136 (36%) | DB: 0.03377 (15%) | 200 OK [http://0.0.0.0/memorial/show/10]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:21:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.006597)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005859)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000993)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002723)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 4, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:21:00' WHERE id = 10[0m
+  [4;35;1mSQL (0.003689)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.03200)
+Rendered memorial/_memorial (0.00068)
+  [4;36;1mPicture Load (0.003861)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.012720)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_public_picture_view (0.03669)
+  [4;36;1mComment Load (0.004348)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01405)
+Completed in 0.20589 (4 reqs/sec) | Rendering: 0.07882 (38%) | DB: 0.04079 (19%) | 200 OK [http://0.0.0.0/memorial/show/10]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:21:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.009659)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005805)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000980)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002436)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 5, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:21:14' WHERE id = 10[0m
+  [4;35;1mSQL (0.001392)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.01893)
+Rendered memorial/_memorial (0.00081)
+  [4;36;1mPicture Load (0.005207)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.007282)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_public_picture_view (0.02448)
+  [4;36;1mComment Load (0.003739)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01410)
+Completed in 0.20111 (4 reqs/sec) | Rendering: 0.05879 (29%) | DB: 0.03650 (18%) | 200 OK [http://0.0.0.0/memorial/show/10]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:21:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.046085)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006056)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001936)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.007548)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 6, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:21:41' WHERE id = 10[0m
+  [4;35;1mSQL (0.000965)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.02328)
+Rendered memorial/_memorial (0.00128)
+  [4;36;1mPicture Load (0.003543)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004429)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_public_picture_view (0.04830)
+  [4;36;1mComment Load (0.003878)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01328)
+Completed in 0.28380 (3 reqs/sec) | Rendering: 0.08696 (30%) | DB: 0.07444 (26%) | 200 OK [http://0.0.0.0/memorial/show/10]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:24:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.017069)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.007843)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000966)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002202)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 7, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:24:05' WHERE id = 10[0m
+  [4;35;1mSQL (0.000993)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.02204)
+Rendered memorial/_memorial (0.00131)
+  [4;36;1mPicture Load (0.006314)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004645)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_public_picture_view (0.02436)
+  [4;36;1mComment Load (0.006763)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01658)
+Completed in 0.22135 (4 reqs/sec) | Rendering: 0.07135 (32%) | DB: 0.04680 (21%) | 200 OK [http://0.0.0.0/memorial/show/10]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-15 02:24:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.014577)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '10') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.014140)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.002351)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002132)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-12 23:21:44', `views` = 8, `date_of_birth` = '1967-09-04', `lastname` = 'Bigelow', `message` = 'In this episode, The Brain records a subliminal message telling \"Citzens of the World\" that they must do whatever he says. Now all he needs is a means to get the message \"air time.\" Pinky\'s preoccupation with country music provides inspiration, and before you can say \"Howdy!\" The Brain gets a pair of stilts and transforms himself from a tiny white lab mouse into \"the best new country music star over six foot six.\"', `date_of_death` = '2002-03-18', `hometown` = 'Hometown, USA', `image` = '/picture/image/44/jonmagic-medium.jpg', `user_id` = 1, `firstname` = 'Brandy', `updated_at` = '2005-12-15 02:24:49' WHERE id = 10[0m
+  [4;35;1mSQL (0.001713)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.01889)
+Rendered memorial/_memorial (0.00093)
+  [4;36;1mPicture Load (0.005302)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 10) [0m
+  [4;35;1mPicture Columns (0.004120)[0m   [0mSHOW FIELDS FROM pictures[0m
+Rendered memorial/_public_picture_view (0.02506)
+  [4;36;1mComment Load (0.003981)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 10) [0m
+Rendered memorial/_comments (0.01410)
+Completed in 0.24913 (4 reqs/sec) | Rendering: 0.05907 (23%) | DB: 0.04832 (19%) | 200 OK [http://0.0.0.0/memorial/show/10]

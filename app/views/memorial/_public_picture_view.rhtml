@@ -1,6 +1,6 @@
 <% for @picture in @memorial.pictures %>
     <div class="picture-thumbwrapper">
-        <div class="picture-thumb">
+        <div class="picture-background">
             <a href="<%= url_for_file_column "picture", "image" %>" rel="external">
                 <%= image_tag url_for_file_column "picture", "image", "thumb"  %>
             </a>
