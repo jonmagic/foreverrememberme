@@ -25,6 +25,15 @@ class MemorialController < ApplicationController
     redirect_to :action => "show", :id => params[:id]
   end
   
+  def feedback
+  end
+  
+  def get_feedback
+  ...
+    Notifier::deliver_send_feedback( feedback )
+  ...
+  end
+  
   
 # Management methods, all protected by user account
 
