@@ -23,17 +23,7 @@ class MemorialController < ApplicationController
     Memorial.find(params[:id]).comments.create(params[:comment])
     flash[:notice] = "Added Your Comment."
     redirect_to :action => "show", :id => params[:id]
-  end
-  
-  def feedback
-  end
-  
-  def get_feedback
-  ...
-    Notifier::deliver_send_feedback( feedback )
-  ...
-  end
-  
+  end  
   
 # Management methods, all protected by user account
 
