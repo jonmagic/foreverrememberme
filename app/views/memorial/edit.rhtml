@@ -1,7 +1,41 @@
 <h1>Editing memorial</h1>
 
 <%= start_form_tag :action => 'update', :id => @memorial %>
-  <%= render :partial => 'form' %>
+
+<%= error_messages_for 'memorial' %>
+
+<!--[form:memorial]-->
+<p><label for="memorial_firstname">Firstname</label><br/>
+<%= text_field 'memorial', 'firstname'  %></p>
+
+<p><label for="memorial_lastname">Lastname</label><br/>
+<%= text_field 'memorial', 'lastname'  %></p>
+
+<p><label for="memorial_message">Message</label><br/>
+<div dojoType="Editor" items="textGroup;|;listGroup;">
+    some content
+</div>    
+<textarea  dojoType="Editor" id="memorial_message" name="memorial[message]"></textarea></p>
+
+<p><label for="memorial_hometown">Hometown</label><br/>
+<%= text_field 'memorial', 'hometown'  %></p>
+
+<p><label for="memorial_date_of_birth">Date of birth</label><br/>
+<%= date_select 'memorial', 'date_of_birth', :start_year => 1900  %></p>
+
+<p><label for="memorial_date_of_death">Date of death</label><br/>
+<%= date_select 'memorial', 'date_of_death', :start_year => 1900  %></p>
+
+<%= hidden_field 'memorial', 'created_at'  %>
+
+<%= hidden_field 'memorial', 'updated_at'  %>
+
+<%= hidden_field 'memorial', 'user_id', 'value' => @session[:user].id  %>
+
+<%= hidden_field 'memorial', 'views', 'value' => 0  %>
+
+<!--[eoform:memorial]-->
+
   <%= submit_tag 'Edit' %>
 <%= end_form_tag %>
 
