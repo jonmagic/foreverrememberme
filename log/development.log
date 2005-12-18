@@ -14773,3 +14773,397 @@ ActionController::RoutingError (Recognition failed for "/javascripts/__package__
 
 
 Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.004637)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 12:46:01) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.031204)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.015488)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Completed in 0.31075 (3 reqs/sec) | Rendering: 0.11441 (36%) | DB: 0.13189 (42%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;36;1mUser Columns (0.004648)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-18 12:46:03) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/javascripts/dojo.js"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.004890)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 12:46:10) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.044998)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005511)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Completed in 0.13866 (7 reqs/sec) | Rendering: 0.03431 (24%) | DB: 0.06005 (43%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;36;1mUser Columns (0.004885)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 12:46:50) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.032743)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005754)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Completed in 0.23226 (4 reqs/sec) | Rendering: 0.13195 (56%) | DB: 0.04338 (18%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;35;1mUser Columns (0.004383)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 12:47:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.023247)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006659)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000976)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.003127)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 5, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a test</b> to see if I can <em>em my way into</em> the front row...<br /><br />But if it doesn\'t work <u>I won\'t cry</u>.', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 12:47:17' WHERE id = 1[0m
+  [4;36;1mSQL (0.000960)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00807)
+Rendered memorial/_manage_this_memorial (0.00238)
+Rendered memorial/_manage_your_memorials (0.00192)
+Rendered memorial/_memorial_details (0.01494)
+Rendered memorial/_memorial (0.00071)
+Rendered memorial/_uploadpictures (0.02709)
+  [4;35;1mPicture Load (0.007558)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.01297)
+  [4;36;1mComment Load (0.005511)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.008746)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.06428)
+Completed in 0.33837 (2 reqs/sec) | Rendering: 0.13507 (39%) | DB: 0.06117 (18%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.004825)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 12:47:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.039762)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006578)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000967)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.001992)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 6, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a test</b> to see if I can <em>em my way into</em> the front row...<br /><br />But if it doesn\'t work <u>I won\'t cry</u>.', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 12:47:27' WHERE id = 1[0m
+  [4;35;1mSQL (0.001005)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00367)
+Rendered memorial/_manage_this_memorial (0.00232)
+Rendered memorial/_manage_your_memorials (0.00228)
+Rendered memorial/_memorial_details (0.01160)
+Rendered memorial/_memorial (0.00092)
+Rendered memorial/_uploadpictures (0.00583)
+  [4;36;1mPicture Load (0.003134)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00836)
+  [4;35;1mComment Load (0.010778)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.004166)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.06729)
+Completed in 0.28394 (3 reqs/sec) | Rendering: 0.11828 (41%) | DB: 0.07321 (25%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.004538)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 12:48:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.030593)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.009395)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000943)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002919)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 7, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a test</b> to see if I can <em>em my way into</em> the front row...<br /><br />But if it doesn\'t work <u>I won\'t cry</u>.', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 12:48:28' WHERE id = 1[0m
+  [4;36;1mSQL (0.001266)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00308)
+Rendered memorial/_manage_this_memorial (0.00348)
+Rendered memorial/_manage_your_memorials (0.00212)
+Rendered memorial/_memorial_details (0.00846)
+Rendered memorial/_memorial (0.01355)
+Rendered memorial/_uploadpictures (0.00857)
+  [4;35;1mPicture Load (0.003268)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.01059)
+  [4;36;1mComment Load (0.004389)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.005401)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.03352)
+Completed in 0.32494 (3 reqs/sec) | Rendering: 0.14788 (45%) | DB: 0.06271 (19%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.004445)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 12:48:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.024385)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.008154)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000985)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.003276)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 8, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a test</b> to see if I can <em>em my way into</em> the front row...<br /><br />But if it doesn\'t work <u>I won\'t cry</u>.', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 12:48:38' WHERE id = 1[0m
+  [4;35;1mSQL (0.000961)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00336)
+Rendered memorial/_manage_this_memorial (0.00236)
+Rendered memorial/_manage_your_memorials (0.00218)
+Rendered memorial/_memorial_details (0.01479)
+Rendered memorial/_memorial (0.00097)
+Rendered memorial/_uploadpictures (0.01269)
+  [4;36;1mPicture Load (0.010405)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.03134)
+  [4;35;1mComment Load (0.004412)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.025611)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.06647)
+Completed in 0.30149 (3 reqs/sec) | Rendering: 0.11508 (38%) | DB: 0.08263 (27%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.004625)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 12:48:47) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.006544)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006836)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Completed in 0.12932 (7 reqs/sec) | Rendering: 0.04704 (36%) | DB: 0.01800 (13%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;36;1mUser Columns (0.006211)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 12:49:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.047664)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006331)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.013980)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.017707)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 9, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a test</b> to see if I can <em>em my way into</em> the front row...<br /><br />But if it doesn\'t work <u>I won\'t cry</u>.', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 12:49:29' WHERE id = 1[0m
+  [4;35;1mSQL (0.001182)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00455)
+Rendered memorial/_manage_this_memorial (0.00248)
+Rendered memorial/_manage_your_memorials (0.00199)
+Rendered memorial/_memorial_details (0.00826)
+Rendered memorial/_memorial (0.00072)
+Rendered memorial/_uploadpictures (0.00520)
+  [4;36;1mPicture Load (0.003233)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00927)
+  [4;35;1mComment Load (0.004587)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.004782)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04652)
+Completed in 0.29888 (3 reqs/sec) | Rendering: 0.08462 (28%) | DB: 0.10568 (35%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.008060)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 12:49:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.038081)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005678)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000994)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.005159)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 10, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a test</b> to see if I can <em>em my way into</em> the front row...<br /><br />But if it doesn\'t work <u>I won\'t cry</u>.', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 12:49:40' WHERE id = 1[0m
+  [4;36;1mSQL (0.001013)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00364)
+Rendered memorial/_manage_this_memorial (0.00229)
+Rendered memorial/_manage_your_memorials (0.00289)
+Rendered memorial/_memorial_details (0.00778)
+Rendered memorial/_memorial (0.00072)
+Rendered memorial/_uploadpictures (0.00571)
+  [4;35;1mPicture Load (0.004377)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.02061)
+  [4;36;1mComment Load (0.004451)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004423)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04330)
+Completed in 0.28334 (3 reqs/sec) | Rendering: 0.12523 (44%) | DB: 0.07224 (25%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.006057)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 12:50:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.019845)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005604)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001943)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002969)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 11, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a test</b> to see if I can <em>em my way into</em> the front row...<br /><br />But if it doesn\'t work <u>I won\'t cry</u>.', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 12:50:04' WHERE id = 1[0m
+  [4;35;1mSQL (0.001037)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00362)
+Rendered memorial/_manage_this_memorial (0.00270)
+Rendered memorial/_manage_your_memorials (0.00193)
+Rendered memorial/_memorial_details (0.01436)
+Rendered memorial/_memorial (0.00123)
+Rendered memorial/_uploadpictures (0.00503)
+  [4;36;1mPicture Load (0.006238)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.02702)
+  [4;35;1mComment Load (0.004427)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.004231)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.03233)
+Completed in 0.24554 (4 reqs/sec) | Rendering: 0.09666 (39%) | DB: 0.05235 (21%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.006030)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 12:50:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.006678)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005803)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001461)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002319)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 12, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a test</b> to see if I can <em>em my way into</em> the front row...<br /><br />But if it doesn\'t work <u>I won\'t cry</u>.', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 12:50:13' WHERE id = 1[0m
+  [4;36;1mSQL (0.001194)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00351)
+Rendered memorial/_manage_this_memorial (0.00250)
+Rendered memorial/_manage_your_memorials (0.00218)
+Rendered memorial/_memorial_details (0.04757)
+Rendered memorial/_memorial (0.00071)
+Rendered memorial/_uploadpictures (0.00853)
+  [4;35;1mPicture Load (0.003863)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.01089)
+  [4;36;1mComment Load (0.007044)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004418)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.19448)
+Completed in 0.45078 (2 reqs/sec) | Rendering: 0.28105 (62%) | DB: 0.03881 (8%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.005259)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 12:51:44) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.040556)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006515)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Rendered memorial/_form (0.03442)
+Completed in 0.24020 (4 reqs/sec) | Rendering: 0.12126 (50%) | DB: 0.05233 (21%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;35;1mUser Columns (0.006534)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 12:53:48) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.026228)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006105)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Rendered memorial/_form (0.06752)
+Completed in 0.20804 (4 reqs/sec) | Rendering: 0.09304 (44%) | DB: 0.03887 (18%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;36;1mUser Columns (0.004701)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 12:56:27) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.134833)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006211)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Rendered memorial/_form (0.06776)
+Completed in 0.33511 (2 reqs/sec) | Rendering: 0.11979 (35%) | DB: 0.14575 (43%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;35;1mUser Columns (0.007211)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 13:23:43) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.048412)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005537)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Rendered memorial/_form (0.07109)
+Completed in 0.48114 (2 reqs/sec) | Rendering: 0.08809 (18%) | DB: 0.06116 (12%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;36;1mUser Columns (0.006125)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 13:24:25) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.029465)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005465)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Rendered memorial/_form (0.03981)
+Completed in 0.15160 (6 reqs/sec) | Rendering: 0.05433 (35%) | DB: 0.04106 (27%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;35;1mUser Columns (0.004369)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#edit (for 127.0.0.1 at 2005-12-18 13:28:21) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.024597)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.018600)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendering  within layouts/memorial
+Rendering memorial/edit
+Rendered memorial/_form (0.03788)
+Completed in 0.26479 (3 reqs/sec) | Rendering: 0.08015 (30%) | DB: 0.04757 (17%) | 200 OK [http://0.0.0.0/memorial/edit/1]
+  [4;36;1mUser Columns (0.094518)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#update (for 127.0.0.1 at 2005-12-18 13:29:45) [POST]
+  Parameters: {"commit"=>"Edit", "action"=>"update", "id"=>"1", "controller"=>"memorial", "memorial"=>{"date_of_birth(2i)"=>"7", "date_of_death(2i)"=>"11", "message"=>"<b>This is a just a thing that will work as long as we can get it t</b>o This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to <br><br>This is a just<i> a thing that will work as long as we can get it to This is a jus</i>t a thing that will work as long as we can get it to This is a just a thing that will work as long as we ca<strike>n get it to This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to This is a just a th</strike>ing <br><br><div align=\"center\">that will work as long as we can get it to This is a just a thing that will work as long as we can get it to...</div>", "date_of_birth(3i)"=>"17", "updated_at"=>"2005-12-18 12:50:13", "date_of_death(3i)"=>"14", "lastname"=>"Depp", "firstname"=>"Johnny", "views"=>"0", "user_id"=>"1", "hometown"=>"Las Vegas, NV", "date_of_death(1i)"=>"2004", "date_of_birth(1i)"=>"1929", "created_at"=>"2005-12-05 16:16:46"}}
+  [4;35;1mMemorial Load (0.026030)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.014086)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000926)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.006174)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 0, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a just a thing that will work as long as we can get it t</b>o This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to <br><br>This is a just<i> a thing that will work as long as we can get it to This is a jus</i>t a thing that will work as long as we can get it to This is a just a thing that will work as long as we ca<strike>n get it to This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to This is a just a th</strike>ing <br><br><div align=\"center\">that will work as long as we can get it to This is a just a thing that will work as long as we can get it to...</div>', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 13:29:45' WHERE id = 1[0m
+  [4;35;1mSQL (0.000931)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/memorial/show/1
+Completed in 0.15578 (6 reqs/sec) | DB: 0.14266 (91%) | 302 Found [http://0.0.0.0/memorial/update/1]
+  [4;36;1mUser Columns (0.004553)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 13:29:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005904)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.012663)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000959)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002058)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 1, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a just a thing that will work as long as we can get it t</b>o This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to <br><br>This is a just<i> a thing that will work as long as we can get it to This is a jus</i>t a thing that will work as long as we can get it to This is a just a thing that will work as long as we ca<strike>n get it to This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to This is a just a th</strike>ing <br><br><div align=\"center\">that will work as long as we can get it to This is a just a thing that will work as long as we can get it to...</div>', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 13:29:46' WHERE id = 1[0m
+  [4;35;1mSQL (0.000970)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00343)
+Rendered memorial/_manage_this_memorial (0.00251)
+Rendered memorial/_manage_your_memorials (0.00282)
+Rendered memorial/_memorial_details (0.01482)
+Rendered memorial/_memorial (0.00081)
+Rendered memorial/_uploadpictures (0.00802)
+  [4;36;1mPicture Load (0.002978)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00968)
+  [4;35;1mComment Load (0.005322)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.004732)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.05055)
+Completed in 0.22236 (4 reqs/sec) | Rendering: 0.10599 (47%) | DB: 0.04014 (18%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.020332)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 13:29:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.006135)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005560)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000951)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.006312)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 2, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = '<b>This is a just a thing that will work as long as we can get it t</b>o This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to <br><br>This is a just<i> a thing that will work as long as we can get it to This is a jus</i>t a thing that will work as long as we can get it to This is a just a thing that will work as long as we ca<strike>n get it to This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to This is a just a thing that will work as long as we can get it to This is a just a th</strike>ing <br><br><div align=\"center\">that will work as long as we can get it to This is a just a thing that will work as long as we can get it to...</div>', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 13:29:57' WHERE id = 1[0m
+  [4;36;1mSQL (0.001154)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.01152)
+Rendered memorial/_manage_this_memorial (0.00223)
+Rendered memorial/_manage_your_memorials (0.08960)
+Rendered memorial/_memorial_details (0.00723)
+Rendered memorial/_memorial (0.00072)
+Rendered memorial/_uploadpictures (0.01159)
+  [4;35;1mPicture Load (0.003305)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.02112)
+  [4;36;1mComment Load (0.004968)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004571)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.05122)
+Completed in 0.45850 (2 reqs/sec) | Rendering: 0.20523 (44%) | DB: 0.05329 (11%) | 200 OK [http://0.0.0.0/memorial/show/1]

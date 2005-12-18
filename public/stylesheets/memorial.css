@@ -262,6 +262,11 @@ html>body #banner {
 	background: #eee;
 }
 
+.memorial-textarea {
+	border: 1px solid #000;
+	padding: 10px;
+}
+
 /************* Images *************/
 .picture-background, .picture-memorial {
 	padding: 10px;

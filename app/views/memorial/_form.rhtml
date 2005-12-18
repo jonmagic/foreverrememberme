@@ -7,8 +7,8 @@
 <p><label for="memorial_lastname">Lastname</label><br/>
 <%= text_field 'memorial', 'lastname'  %></p>
 
-<p><label for="memorial_message">Message</label><br/>
-<textarea id="memorial_message" name="memorial[message]" rows="15" cols="34"></textarea></p>
+<p><label for="memorial_message">Message</label><br/>  
+<div class="memorial-textarea"><textarea dojoType="Editor" id="memorial_message" name="memorial[message]" items="textGroup;|;listGroup;|;justifyGroup">Delete this text and type memorial here.</textarea></div></p><br /><br />
 
 <p><label for="memorial_hometown">Hometown</label><br/>
 <%= text_field 'memorial', 'hometown'  %></p>
@@ -28,4 +28,3 @@
 <%= hidden_field 'memorial', 'views', 'value' => 0  %>
 
 <!--[eoform:memorial]-->
-
