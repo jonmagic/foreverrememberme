@@ -13169,3 +13169,774 @@ Rendered memorial/_owner_picture_view (0.02628)
   [4;36;1mComment Load (0.011256)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 11) [0m
 Rendered memorial/_comments (0.02038)
 Completed in 0.60658 (1 reqs/sec) | Rendering: 0.09431 (15%) | DB: 0.30645 (50%) | 200 OK [http://0.0.0.0/memorial/show/11]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-18 08:37:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.015780)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.006634)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.03814)
+Rendered memorial/_searchbox (0.00916)
+Completed in 2.33947 (0 reqs/sec) | Rendering: 0.14527 (6%) | DB: 0.02241 (0%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:37:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.005794)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006471)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000981)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.002160)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 7, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:37:48' WHERE id = 1[0m
+  [4;36;1mSQL (0.000995)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.03842)
+Rendered memorial/_memorial (0.02058)
+  [4;35;1mPicture Load (0.003259)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_public_picture_view (0.11457)
+  [4;36;1mComment Load (0.005288)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004605)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.15008)
+Completed in 1.03714 (0 reqs/sec) | Rendering: 0.68626 (66%) | DB: 0.02955 (2%) | 200 OK [http://0.0.0.0/memorial/show/1]
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:37:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.068466)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.009056)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001253)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.003793)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 8, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:37:59' WHERE id = 1[0m
+  [4;36;1mSQL (0.000980)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_memorial_details (0.11766)
+Rendered memorial/_memorial (0.00081)
+  [4;35;1mPicture Load (0.003121)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_public_picture_view (0.03153)
+  [4;36;1mComment Load (0.004900)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004447)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.03262)
+Completed in 0.48697 (2 reqs/sec) | Rendering: 0.18861 (38%) | DB: 0.09602 (19%) | 200 OK [http://0.0.0.0/memorial/show/1]
+
+
+Processing MemorialController#index (for 127.0.0.1 at 2005-12-18 08:38:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007683)[0m   [0;1mSELECT * from memorials LIMIT 5[0m
+Rendering  within layouts/memorial
+Rendering memorial/index
+  [4;35;1mMemorial Columns (0.005624)[0m   [0mSHOW FIELDS FROM memorials[0m
+Rendered memorial/_userbox (0.00249)
+Rendered memorial/_searchbox (0.00252)
+Completed in 0.10735 (9 reqs/sec) | Rendering: 0.03740 (34%) | DB: 0.01331 (12%) | 200 OK [http://0.0.0.0/memorial]
+
+
+Processing UserController#login (for 127.0.0.1 at 2005-12-18 08:39:22) [POST]
+  Parameters: {"user_login"=>"jonmagic", "action"=>"login", "controller"=>"user", "user_password"=>"vrcade", "login"=>"Login \302\273"}
+  [4;36;1mUser Load (0.005628)[0m   [0;1mSELECT * FROM users WHERE (login = 'jonmagic' AND password = '52e6920634be2e1d947c3023d922d425ea4fd8e2') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/memorial/manage
+  [4;35;1mUser Columns (0.004935)[0m   [0mSHOW FIELDS FROM users[0m
+Completed in 0.03752 (26 reqs/sec) | DB: 0.01056 (28%) | 302 Found [http://0.0.0.0/user/login]
+  [4;36;1mUser Columns (0.004997)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#manage (for 127.0.0.1 at 2005-12-18 08:39:23) [GET]
+  Parameters: {"action"=>"manage", "controller"=>"memorial"}
+  [4;35;1mMemorial Columns (0.005828)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mMemorial Load (0.026730)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.`user_id` = 1 ) [0m
+Rendering  within layouts/memorial
+Rendering memorial/manage
+Rendered memorial/_userbox (0.01070)
+Rendered memorial/_manage_your_memorials (0.02208)
+Rendered memorial/_activememorials (0.07675)
+Completed in 0.24250 (4 reqs/sec) | Rendering: 0.14878 (61%) | DB: 0.03756 (15%) | 200 OK [http://0.0.0.0/memorial/manage]
+  [4;35;1mUser Columns (0.006453)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:39:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.027327)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006144)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.002362)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.003786)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 9, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:39:35' WHERE id = 1[0m
+  [4;36;1mSQL (0.001147)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00392)
+Rendered memorial/_manage_this_memorial (0.04261)
+Rendered memorial/_manage_your_memorials (0.00343)
+Rendered memorial/_memorial_details (0.04104)
+Rendered memorial/_memorial (0.00071)
+Rendered memorial/_uploadpictures (0.05384)
+  [4;35;1mPicture Load (0.003663)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.02543)
+  [4;36;1mComment Load (0.004877)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004892)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04447)
+Completed in 0.40205 (2 reqs/sec) | Rendering: 0.23803 (59%) | DB: 0.06065 (15%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.167039)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:39:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.013545)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.016325)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001028)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002064)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 10, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:39:46' WHERE id = 1[0m
+  [4;35;1mSQL (0.002489)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00336)
+Rendered memorial/_manage_this_memorial (0.01039)
+Rendered memorial/_manage_your_memorials (0.00283)
+Rendered memorial/_memorial_details (0.01057)
+Rendered memorial/_memorial (0.00083)
+Rendered memorial/_uploadpictures (0.00504)
+  [4;36;1mPicture Load (0.003363)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00902)
+  [4;35;1mComment Load (0.004591)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.032892)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.08584)
+Completed in 0.29679 (3 reqs/sec) | Rendering: 0.10513 (35%) | DB: 0.24334 (81%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.004536)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:40:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.031239)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006200)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001031)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.003351)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 11, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:40:26' WHERE id = 1[0m
+  [4;36;1mSQL (0.001065)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.01033)
+Rendered memorial/_manage_this_memorial (0.00269)
+Rendered memorial/_manage_your_memorials (0.00205)
+Rendered memorial/_memorial_details (0.00825)
+Rendered memorial/_memorial (0.00070)
+Rendered memorial/_uploadpictures (0.00599)
+  [4;35;1mPicture Load (0.003652)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00887)
+  [4;36;1mComment Load (0.004643)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004255)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04243)
+Completed in 0.24668 (4 reqs/sec) | Rendering: 0.09121 (36%) | DB: 0.05997 (24%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.050713)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:40:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.010453)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.007088)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.015488)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.006752)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 12, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:40:38' WHERE id = 1[0m
+  [4;35;1mSQL (0.001080)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00304)
+Rendered memorial/_manage_this_memorial (0.00388)
+Rendered memorial/_manage_your_memorials (0.00217)
+Rendered memorial/_memorial_details (0.03162)
+Rendered memorial/_memorial (0.00069)
+Rendered memorial/_uploadpictures (0.00769)
+  [4;36;1mPicture Load (0.004253)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00970)
+  [4;35;1mComment Load (0.005044)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.025160)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.05120)
+Completed in 0.37352 (2 reqs/sec) | Rendering: 0.09432 (25%) | DB: 0.12603 (33%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.004892)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:41:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.037265)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005637)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000953)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.021645)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 13, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:41:14' WHERE id = 1[0m
+  [4;36;1mSQL (0.001079)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00347)
+Rendered memorial/_manage_this_memorial (0.00680)
+Rendered memorial/_manage_your_memorials (0.00244)
+Rendered memorial/_memorial_details (0.00768)
+Rendered memorial/_memorial (0.00071)
+Rendered memorial/_uploadpictures (0.00551)
+  [4;35;1mPicture Load (0.009381)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.01463)
+  [4;36;1mComment Load (0.004467)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.012211)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.08027)
+Completed in 0.65987 (1 reqs/sec) | Rendering: 0.13212 (20%) | DB: 0.09753 (14%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.005287)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:41:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.031063)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.007896)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.001183)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.005334)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 14, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:41:24' WHERE id = 1[0m
+  [4;35;1mSQL (0.001003)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00485)
+Rendered memorial/_manage_this_memorial (0.00240)
+Rendered memorial/_manage_your_memorials (0.00440)
+Rendered memorial/_memorial_details (0.00853)
+Rendered memorial/_memorial (0.00070)
+Rendered memorial/_uploadpictures (0.00509)
+  [4;36;1mPicture Load (0.016765)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.02334)
+  [4;35;1mComment Load (0.007264)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.004338)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04396)
+Completed in 0.32371 (3 reqs/sec) | Rendering: 0.12230 (37%) | DB: 0.08013 (24%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.010508)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:41:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.006961)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.005287)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000988)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.001925)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 15, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:41:36' WHERE id = 1[0m
+  [4;36;1mSQL (0.000995)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00412)
+Rendered memorial/_manage_this_memorial (0.00222)
+Rendered memorial/_manage_your_memorials (0.00294)
+Rendered memorial/_memorial_details (0.01800)
+Rendered memorial/_memorial (0.00075)
+Rendered memorial/_uploadpictures (0.00577)
+  [4;35;1mPicture Load (0.003238)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00902)
+  [4;36;1mComment Load (0.004683)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004523)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.08575)
+Completed in 0.28070 (3 reqs/sec) | Rendering: 0.14958 (53%) | DB: 0.03911 (13%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.013018)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:41:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.007316)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.018331)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.006820)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.011801)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 16, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:41:47' WHERE id = 1[0m
+  [4;35;1mSQL (0.001090)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00388)
+Rendered memorial/_manage_this_memorial (0.00250)
+Rendered memorial/_manage_your_memorials (0.00189)
+Rendered memorial/_memorial_details (0.00906)
+Rendered memorial/_memorial (0.00093)
+Rendered memorial/_uploadpictures (0.00565)
+  [4;36;1mPicture Load (0.003221)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.02038)
+  [4;35;1mComment Load (0.004830)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.011466)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.07166)
+Completed in 0.32283 (3 reqs/sec) | Rendering: 0.12874 (39%) | DB: 0.07789 (24%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.020566)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#comment_delete (for 127.0.0.1 at 2005-12-18 08:41:51) [GET]
+  Parameters: {"action"=>"comment_delete", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.029512)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Comment without an ID):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:407:in `find'
+    .//app/controllers/memorial_controller.rb:77:in `comment_delete'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:853:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.025744)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:42:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.034447)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.021184)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000953)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.004033)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 17, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:42:26' WHERE id = 1[0m
+  [4;36;1mSQL (0.000913)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00346)
+Rendered memorial/_manage_this_memorial (0.00319)
+Rendered memorial/_manage_your_memorials (0.01861)
+Rendered memorial/_memorial_details (0.00723)
+Rendered memorial/_memorial (0.00072)
+Rendered memorial/_uploadpictures (0.00629)
+  [4;35;1mPicture Load (0.003195)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00895)
+  [4;36;1mComment Load (0.005014)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `name' for #<Memorial:0x276f024>) on line #26 of app/views/memorial/_comments.rhtml:
+23: <div class="column-left">
+24: 	<h3>Comments</h3>
+25: 	<% for @comment in @memorial.comments %>
+26: 		Name: <%= comments.name %><br />
+27: 		Note: <%= comments.note %><br />
+28: 		<% if @owner > 0 %>
+29: 	        <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => @comment %></span><br />
+
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:1501:in `method_missing'
+    #{RAILS_ROOT}/app/views/memorial/_comments.rhtml:26
+    #{RAILS_ROOT}/app/views/memorial/_comments.rhtml:25:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/has_many_association.rb:90:in `method_missing'
+    #{RAILS_ROOT}/app/views/memorial/_comments.rhtml:25
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:220:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `measure'
+    /usr/local/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:230:in `render'
+    #{RAILS_ROOT}/app/views/memorial/show.rhtml:39
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:655:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:220:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.004453)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:42:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.006018)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.006866)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000950)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.008557)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 18, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:42:38' WHERE id = 1[0m
+  [4;36;1mSQL (0.000923)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00340)
+Rendered memorial/_manage_this_memorial (0.00267)
+Rendered memorial/_manage_your_memorials (0.00199)
+Rendered memorial/_memorial_details (0.02486)
+Rendered memorial/_memorial (0.00088)
+Rendered memorial/_uploadpictures (0.00516)
+  [4;35;1mPicture Load (0.003329)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.01027)
+  [4;36;1mComment Load (0.012176)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `name' for #<Memorial:0x26aef54>) on line #26 of app/views/memorial/_comments.rhtml:
+23: <div class="column-left">
+24: 	<h3>Comments</h3>
+25: 	<% for comment in @memorial.comments %>
+26: 		Name: <%= comments.name %><br />
+27: 		Note: <%= comments.note %><br />
+28: 		<% if @owner > 0 %>
+29: 	        <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => @comment %></span><br />
+
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/base.rb:1501:in `method_missing'
+    #{RAILS_ROOT}/app/views/memorial/_comments.rhtml:26
+    #{RAILS_ROOT}/app/views/memorial/_comments.rhtml:25:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/has_many_association.rb:90:in `method_missing'
+    #{RAILS_ROOT}/app/views/memorial/_comments.rhtml:25
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:220:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `measure'
+    /usr/local/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:230:in `render'
+    #{RAILS_ROOT}/app/views/memorial/show.rhtml:39
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:655:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:220:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;35;1mUser Columns (0.012492)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:42:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.042266)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.014914)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.004368)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.005818)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 19, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:42:49' WHERE id = 1[0m
+  [4;36;1mSQL (0.000953)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00402)
+Rendered memorial/_manage_this_memorial (0.00519)
+Rendered memorial/_manage_your_memorials (0.00868)
+Rendered memorial/_memorial_details (0.00731)
+Rendered memorial/_memorial (0.00070)
+Rendered memorial/_uploadpictures (0.01083)
+  [4;35;1mPicture Load (0.003445)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00954)
+  [4;36;1mComment Load (0.014041)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004467)[0m   [0mSHOW FIELDS FROM comments[0m
+
+
+ActionView::TemplateError (undefined local variable or method `comment' for #<#<Class:0x26d8160>:0x26d7530>) on line #29 of app/views/memorial/_comments.rhtml:
+26: 		Name: <%= comments.name %><br />
+27: 		Note: <%= comments.note %><br />
+28: 		<% if @owner > 0 %>
+29: 	        <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => comment %></span><br />
+30: 	    <% end %>
+31: 	    <br />
+32: 	<% end %>
+
+    #{RAILS_ROOT}/app/views/memorial/_comments.rhtml:29
+    #{RAILS_ROOT}/app/views/memorial/_comments.rhtml:25:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/association_proxy.rb:75:in `method_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.13.2/lib/active_record/associations/has_many_association.rb:90:in `method_missing'
+    #{RAILS_ROOT}/app/views/memorial/_comments.rhtml:25
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:220:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `measure'
+    /usr/local/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:29:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/partials.rb:57:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:230:in `render'
+    #{RAILS_ROOT}/app/views/memorial/show.rhtml:39
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:268:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:244:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_view/base.rb:205:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:655:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:595:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/layout.rb:220:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:854:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/filters.rb:332:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/base.rb:369:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/session_management.rb:116:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+  [4;36;1mUser Columns (0.004703)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:42:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.007438)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.006699)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.002289)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.002158)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 20, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:42:56' WHERE id = 1[0m
+  [4;35;1mSQL (0.006721)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.02446)
+Rendered memorial/_manage_this_memorial (0.00257)
+Rendered memorial/_manage_your_memorials (0.00189)
+Rendered memorial/_memorial_details (0.00729)
+Rendered memorial/_memorial (0.00092)
+Rendered memorial/_uploadpictures (0.00474)
+  [4;36;1mPicture Load (0.003617)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.01025)
+  [4;35;1mComment Load (0.004783)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.004481)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.06888)
+Completed in 0.26918 (3 reqs/sec) | Rendering: 0.13339 (49%) | DB: 0.06484 (24%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.046201)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:43:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.092211)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.010780)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.000989)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.001947)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 21, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:43:06' WHERE id = 1[0m
+  [4;36;1mSQL (0.000978)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00306)
+Rendered memorial/_manage_this_memorial (0.00218)
+Rendered memorial/_manage_your_memorials (0.00229)
+Rendered memorial/_memorial_details (0.00810)
+Rendered memorial/_memorial (0.00086)
+Rendered memorial/_uploadpictures (0.01621)
+  [4;35;1mPicture Load (0.003176)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00891)
+  [4;36;1mComment Load (0.005001)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.012514)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04748)
+Completed in 0.47693 (2 reqs/sec) | Rendering: 0.09998 (20%) | DB: 0.17380 (36%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.051061)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#comment_delete (for 127.0.0.1 at 2005-12-18 08:43:11) [GET]
+  Parameters: {"action"=>"comment_delete", "id"=>"1", "controller"=>"memorial", "comment"=>"1"}
+  [4;35;1mMemorial Load (0.006272)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mComment Load (0.003741)[0m   [0;1mSELECT * FROM comments WHERE (comments.id = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.001428)[0m   [0mBEGIN[0m
+  [4;36;1mComment Columns (0.004801)[0m   [0;1mSHOW FIELDS FROM comments[0m
+  [4;35;1mComment Destroy (0.018248)[0m   [0m DELETE FROM comments
+ WHERE id = 1
+[0m
+  [4;36;1mSQL (0.000950)[0m   [0;1mCOMMIT[0m
+  [4;35;1mMemorial Columns (0.005396)[0m   [0mSHOW FIELDS FROM memorials[0m
+Redirected to http://0.0.0.0:3000/memorial/show/1
+Completed in 0.12267 (8 reqs/sec) | DB: 0.09190 (74%) | 302 Found [http://0.0.0.0/memorial/comment_delete/1?comment=1]
+  [4;36;1mUser Columns (0.004732)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:43:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.005790)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005418)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000991)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.016818)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 22, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:43:12' WHERE id = 1[0m
+  [4;35;1mSQL (0.000968)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00324)
+Rendered memorial/_manage_this_memorial (0.00237)
+Rendered memorial/_manage_your_memorials (0.00222)
+Rendered memorial/_memorial_details (0.00997)
+Rendered memorial/_memorial (0.00069)
+Rendered memorial/_uploadpictures (0.00525)
+  [4;36;1mPicture Load (0.003420)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00861)
+  [4;35;1mComment Load (0.012187)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.004284)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04774)
+Completed in 0.23796 (4 reqs/sec) | Rendering: 0.07864 (33%) | DB: 0.05461 (22%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.073242)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:43:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.038553)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.008300)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.002316)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.008433)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 23, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:43:23' WHERE id = 1[0m
+  [4;36;1mSQL (0.001039)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00331)
+Rendered memorial/_manage_this_memorial (0.00275)
+Rendered memorial/_manage_your_memorials (0.00190)
+Rendered memorial/_memorial_details (0.00754)
+Rendered memorial/_memorial (0.00069)
+Rendered memorial/_uploadpictures (0.01228)
+  [4;35;1mPicture Load (0.003596)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.01660)
+  [4;36;1mComment Load (0.004465)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004705)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04783)
+Completed in 0.29244 (3 reqs/sec) | Rendering: 0.10351 (35%) | DB: 0.14465 (49%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.009610)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:44:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;35;1mMemorial Load (0.033850)[0m   [0mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;36;1mMemorial Columns (0.005703)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;35;1mSQL (0.000951)[0m   [0mBEGIN[0m
+  [4;36;1mMemorial Update (0.018704)[0m   [0;1mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 24, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:44:19' WHERE id = 1[0m
+  [4;35;1mSQL (0.001035)[0m   [0mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00349)
+Rendered memorial/_manage_this_memorial (0.00382)
+Rendered memorial/_manage_your_memorials (0.00196)
+Rendered memorial/_memorial_details (0.04774)
+Rendered memorial/_memorial (0.00084)
+Rendered memorial/_uploadpictures (0.00607)
+  [4;36;1mPicture Load (0.003195)[0m   [0;1mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.00843)
+  [4;35;1mComment Load (0.004833)[0m   [0mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;36;1mComment Columns (0.004225)[0m   [0;1mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04467)
+Completed in 0.30312 (3 reqs/sec) | Rendering: 0.12397 (40%) | DB: 0.08211 (27%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;35;1mUser Columns (0.033404)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialController#show (for 127.0.0.1 at 2005-12-18 08:44:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memorial"}
+  [4;36;1mMemorial Load (0.007343)[0m   [0;1mSELECT * FROM memorials WHERE (memorials.id = '1') LIMIT 1[0m
+  [4;35;1mMemorial Columns (0.009909)[0m   [0mSHOW FIELDS FROM memorials[0m
+  [4;36;1mSQL (0.001117)[0m   [0;1mBEGIN[0m
+  [4;35;1mMemorial Update (0.001962)[0m   [0mUPDATE memorials SET `created_at` = '2005-12-05 16:16:46', `views` = 25, `date_of_birth` = '1929-07-17', `lastname` = 'Depp', `message` = 'Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think??? Oh yeah baby... whadd-do-ya-think???', `date_of_death` = '2004-11-14', `hometown` = 'Las Vegas, NV', `image` = NULL, `user_id` = 1, `firstname` = 'Johnny', `updated_at` = '2005-12-18 08:44:29' WHERE id = 1[0m
+  [4;36;1mSQL (0.001006)[0m   [0;1mCOMMIT[0m
+Rendering  within layouts/memorial
+Rendering memorial/show
+Rendered memorial/_userbox (0.00353)
+Rendered memorial/_manage_this_memorial (0.00221)
+Rendered memorial/_manage_your_memorials (0.00201)
+Rendered memorial/_memorial_details (0.00726)
+Rendered memorial/_memorial (0.00073)
+Rendered memorial/_uploadpictures (0.00915)
+  [4;35;1mPicture Load (0.003243)[0m   [0mSELECT * FROM pictures WHERE (pictures.memorial_id = 1) [0m
+Rendered memorial/_owner_picture_view (0.02112)
+  [4;36;1mComment Load (0.012748)[0m   [0;1mSELECT * FROM comments WHERE (comments.memorial_id = 1) [0m
+  [4;35;1mComment Columns (0.004398)[0m   [0mSHOW FIELDS FROM comments[0m
+Rendered memorial/_comments (0.04234)
+Completed in 0.50062 (1 reqs/sec) | Rendering: 0.10096 (20%) | DB: 0.07513 (15%) | 200 OK [http://0.0.0.0/memorial/show/1]

@@ -24,6 +24,10 @@
 	<h3>Comments</h3>
 	<% for comments in @memorial.comments %>
 		Name: <%= comments.name %><br />
-		Note: <%= comments.note %><br /><br />
+		Note: <%= comments.note %><br />
+		<% if @owner > 0 %>
+	        <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => comments %></span><br />
+	    <% end %>
+	    <br />
 	<% end %>
 </div>

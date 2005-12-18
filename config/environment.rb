@@ -51,11 +51,3 @@ end
 # Include your application configuration below
 
 # Include your app's configuration here:
-ActionMailer::Base.server_settings = {
-  :address  => "mail.foreverrememberme.com",
-  :port  => 25, 
-  :domain  => 'www.foreverrememberme.com',
-  :user_name  => "forever@foreverrememberme.com",
-  :password  => “r3m3mb3r”,
-  :authentication  => :login
-    }

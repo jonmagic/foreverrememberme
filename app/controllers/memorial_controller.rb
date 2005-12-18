@@ -70,6 +70,14 @@ class MemorialController < ApplicationController
     redirect_to :action => 'manage'
   end
   
+# My nice Comment methods, ready to use
+
+  def comment_delete
+    @memorial = Memorial.find(params[:id])
+    Comment.find(params[:comment]).destroy
+    redirect_to :action => "show", :id => @memorial
+  end
+  
 # My lovely Picture methods, just nice little ones to make pictures do things...
   
   def picture_upload

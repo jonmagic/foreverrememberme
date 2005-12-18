@@ -75,6 +75,10 @@ visibility: hidden;
 	float: left;
 }
 
+.floatright {
+	float: right;
+}
+
 /************ Global *************/
 
 #wrapper  {
