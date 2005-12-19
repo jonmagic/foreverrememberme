@@ -2,6 +2,7 @@ class Memorial < ActiveRecord::Base
   validates_presence_of [ :firstname, :lastname, :hometown, :date_of_birth, :date_of_death ]
   has_many :comments
   has_many :pictures
+  belongs_to :user
   
   def self.search(query)
     if !query.to_s.strip.empty?

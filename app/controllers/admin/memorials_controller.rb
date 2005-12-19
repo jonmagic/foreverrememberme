@@ -1,49 +1,108 @@
 class Admin::MemorialsController < ApplicationController
-  layout 'memorial'
+  before_filter :login_required
+  layout 'admin'
   
   def index
-    list
-    render :action => 'list'
+    is_admin
+    if @is_admin == 1
+      list
+      render :action => 'list'
+    else
+      you_are_no_admin
+    end
   end
 
   def list
-    @memorial_pages, @memorials = paginate :memorials, :per_page => 10
+    is_admin
+    if @is_admin == 1
+      @memorial_pages, @memorials = paginate :memorials, :per_page => 10
+    else
+      you_are_no_admin
+    end      
   end
 
   def show
-    @memorial = Memorial.find(params[:id])
+    is_admin
+    if @is_admin == 1    
+      @memorial = Memorial.find(params[:id])
+    else
+      you_are_no_admin
+    end    
   end
 
   def new
-    @memorial = Memorial.new
+    is_admin
+    if @is_admin == 1    
+      @memorial = Memorial.new
+    else
+      you_are_no_admin
+    end      
   end
 
   def create
-    @memorial = Memorial.new(params[:memorial])
-    if @memorial.save
-      flash[:notice] = 'Memorial was successfully created.'
-      redirect_to :action => 'list'
+    is_admin
+    if @is_admin == 1    
+      @memorial = Memorial.new(params[:memorial])
+      if @memorial.save
+        flash[:notice] = 'Memorial was successfully created.'
+        redirect_to :action => 'list'
+      else
+        render :action => 'new'
+      end
     else
-      render :action => 'new'
-    end
+      you_are_no_admin
+    end      
   end
 
   def edit
-    @memorial = Memorial.find(params[:id])
+    is_admin
+    if @is_admin == 1    
+      @memorial = Memorial.find(params[:id])
+    else
+      you_are_no_admin
+    end      
   end
 
   def update
-    @memorial = Memorial.find(params[:id])
-    if @memorial.update_attributes(params[:memorial])
-      flash[:notice] = 'Memorial was successfully updated.'
-      redirect_to :action => 'show', :id => @memorial
+    is_admin
+    if @is_admin == 1    
+      @memorial = Memorial.find(params[:id])
+      if @memorial.update_attributes(params[:memorial])
+        flash[:notice] = 'Memorial was successfully updated.'
+        redirect_to :action => 'show', :id => @memorial
+      else
+        render :action => 'edit'
+      end
     else
-      render :action => 'edit'
-    end
+      you_are_no_admin
+    end      
   end
 
   def destroy
-    Memorial.find(params[:id]).destroy
-    redirect_to :action => 'list'
+    is_admin
+    if @is_admin == 1    
+      Memorial.find(params[:id]).destroy
+      redirect_to :action => 'list'
+    else
+      you_are_no_admin
+    end      
   end
+  
+  private
+  
+  def is_admin
+    if !@session[:user].nil?
+      if @session[:user].role == 0
+        @is_admin = 1
+      else
+        @is_admin = 0
+      end
+    end
+  end
+  
+  def you_are_no_admin
+    flash[:notice] = "You are not an Admin."
+    redirect_to :controller => '/memorial', :action => 'index'
+  end
+  
 end

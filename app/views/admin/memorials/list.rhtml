@@ -1,27 +1,37 @@
-<h1>Listing memorials</h1>
+<h2>Listing Memorials</h2>
 
 <table>
-  <tr>
-  <% for column in Memorial.content_columns %>
-    <th><%= column.human_name %></th>
-  <% end %>
-  </tr>
-  
-<% for memorial in @memorials %>
-  <tr>
-  <% for column in Memorial.content_columns %>
-    <td><%=h memorial.send(column.name) %></td>
-  <% end %>
-    <td><%= link_to 'Show', :action => 'show', :id => memorial %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => memorial %></td>
-    <td><%= link_to 'Destroy', { :action => 'destroy', :id => memorial }, :confirm => 'Are you sure?' %></td>
-  </tr>
+    <thead>
+        <td>Name</td>
+        <td>Created By</td>
+        <td>Created At</td>
+        <td>Actions</td>
+    </thead>
+<%
+odd_or_even = 0
+for memorial in @memorials.reverse
+	odd_or_even = 1 - odd_or_even
+%>
+    <tr class="listline<%= odd_or_even %>">
+        <td>
+            <a href="/admin/memorials/show/<%= memorial.id %>"><%= memorial.firstname %> <b><%= memorial.lastname %></b></a>
+        </td>
+        <td>
+            <a href="/admin/users/show/<%= memorial.user.id %>"><%= memorial.user.login %></a>
+        </td>
+        <td>
+            <%= memorial.created_at %>
+        </td>        
+        <td>
+            <%= link_to 'Show', :action => 'show', :id => memorial %>
+            <%= link_to 'Edit', :action => 'edit', :id => memorial %>
+            <%= link_to 'Destroy', { :action => 'destroy', :id => memorial }, :confirm => 'Are you sure?' %>
+        </td>
+    </tr>
 <% end %>
-</table>
+
+
+
 
 <%= link_to 'Previous page', { :page => @memorial_pages.current.previous } if @memorial_pages.current.previous %>
 <%= link_to 'Next page', { :page => @memorial_pages.current.next } if @memorial_pages.current.next %> 
-
-<br />
-
-<%= link_to 'New memorial', :action => 'new' %>

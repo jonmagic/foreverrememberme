@@ -1,0 +1,72 @@
+body {
+	text-align: center;
+	margin: 10px;
+	padding: 0;
+	font-family: Verdana,"Geneva CE",sans-serif;
+	font-size: 70%;
+	line-height: 150%;
+	background: #eee url("../images/blue-stripes.gif");
+}
+
+a, a:link, a:visited { padding: 5px; color: #333; }
+a:hover { padding: 5px; color: #fff; text-decoration: none; background-color: #666 }
+
+.clearer {
+clear:both;
+height: 1px;
+margin: -1px 0px 0px 0px;
+padding:0px;
+border-style: none;
+visibility: hidden;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 2em;
+}
+
+/************** main layout stuff ****************/
+
+#wrapper {
+	background: #fff;
+	border: 1px solid #000;
+	padding: 20px;
+	text-align: left;
+}
+
+/************* Lists ****************/
+
+.listline0 {
+	padding: 6px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+.listline1 {
+	padding: 6px;
+	background-color: #eee;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	padding: 6px;
+}
+
+thead {
+	background-color: #666;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: underline;
+}

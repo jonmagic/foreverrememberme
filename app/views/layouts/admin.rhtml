@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+		
+		<title>ForeverRememberMe.com Admin Console</title>
+		
+		<meta name="ROBOTS" content="ALL" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta name="MSSmartTagsPreventParsing" content="true" />
+		<meta name="Copyright" content="(c) 2005 Copyright content:  Copyright design: Jonathan Hoyt" />
+		<!-- (c) Copyright 2005 by Jonathan Hoyt All Rights Reserved. -->
+		
+		<meta name="Keywords" content="__KEYWORDS__" />
+		<meta name="Description" content="__DESCRIPTION__" />
+
+ 		<%= stylesheet_link_tag 'admin' %>   		
+ 		<%= stylesheet_link_tag 'scaffold' %>   
+
+        <%= javascript_include_tag "prototype" %> 		
+        <%= javascript_include_tag "rico" %>
+        <%= javascript_include_tag "external" %>
+        <script type="text/javascript" src="/dojo.js"></script>
+		<script type="text/javascript">
+            dojo.require("dojo.widget.Editor");
+		</script>
+				
+	</head>
+	
+<body id="" onload="">
+
+    <div id="wrapper">
+        <h1><u>Admin Console:</u></h1>
+        <hr />
+        <span>
+            <%= link_to "Manage Users", :controller => "users", :action => "index" %> | 
+            <%= link_to "Manage Memorials", :controller => 'memorials', :action => 'index' %> |
+            You are logged in as <%= @session[:user].login %>, <%= link_to "Logout", :controller => '/user', :action => 'logout' %>
+        </span>
+        <hr />
+        <%= @content_for_layout %>
+	</div>
+
+</body>
+</html>

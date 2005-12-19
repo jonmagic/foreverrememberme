@@ -1,49 +1,60 @@
 class Admin::UsersController < ApplicationController
-  layout 'memorial'
+  before_filter :login_required
+  layout 'admin'
 
   def index
-    list
-    render :action => 'list'
+    is_admin
+    if @is_admin == 1  
+      list
+      render :action => 'list'
+    else
+      you_are_no_admin
+    end      
   end
 
   def list
-    @user_pages, @users = paginate :users, :per_page => 10
+    is_admin
+    if @is_admin == 1    
+      @user_pages, @users = paginate :users, :per_page => 10
+    else
+      you_are_no_admin
+    end      
   end
 
   def show
-    @user = User.find(params[:id])
+    is_admin
+    if @is_admin == 1    
+      @user = User.find(params[:id])
+    else
+      you_are_no_admin
+    end    
   end
-
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.new(params[:user])
-    if @user.save
-      flash[:notice] = 'User was successfully created.'
+  
+  def destroy
+    is_admin
+    if @is_admin == 1    
+      User.find(params[:id]).destroy
       redirect_to :action => 'list'
     else
-      render :action => 'new'
+      you_are_no_admin
+    end    
+  end
+  
+  private
+  
+  def is_admin
+    if !@session[:user].nil?
+      if @session[:user].role == 0
+        @is_admin = 1
+      else
+        @is_admin = 0
+      end
     end
   end
-
-  def edit
-    @user = User.find(params[:id])
+  
+  def you_are_no_admin
+    flash[:notice] = "You are not an Admin."
+    redirect_to :controller => '/memorial', :action => 'index'
   end
-
-  def update
-    @user = User.find(params[:id])
-    if @user.update_attributes(params[:user])
-      flash[:notice] = 'User was successfully updated.'
-      redirect_to :action => 'show', :id => @user
-    else
-      render :action => 'edit'
-    end
-  end
-
-  def destroy
-    User.find(params[:id]).destroy
-    redirect_to :action => 'list'
-  end
+  
 end
