@@ -99,9 +99,6 @@ class MemorialController < ApplicationController
     redirect_to :action => 'show', :id => p.memorial.id
   end
   
-  def picture_delete_confirmation
-  end
-  
   private
   
   def is_owner

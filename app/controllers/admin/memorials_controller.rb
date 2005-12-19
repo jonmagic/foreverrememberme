@@ -88,6 +88,29 @@ class Admin::MemorialsController < ApplicationController
     end      
   end
   
+  # My nice Comment methods, ready to use
+
+    def comment_delete
+      @memorial = Memorial.find(params[:id])
+      Comment.find(params[:comment]).destroy
+      redirect_to :action => "show", :id => @memorial
+    end
+
+  # My lovely Picture methods, just nice little ones to make pictures do things...
+
+    def picture_delete
+      @memorial = Memorial.find(params[:id])
+      Picture.find(params[:picture]).destroy
+      redirect_to :action => "show", :id => @memorial
+    end
+
+    def picture_update
+      p = Picture.find(params[:picture])
+      p.memorial.image = params[:image]
+      p.memorial.save
+      redirect_to :action => 'show', :id => p.memorial.id
+    end  
+  
   private
   
   def is_admin

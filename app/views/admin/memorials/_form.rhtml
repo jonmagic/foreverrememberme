@@ -8,7 +8,12 @@
 <%= text_field 'memorial', 'lastname'  %></p>
 
 <p><label for="memorial_message">Message</label><br/>  
-<div class="memorial-textarea"><textarea dojoType="Editor" id="memorial_message" name="memorial[message]" items="textGroup;|;listGroup;|;justifyGroup">Delete this text and type memorial here.</textarea></div></p><br /><br />
+<div class="memorial-textarea">
+    <textarea dojoType="Editor" id="memorial_message" name="memorial[message]" items="textGroup;|;listGroup;|;justifyGroup" rows="30" cols="40">   
+        <% if !@memorial.nil? %><%= @memorial.message %><% end %>
+    </textarea>
+</div></p>
+<br /><br />
 
 <p><label for="memorial_hometown">Hometown</label><br/>
 <%= text_field 'memorial', 'hometown'  %></p>
