@@ -34,6 +34,7 @@ class Admin::MemorialsController < ApplicationController
     is_admin
     if @is_admin == 1    
       @memorial = Memorial.new
+      @memorial.views = 0
     else
       you_are_no_admin
     end      

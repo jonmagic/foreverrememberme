@@ -33,6 +33,8 @@ class MemorialController < ApplicationController
 
   def new
     @memorial = Memorial.new
+    @memorial.views = 0
+    @memorial.message = "Delete this text and begin typing here."
   end
 
   def create

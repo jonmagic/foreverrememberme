@@ -10,7 +10,7 @@
 <p><label for="memorial_message">Message</label><br/>  
 <div class="memorial-textarea">
     <textarea dojoType="Editor" id="memorial_message" name="memorial[message]" items="textGroup;|;listGroup;|;justifyGroup" rows="30" cols="40">   
-        <% if !@memorial.nil? %><%= @memorial.message %><% end %>
+        <%= @memorial.message %>
     </textarea>
 </div></p>
 <br /><br />
@@ -25,6 +25,6 @@
 <%= date_select 'memorial', 'date_of_death'  %></p>
 
 <p><label for="memorial_views">Views</label><br/>
-<%= text_field 'memorial', 'views'  %></p>
+<%= text_field 'memorial', 'views', value => @memorial.views  %></p>
 <!--[eoform:memorial]-->
 
