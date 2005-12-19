@@ -15167,3 +15167,155 @@ Rendered memorial/_owner_picture_view (0.02112)
   [4;35;1mComment Columns (0.004571)[0m   [0mSHOW FIELDS FROM comments[0m
 Rendered memorial/_comments (0.05122)
 Completed in 0.45850 (2 reqs/sec) | Rendering: 0.20523 (44%) | DB: 0.05329 (11%) | 200 OK [http://0.0.0.0/memorial/show/1]
+  [4;36;1mUser Columns (0.043535)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;36;1mMemorial Columns (0.005333)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+  [4;36;1mUser Columns (0.005173)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialsController#index (for 127.0.0.1 at 2005-12-18 21:04:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/memorials"}
+  [4;35;1mMemorial Count (0.061644)[0m   [0mSELECT COUNT(*) FROM memorials [0m
+  [4;36;1mMemorial Load (0.040555)[0m   [0;1mSELECT * FROM memorials LIMIT 0, 10[0m
+Rendering admin/memorials/list
+  [4;35;1mMemorial Columns (0.005446)[0m   [0mSHOW FIELDS FROM memorials[0m
+Completed in 0.41283 (2 reqs/sec) | Rendering: 0.21732 (52%) | DB: 0.11282 (27%) | 200 OK [http://0.0.0.0/admin/memorials]
+  [4;36;1mUser Columns (0.012283)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialsController#index (for 127.0.0.1 at 2005-12-18 21:05:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/memorials"}
+  [4;35;1mMemorial Count (0.001757)[0m   [0mSELECT COUNT(*) FROM memorials [0m
+  [4;36;1mMemorial Load (0.031819)[0m   [0;1mSELECT * FROM memorials LIMIT 0, 10[0m
+Rendering actionlistlayoutfalse within layouts/memorial
+Rendering admin/memorials/list
+  [4;35;1mMemorial Columns (0.006556)[0m   [0mSHOW FIELDS FROM memorials[0m
+Completed in 0.28044 (3 reqs/sec) | Rendering: 0.18418 (65%) | DB: 0.05241 (18%) | 200 OK [http://0.0.0.0/admin/memorials]
+  [4;36;1mUser Columns (0.004662)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-18 21:05:43) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/javascripts/rico.js"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;35;1mUser Columns (0.004581)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing MemorialsController#index (for 127.0.0.1 at 2005-12-18 21:06:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/memorials"}
+  [4;36;1mMemorial Count (0.002026)[0m   [0;1mSELECT COUNT(*) FROM memorials [0m
+  [4;35;1mMemorial Load (0.032317)[0m   [0mSELECT * FROM memorials LIMIT 0, 10[0m
+Rendering actionlistlayoutfalse within layouts/memorial
+Rendering admin/memorials/list
+  [4;36;1mMemorial Columns (0.005596)[0m   [0;1mSHOW FIELDS FROM memorials[0m
+Completed in 0.41295 (2 reqs/sec) | Rendering: 0.31750 (76%) | DB: 0.04918 (11%) | 200 OK [http://0.0.0.0/admin/memorials]
+  [4;35;1mUser Columns (0.040958)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-18 21:06:16) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/javascripts/rico.js"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;36;1mUser Columns (0.004510)[0m   [0;1mSHOW FIELDS FROM users[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2005-12-18 21:06:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/users"}
+  [4;35;1mUser Count (0.001832)[0m   [0mSELECT COUNT(*) FROM users [0m
+  [4;36;1mUser Load (0.029078)[0m   [0;1mSELECT * FROM users LIMIT 0, 10[0m
+Rendering actionlistlayoutfalse within layouts/memorial
+Rendering admin/users/list
+Completed in 0.15636 (6 reqs/sec) | Rendering: 0.09919 (63%) | DB: 0.07638 (48%) | 200 OK [http://0.0.0.0/admin/users]
+  [4;35;1mUser Columns (0.004592)[0m   [0mSHOW FIELDS FROM users[0m
+
+
+Processing Base#index (for 127.0.0.1 at 2005-12-18 21:06:24) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/javascripts/rico.js"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:469:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/routing.rb:459:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:117:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:83:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/webrick_server.rb:69:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.0.0/lib/commands/server.rb:28
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require__'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.2.5/lib/active_support/dependencies.rb:214:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.11.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)

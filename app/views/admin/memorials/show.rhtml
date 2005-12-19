@@ -1,0 +1,8 @@
+<% for column in Memorial.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @memorial.send(column.name) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', :action => 'edit', :id => @memorial %> |
+<%= link_to 'Back', :action => 'list' %>
