@@ -70,3 +70,28 @@ thead {
 	font-weight: bold;
 	text-decoration: underline;
 }
+
+/************* show pages ****************/
+
+.show-name {
+	font-size: 1.2em;
+}
+
+.show-picture {
+	width: 120px;
+	border: 1px dashed #666;
+	margin: 10px;
+	padding: 10px;
+}
+
+.show-message {
+	margin-right: 320px;
+	padding: 10px;
+}
+
+/*************** edit memorial page ****************/
+
+.memorial-textarea {
+	border: 1px solid #000;
+	padding: 10px;
+}

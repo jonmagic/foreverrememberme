@@ -7,8 +7,8 @@
 <p><label for="memorial_lastname">Lastname</label><br/>
 <%= text_field 'memorial', 'lastname'  %></p>
 
-<p><label for="memorial_message">Message</label><br/>
-<%= text_area 'memorial', 'message'  %></p>
+<p><label for="memorial_message">Message</label><br/>  
+<div class="memorial-textarea"><textarea dojoType="Editor" id="memorial_message" name="memorial[message]" items="textGroup;|;listGroup;|;justifyGroup">Delete this text and type memorial here.</textarea></div></p><br /><br />
 
 <p><label for="memorial_hometown">Hometown</label><br/>
 <%= text_field 'memorial', 'hometown'  %></p>
@@ -18,15 +18,6 @@
 
 <p><label for="memorial_date_of_death">Date of death</label><br/>
 <%= date_select 'memorial', 'date_of_death'  %></p>
-
-<p><label for="memorial_created_at">Created at</label><br/>
-<%= datetime_select 'memorial', 'created_at'  %></p>
-
-<p><label for="memorial_updated_at">Updated at</label><br/>
-<%= datetime_select 'memorial', 'updated_at'  %></p>
-
-<p><label for="memorial_image">Image</label><br/>
-<%= text_field 'memorial', 'image'  %></p>
 
 <p><label for="memorial_views">Views</label><br/>
 <%= text_field 'memorial', 'views'  %></p>

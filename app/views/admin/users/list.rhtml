@@ -14,18 +14,17 @@ for user in @users.reverse
 %>
 
     <tr class="listline<%= odd_or_even %>">
-        <td class="user-listlogin floatleft">
+        <td>
             <a href="/admin/users/show/<%= user.id %>"><%= user.login %></a>
         </td>
-        <td class="user-listname">
+        <td>
             <a href="/admin/users/show/<%= user.id %>"><%= user.firstname %> <b><%= user.lastname %></b></a>
         </td>
-        <td class="user-listdates">
+        <td>
             <%= user.created_at %>
         </td>        
-        <td class="user-listactions">
+        <td>
             <%= link_to 'Show', :action => 'show', :id => user %>
-            <%= link_to 'Edit', :action => 'edit', :id => user %>
             <%= link_to 'Destroy', { :action => 'destroy', :id => user }, :confirm => 'Are you sure?' %>
         </td>
     </tr>

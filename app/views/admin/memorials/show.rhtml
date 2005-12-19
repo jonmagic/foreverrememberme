@@ -1,8 +1,31 @@
-<% for column in Memorial.content_columns %>
-<p>
-  <b><%= column.human_name %>:</b> <%=h @memorial.send(column.name) %>
-</p>
-<% end %>
-
+<span class="show-name"><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></span>    
+<div class="floatright"><img alt="<%= @memorial.image %>" width="300" src="<%= @memorial.image %>" /></div>
+<p></p>
+<p class="show-message"><%= @memorial.message %></p>
 <%= link_to 'Edit', :action => 'edit', :id => @memorial %> |
 <%= link_to 'Back', :action => 'list' %>
+<br />
+<h3>Pictures</h3>
+<% for @picture in @memorial.pictures %>
+    <div class="show-picture floatleft">
+        <a href="<%= url_for_file_column "picture", "image", "large" %>" rel="external">
+            <%= image_tag url_for_file_column "picture", "image", "thumb" %>
+        </a>
+        <ul>
+            <li><%= link_to 'Set Main', :action => 'picture_update', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
+            <li><%= link_to 'Delete', :action => 'picture_delete', :id => @memorial, :picture => @picture %></li>
+        </ul>
+    </div>
+<% end %>
+<br class="clearer" /><br />
+<h3>Comments</h3>
+<% for comments in @memorial.comments %>
+	Name: <%= comments.name %><br />
+	Note: <%= comments.note %><br />
+    <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => comments %></span>
+    <br /><br />
+<% end %>
+<hr class="clearer">
+
+
+
