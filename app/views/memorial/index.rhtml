@@ -1,25 +1,15 @@
-<h4 class="index-quote">LOOK BACK AT THE TIME WE CHERISHED TOGETHER AND REMEMBER ME ALWAYS AS I DO YOU</h4>
-
-<div class="column-right">
-    <div class="index-recent-memorials">
-        <h2>Recent Memorials</h2>
-        <% for memorial in @memorials %>
-            <a href="/memorial/show/<%= memorial.id %>"><span class="index-recent-memorial"><%= memorial.firstname %> <b><%= memorial.lastname %></b></span></a><br />
-        <% end %>
-    </div>
-    <% if @session[:user].nil? %>
-        <h2>How do I make a Memorial</h2>
-        <p>on Forever Remember Me? It only takes a few simple steps to create a memorial. The first step is to signup for an account.</p>
-        <p style="text-align:center"><%= link_to "Signup for an account", { :controller => "user", :action => "signup" } %></p><br />
-        <h2>Already have an account?</h2>
-    <% end %>
-    <% if !@session[:user].nil? %>
-        <h2>Account Options</h2>
-    <% end %>
-    <%= render_partial 'userbox' %>
+<div id="thin-right-column" class="floatright">
+	<%= render :partial => "recentmemorials" %>
 </div>
-<div class="column-left">
-    <h2>How do I find a loved one</h2>
-    <p> with Forever Remember Me? Use the search box below. You can search for them by typing their first name and last name, or just by last name. You can even search by entering their hometown in the search box.</p>
-    <%= render_partial 'searchbox' %>
+<div id="wide-left-column" class="">
+	<%= image_tag "quote.jpg" %>
+	<p>This website is for those who wish to remember someone by dedicating a memorial describing their life in words, photos, and sharing thoughts with others. This is a place to remember those we love who have passed on. We hope with this website to help family and friends cope with their loss. This is a website anyone can use with ease. In just a few minutes you can create a unique website memorial for your loved one. Its easy and friendly to do.</p>
+	<p>You can create a memorial for free for the first 10 days. Just follow the steps listed below to create a memorial. Have friends and family take a look at it and make any changes you would like. Remember, you have total control to change, edit, or add to your website memorial. If you would like to continue having your website memorial on our site after 10 days you will be notified as to the small cost involved that will allow your website memorial to be on our site for the next 10 years.</p>
+	<div class="formattedbox">
+		<p>Tell the story of the loved one as you see it. <%= link_to "SEE EXAMPLE", :action => 'index' %></p>
+		<p>Place pictures into an online photo album. <%= link_to "SEE EXAMPLE", :action => 'index' %></p>
+		<p>Make a timeline of their life. <%= link_to "SEE EXAMPLE", :action => 'index' %></p>
+		<p>Family and friends can leave messages or tell a special story. <%= link_to "SEE EXAMPLE", :action => 'index' %></p>
+		<p>Visitors to the website can light a candle and leave comments. <%= link_to "SEE EXAMPLE", :action => 'index' %></p>								
+	</div>
 </div>

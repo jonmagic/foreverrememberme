@@ -1,5 +1,4 @@
-<div id="userbox">
-    <div style="padding:10px">
+<div class="formattedbox">
         <% if !@session[:user].nil? %>
             <p>Welcome <%= @session[:user].firstname %> - <a href="/user/logout">Logout</a></p>
         <% end %>        
@@ -25,11 +24,6 @@
                 </div>
             <%= end_form_tag %>
         <% end %>
-    </div>
 </div>
-<script type="text/javascript" charset="utf-8">
-	// <![CDATA[
-	 Rico.Corner.round('userbox');
-	// ]]>
-</script>
+
 

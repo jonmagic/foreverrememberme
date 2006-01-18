@@ -31,37 +31,40 @@
 	</head>
 	
 <body>
-    <div id="wrapper">
-        <div id="header">
-            <h1 class="heading"><%= link_to "Forever Remember Me", { :controller => "memorial", :action => 'index' } %></h1>
-        </div>
-        <div id="container">
-            <div class="clearer"></div>
-            <div id="banner">
-                <a href="/memorial"><%= image_tag "banner-maninwoods.jpg" %></a>
-                <h4 class="subtitle">A place for remembering those we love.</h4>
-            </div>       
-            <div id="notice">
-                <span style="color: green"><%= flash[:notice] %></span>
-            </div>
-            <div id="content">
-                <%= @content_for_layout %>
-            </div>
-            <div class="clearer"></div>
-        </div>
-        <div id="footer">
-            <div class="footer-background footer">
-                <p>Copyright Sunshine Industries 2005</p>
-                <a href="http://validator.w3.org/check?uri=referer">
-                    <img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" />
-                </a>
-                <a href="http://jigsaw.w3.org/css-validator/">
-                  <img style="border:0;width:88px;height:31px"
-                       src="http://jigsaw.w3.org/css-validator/images/vcss" 
-                       alt="Valid CSS!" />
-                 </a>
-             </div>
-        </div>
+    <div id="wrapper1">
+		<div id="wrapper2">
+	        <div id="header">
+	            <h1 class="heading"><%= link_to "Forever Remember Me", { :controller => "memorial", :action => 'index' } %></h1>
+	            <div class="banner"><a href="/memorial"><%= image_tag "banner.jpg" %></a></div>
+	        </div>
+			<div id="linkbar">
+				<ul>
+					<li>Menu >></li>
+					<li><%= link_to "Search", :controller => 'memorial', :action => 'search' %></li>
+					<li><%= link_to "Features", :controller => 'memorial', :action => 'features' %></li>
+					<li><%= link_to "Create", :controller => 'memorial', :action => 'new' %></li>
+					<li><%= link_to "F.A.Q.", :controller => 'memorial', :action => 'faq' %></li>
+					<li><%= link_to "Contact Us", :controller => 'memorial', :action => 'index' %></li>
+					<li><%= link_to "Manage", :controller => 'memorial', :action => 'manage' %></li>					
+				</ul>
+			</div>
+	        <div id="container">
+	            <div id="notice">
+	                <span style="color: green"><%= flash[:notice] %></span>
+	            </div>
+	            <div id="content">
+					<div class="clearer"></div>
+	                <%= @content_for_layout %>
+					<div class="clearer"></div>
+	            </div>
+	        </div>
+	        <div id="footer">
+	            <div class="footing">
+	                <p>Copyright J & W Drake Enterprises LLC 2006, <%= link_to "Privacy Policy", :controller => 'memorial', :action => 'privacypolicy' %></p>
+	                 </a>
+	             </div>
+	        </div>
+		</div>
     </div>
 </body>
 </html>

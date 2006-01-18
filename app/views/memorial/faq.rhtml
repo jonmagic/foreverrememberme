@@ -1,0 +1,36 @@
+<div id="thin-right-column" class="floatright">
+	<h3>Recent Memorials</h3>
+	<% for memorial in @memorials %>
+		<div class="recentmemorial">
+        	<a href="/memorial/show/<%= memorial.id %>">
+				<img alt="<%= memorial.image %>" width="128" class="" src="<%= memorial.image %>" />
+				<span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
+			</a>
+		</div>
+    <% end %>
+</div>
+<div id="wide-left-column" class="">
+	<h3 class="center">Frequently Asked Question</h3>
+	<p><b>Q.</b> What is a web Memorial?</p>
+	<p><b>A.</b> It is an internet website that you create to tell the story of your loved one who has passed on.
+		<ul>
+			<li>A place family and friends can view</li>
+			<li>Photo album can be viewed of your lost loved one</li>
+			<li>A visitor can light a candle</li>
+			<li>A visitor can leave condolences or comments</li>
+		</ul>
+	</p>
+	<p><b>Q.</b> How can my family or friends view the Memorial?</p>
+	<p><b>A.</b> Each memorial has it's own unique web address. ( example:  http://www.foreverrememberme.com/johndoe/ )</p>
+	<p><b>Q.</b> Who can create the web site?</p>
+	<p><b>A.</b> Anyone can create a web site memorial using our easy steps. And once you have created it you have a password and total control of the web site memorial, which you can add to or edit at anytime. You are the web site manager.</p>
+	<p><b>Q.</b> Can I get help with my website memorial?</p>
+	<p><b>A.</b> Yes, just <%= link_to "Contact Us", :controller => 'memorial', :action => 'index' %> and we'll be glad to help you.</p>
+	<p><b>Q.</b> How much does it cost for a website Memorial?</p>
+	<p><b>A.</b> Just $49.99 for ten years - we believe this to be very reasonable.</p>
+	<p><b>Q.</b> How long does it take to create a website Memorial?</p>
+	<p><b>A.</b> In ten minutes a website memorial can be made and additions can be added or edited anytime.</p>
+	<br />
+	<h4 class="center"><%= link_to "Create A Memorial Website Now For Your Loved One", :controller => 'memorial', :action => 'new' %></h4>
+	<h4 class="center"><i>Remember - it's free for ten days!</i></h4>
+</div>

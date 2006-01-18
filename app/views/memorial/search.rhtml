@@ -1,37 +1,33 @@
-<div class="column-right">
-    <br />
+<div class="medium-right-column floatright">
     <%= render_partial 'searchbox' %>
 </div>
+<div class="medium-left-column">
 
-<div class="column-left">
-<h2>Search Results</h2>
-<% if @memorials.to_a.empty? -%>
+	<h3>Search Results</h3>
+	<% if @memorials.to_a.empty? -%>
 
-<p>No memorials found...</p>
+	<p>No memorials found...</p>
 
-<% else -%>
+	<% else -%>
 
-<%
-odd_or_even = 0
-for memorial in @memorials
-	odd_or_even = 1 - odd_or_even
-%>
-    <div class="listline<%= odd_or_even %>">
-            <a href="/memorial/show/<%= memorial.id %>">        
-	            <img alt="<%= memorial.image %>" width="128" class="picture-thumb floatleft" src="<%= memorial.image %>" />
-	        </a>
-	    <div style="margin-left:170px">
-            <span class="listdetailsname">
-                <a href="/memorial/show/<%= memorial.id %>">
-                    <%= h(memorial.firstname) %> <b><%= h(memorial.lastname) %></b>
-                </a>
-            </span>
-            <br />
-    		<p><%= h(truncate(memorial.message, 80)) %></p>
-    		<div class="clearer"></div>
-        </div>
-    </div>
-<% end %>
+	<%
+	odd_or_even = 0
+	for memorial in @memorials
+		odd_or_even = 1 - odd_or_even
+	%>
+	    <div class="line<%= odd_or_even %>" style="padding: 5px;">
+	            <a href="/memorial/show/<%= memorial.id %>">        
+		            <img alt="<%= memorial.image %>" width="128" class="picture-thumb floatleft" src="<%= memorial.image %>" />
+		        </a>
+		    <div style="margin-left:140px">
+	                <a href="/memorial/show/<%= memorial.id %>">
+	                    <span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
+	                </a>
+	    		<p><%= truncate(memorial.message, 80) %></p>
+	    		<div class="clearer"></div>
+	        </div>
+	    </div>
+	<% end %>
 
-<% end -%>
+	<% end -%>
 </div>

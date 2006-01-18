@@ -5,28 +5,14 @@ body {
 	font-family: Verdana,"Geneva CE",sans-serif;
 	font-size: 70%;
 	line-height: 150%;
-	background: #eee url("../images/blue-stripes.gif");
+	background: #eee url("../images/blue-green-stripes.jpg");
 }
 
-a, a:link, a:visited { color: #f60; }
-a:hover { color: #f60; text-decoration: none; }
+a, a:link, a:visited { color: #000; }
+a:hover { color: #000; text-decoration: none; }
 
 a img {
 border-style: none;
-}
-
-ul{
-padding: 0;
-margin: 0 0 1em 0;
-}
-
-ul li {
-display: block;
-height: 20px;
-list-style: none;
-margin-left: 10px;
-padding-left: 20px;
-background: url("../images/bullet.gif") no-repeat 0% 50%;
 }
 
 h1 {
@@ -58,8 +44,19 @@ p {
 	margin: 0 0 1em 0;
 }
 
-h3, h4, p, li {
+b {
+	color: #000;
+}
+
+h4, p, li {
 	color: #606060;
+}
+
+
+.quote {
+	font-size: 1.4em;
+	text-align: center;
+	font-style: italic;
 }
 
 .clearer {
@@ -79,207 +76,178 @@ visibility: hidden;
 	float: right;
 }
 
-/************ Global *************/
+.center {
+	text-align: center;
+}
 
-#wrapper  {
-	width: 770px;
+/*************** Wrapper **************/
+#wrapper1 {
 	margin: 0 auto;
-	text-align: left;
-	position: relative;
+	width: 750px;
+	padding: 1px;
+	border: 3px solid #282F27;
 }
 
+#wrapper2 {
+	background: #fff;	
+}
+
+/*************** Header ***************/
 #header {
-background: url("../images/border-top.png") no-repeat;
-height: 47px;
-padding: 37px 0 0 35px;
-/*border: 1px solid #f60;*/
-}
-
-#banner {
-	position:relative;
-	z-index:0;
-	margin: -50px 0 20px 35px;
-	height: 210px;
-	voice-family: "\"}\""; 
-   voice-family:inherit;
-	margin-top: -35px;
-}
-
-html>body #banner {
-  margin-top: -50px;
+	height: 280px;
 }
 
 .heading {
 	display: none;
 }
 
-.subtitle {
-	display: none;
-	float:right;
-	margin: 3em 50px 0 400px;
-	padding: 5px;
-	background: url("../images/grey-stripes.gif");
+.banner {
 }
 
-#container {
-	background: url("../images/border-sides.png") repeat-y;
-	color: #606060;
+/************** Linkbar ***************/
+#linkbar {
+	padding: 5px;	
+	width: 750px;
+	background: #F1FDFD;
+	border-top: 3px solid #282F27;
+	border-bottom: 3px solid #282F27;
+	voice-family: "\"}\"";
+	voice-family: inherit;
 }
 
-#notice {
-	padding: 0 35px 0 35px;
+html>body #linkbar {
+	width: 740px;
+	margin-bottom: 20px;
 }
 
+#linkbar ul {
+	padding: 0;
+	margin: 0;
+	white-space : nowrap;
+}
+
+#linkbar ul li {
+	display: inline;
+}
+
+#linkbar a {
+	font-size: 1.3em;
+	font-weight: bold;	
+	padding: 5px 15px;
+	border-left: 3px solid #F1FDFD;
+	border-right: 3px solid #F1FDFD;
+}
+
+#linkbar a:hover {	
+	background: #fff;
+	border-left: 3px solid #282F27;
+	border-right: 3px solid #282F27;
+}
+
+/************** Content ***************/
 #content {
-	padding: 0 35px 0 35px;
+	width: 750px;
+	text-align: left;
 }
 
-#searchbox {
-	background: #eee;
-	width: 330px;
-}
-
-#userbox {
-	background: #eee;
-	width: 330px;
-}
-
-
-
-#signupbox {
-	background: #EDF5F8;
-}
-
-#newmemorial {
-	background: #eee;
-}
-
-#uploadpictures {
-	background: #EDF5F8;
-}
-
-#leavecomment {
-	float: right;
-	background: #eee;
-}
-
-#footer {
-	height: 140px;
-	background: url("../images/border-bottom.png") no-repeat;
-	padding: 25px 35px 0 35px;
-	text-align: center;	
-}
-
-.footer-background {
-	padding: 10px;
-	background: url("../images/grey-stripes.gif");
-}
-
-/************* Public and Manage Index **************/
-
-.column-right {
-	float: right;
-	padding: 1px 0 0 10px;
-	width: 330px;
-}
-
-.column-left {
-	padding: 1px 10px 0 0;
-	width: 330px;
-}
-
-/************* Index ***************/
-
-.index-recent-memorials {
-	
-}
-
-.index-recent-memorial {
-	padding-left: 10px;
-}
-
-.index-recent-memorials a, .index-recent-memorials a:link, .index-recent-memorials a:visited  {
-	text-decoration: none;
-}
-
-.index-recent-memorials a:hover {
-	font-weight: bold;
-}
-
-.index-quote {
-	text-align: center;
-	font-style: italic;
-}
-
-/************* Manage Index *************/
-
-.listline0 {
-	padding: 10px;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;	
-}
-
-.listline1 {
-	padding: 10px;
-	background: #EDF5F8;
-}
-
-.listdetailsname a {
-	text-decoration: none;
-}
-.listdetailsname a:hover {
-	font-weight: bold;
-}
-
-.listdetailsname {
-	font-size: 1.5em;
-}
-
-.listdetailssummary {
+#wide-left-column {
+	width: 570px;
 	padding: 0 10px;
+	voice-family: "\"}\"";
+	voice-family: inherit;	
 }
 
-.listactions {
-	line-height: 120%;
-	padding: 8px;
-}
-.searchresultsname {	
-	margin-left: 200px;
+html>body #wide-left-column {
+	width: 550px;
 }
 
-/*************** Memorial Show Page ***************/
-
-.memorial-show-name {
-	line-height: 150%;
-	font-size: 3em;
+#thin-right-column {
+	width: 140px;
+	padding: 10px;
+	margin-right: 5px;
+	text-align: center;
+	background: #F1FDFD;
+	border: 1px solid #666;
+	voice-family: "\"}\"";
+	voice-family: inherit;	
 }
 
-#memorial-show-details {
-	background: #EDF5F8;
+html>body #thin-right-column {
+	width: 150px;
 }
 
-#memorial-hitcounter {
+.medium-left-column {
+	width: 370px;
+	padding: 0 15px;
+	voice-family: "\"}\"";
+	voice-family: inherit;	
+}
+
+html>body .medium-left-column {
+	width: 350px;
+}
+
+.medium-right-column {
+	width: 320px;
+	padding: 10px;
+	margin-right: 5px;
+	text-align: left;
+	background: #F1FDFD;
+	border: 1px solid #666;
+	voice-family: "\"}\"";
+	voice-family: inherit;	
+}
+
+html>body .medium-right-column {
+	width: 320px;
+}
+
+.full-width-column {
+	width: 730px;
+	padding: 10px;
+	voice-family: "\"}\"";
+	voice-family: inherit;	
+}
+
+html>body .full-width-column {
+	width: 750px;
+}
+
+/************ Page Specific Content Stuff **********/
+.recentmemorial {
+	margin-bottom: 10px;
+	padding: 5px;
+	border: 1px dashed #666;
 	background: #eee;
 }
 
-.memorial-textarea {
-	border: 1px solid #000;
-	padding: 10px;
+.line0 {
+	border-top: 1px solid #666;
+	border-bottom: 1px solid #666;
 }
 
-/************* Images *************/
-.picture-background, .picture-memorial {
+.line1 {
+	background: #F1FDFD;
+}
+
+/*********** Formatted Box ***********/
+.formattedbox {
+	padding: 20px 20px 10px 20px;	
+	border: 1px solid #000;
+	background: #fff;
+}
+
+.formattedbox a, .formattedbox a:link, .formattedbox a:visited {
+	color: #FF0000;
+	font-weight: bold;
+}
+
+/************** Footer ***************/
+#footer {
+	padding: 20px 30px;
+}
+
+.footing {
 	padding: 10px;
 	background: url("../images/grey-stripes.gif");
-}
-
-.picture-thumbwrapper {
-	float: left;
-	margin: 5px;
-	padding: 2px;
-	border: 1px solid #ccc;
-}
-
-.picture-options {
-	margin: 10px 0 0 -10px;
 }

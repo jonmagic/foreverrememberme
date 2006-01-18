@@ -1,14 +1,14 @@
-
-
-<div class="column-right">
-    <h2>Need Help Logging In?</h2>
-    <p>Enter the username you used when you signed up.<br />(example: "jonnyhoyt")</p>
-    <p>Then enter your password and click the Login button.</p> 
+<div class="medium-right-column floatright">
+    <h3>Need Help Logging In?</h3>
+    <p>Enter the username you used when you signed up.<br />(example: "johndoe@gmail.com")</p>
+    <p>Then enter your password and click the Login button.</p>
+	<div class="formattedbox">
+		<h3>Are you a new user?</h3>
+		<p><%= link_to "Signup", :controller => 'user', :action => 'signup' %> in seconds, and its Free!</p>
+	</div>
 </div>
 
-<div class="column-left">
-    <div id="signupbox">
-        <div style="padding:10px">
+<div class="medium-left-column">
             <%= start_form_tag :action=> "login" %>
 
             <div title="Account login" id="loginform" class="form">
@@ -30,11 +30,4 @@
             </div>
 
             <%= end_form_tag %>
-        </div>
-    </div>
-    <script type="text/javascript" charset="utf-8">
-    	// <![CDATA[
-    	 Rico.Corner.round('signupbox');
-    	// ]]>
-    </script>
 </div>

@@ -1,0 +1,23 @@
+<div id="thin-right-column" class="floatright">
+	<h3>Recent Memorials</h3>
+	<% for memorial in @memorials %>
+		<div class="recentmemorial">
+        	<a href="/memorial/show/<%= memorial.id %>">
+				<img alt="<%= memorial.image %>" width="128" class="" src="<%= memorial.image %>" />
+				<span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
+			</a>
+		</div>
+    <% end %>
+</div>
+<div id="wide-left-column" class="">
+	<h3 class="center">Privacy Policy</h3>
+	<p>This policy covers where this information will be used in relation to the information collected. In addition the following describes our privacy practices. By using this web site, you agree to accept the terms of this privacy policy.</p>
+	<p><b>Personal Information</b></p>
+	<p>When you create an account we will ask for some personal information including your name and e-mail address. A <b>Forever Remember Me</b> account allows you to access many of our services. After ten (10) days and you decide to purchase a memorial for your loved one your credit card number will be required.</p>
+	<p><b>The Way We Use Information</b></p>
+	<p>Personal information will never be sold to any third party without your consent.</p>
+	<p>All credit card transaction are done through a secure and trusted third party site (PayPal).</p>
+	<p>Personal information is the property of <b>Forever Remember Me</b>, subject to and protected by the Electronic Communications Privacy Act. <b>Forever Remember Me</b> will not sell, rent, or otherwise disclose your personal information to any third party.</p>
+	<p>Our site contains links to other sites and <b>Forever Remember Me</b> is not responsible for their site privacy policy.</p>
+	<p>For any questions regarding our privacy policy please <%= link_to "Contact Us", :controller => 'memorial', :action => 'index' %>.</p>
+</div>

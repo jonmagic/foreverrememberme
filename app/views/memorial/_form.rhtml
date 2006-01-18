@@ -7,7 +7,7 @@
 <p><label for="memorial_lastname">Lastname</label><br/>
 <%= text_field 'memorial', 'lastname'  %></p>
 
-<p><label for="memorial_message">Message</label><br/>  
+<p><label for="memorial_message"></label>
 <div class="memorial-textarea">
     <textarea dojoType="Editor" id="memorial_message" name="memorial[message]" items="textGroup;|;listGroup;|;justifyGroup">   
         <% if !@memorial.nil? %><%= @memorial.message %><% end %>
@@ -29,6 +29,8 @@
 <%= hidden_field 'memorial', 'updated_at'  %>
 
 <%= hidden_field 'memorial', 'user_id', 'value' => @session[:user].id  %>
+
+<%= hidden_field 'memorial', 'image', 'value' => '/images/noimage.jpg' %>
 
 <%= hidden_field 'memorial', 'views', 'value' => @memorial.views %>
 

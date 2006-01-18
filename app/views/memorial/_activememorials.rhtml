@@ -3,14 +3,14 @@ odd_or_even = 0
 for memorial in @memorials.reverse
 	odd_or_even = 1 - odd_or_even
 %>
-    <div class="listline<%= odd_or_even %>">
+    <div class="line<%= odd_or_even %>" style="padding:10px;">
+	 	<div class="floatright"><%= link_to 'Edit', :action => 'edit', :id => memorial %></div>
         <span class="listdetailsname">
             <a href="/memorial/show/<%= memorial.id %>">
-                <%= h(memorial.firstname) %> <b><%= h(memorial.lastname) %></b>
+                <%= memorial.firstname %> <b><%= memorial.lastname %></b>
             </a>
         </span>
         <br />
-		<p><%= h(truncate(memorial.message, 40)) %></p>
-	 	<%= link_to 'Edit', :action => 'edit', :id => memorial %>
+		<p><%= truncate(memorial.message, 40) %></p>
     </div>
 <% end %>

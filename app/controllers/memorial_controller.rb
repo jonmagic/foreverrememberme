@@ -1,5 +1,5 @@
 class MemorialController < ApplicationController
-  before_filter :login_required, :except => [ :index, :show, :search, :comment ]
+  before_filter :login_required, :except => [ :index, :features, :faq, :privacypolicy, :show, :search, :comment ]
   layout 'memorial'
 
 # Public methods, every one can use them
@@ -7,6 +7,18 @@ class MemorialController < ApplicationController
   def index
     @memorials = Memorial.most_recent
   end
+  
+  def features
+    @memorials = Memorial.most_recent
+  end
+
+  def faq
+    @memorials = Memorial.most_recent
+  end
+  
+  def privacypolicy
+    @memorials = Memorial.most_recent
+  end  
   
   def show
     @memorial = Memorial.find(params[:id])

@@ -1,0 +1,24 @@
+<div id="thin-right-column" class="floatright">
+	<h3>Recent Memorials</h3>
+	<% for memorial in @memorials %>
+		<div class="recentmemorial">
+        	<a href="/memorial/show/<%= memorial.id %>">
+				<img alt="<%= memorial.image %>" width="128" class="" src="<%= memorial.image %>" />
+				<span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
+			</a>
+		</div>
+    <% end %>
+</div>
+<div id="wide-left-column" class="">
+	<h3 class="center">Features</h3>
+	<p><b>Forever Remember Me</b> is a website to remember your loved one. When you create your website memorial you control it with easy to use tools, that you can add and edit at any time. Your website is password protected for you.</p>
+	<p>Create a memorial. Tell the story of their life the way you would like it told. Make announcements of events that you are having in the future.</p>
+	<p>Family and friends may visit at their convenience. Easy to find on the internet. Easy to leave comments, condolences, or light a candle.</p>
+	<p>Every year on the anniversary of their passing a bouquet of flowers will be sent to your website for display.</p>
+	<p>Put in articles of events that happened in their lives.</p>
+	<p>Easy to enter and display picture albums or slide shows.</p>
+	<p>Create a life time line.</p>
+	<p>Mailing list for family and friends to advise them of updates of the memorial.</p>
+	<h4 class="center"><%= link_to "Create A Memorial Website Now For Your Loved One", :controller => 'memorial', :action => 'new' %></h4>
+	<h4 class="center"><i>Remember - it's free for ten days!</i></h4>
+</div>
