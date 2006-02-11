@@ -99,18 +99,20 @@ class Admin::MemorialsController < ApplicationController
 
   # My lovely Picture methods, just nice little ones to make pictures do things...
 
-    def picture_delete
-      @memorial = Memorial.find(params[:id])
-      Picture.find(params[:picture]).destroy
-      redirect_to :action => "show", :id => @memorial
-    end
-
-    def picture_update
-      p = Picture.find(params[:picture])
-      p.memorial.image = params[:image]
-      p.memorial.save
-      redirect_to :action => 'show', :id => p.memorial.id
-    end  
+  def picture_delete
+    @memorial = Memorial.find(params[:id])
+    p = Picture.find(params[:picture])
+    p.destroy
+    redirect_to :action => "show", :id => @memorial
+  end
+  
+  def set_primary_picture
+    m = Memorial.find(params[:id])
+    p = Picture.find(params[:picture])
+    m.primary_picture = p
+    m.save
+    redirect_to :action => 'show', :id => p.memorial.id
+  end
   
   private
   

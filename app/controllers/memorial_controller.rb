@@ -115,7 +115,7 @@ class MemorialController < ApplicationController
     redirect_to :action => "show", :id => @memorial
   end
   
-  def set_main_picture
+  def set_primary_picture
     m = Memorial.find(params[:id])
     p = Picture.find(params[:picture])
     m.primary_picture = p

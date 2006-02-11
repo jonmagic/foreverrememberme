@@ -1,5 +1,5 @@
 <span class="show-name"><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></span>    
-<div class="floatright"><img alt="<%= @memorial.image %>" width="300" src="<%= @memorial.image %>" /></div>
+<div class="floatright"><%= show_primary_picture(@memorial) %></div>
 <p></p>
 <p class="show-message"><%= @memorial.message %></p>
 <%= link_to 'Edit', :action => 'edit', :id => @memorial %> |
@@ -12,7 +12,7 @@
             <%= image_tag url_for_file_column "picture", "image", "thumb" %>
         </a>
         <ul>
-            <li><%= link_to 'Set Main', :action => 'picture_update', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
+            <li><%= link_to 'Set Main', :action => 'set_primary_picture', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
             <li><%= link_to 'Delete', :action => 'picture_delete', :id => @memorial, :picture => @picture %></li>
         </ul>
     </div>

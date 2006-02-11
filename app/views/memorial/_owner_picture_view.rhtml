@@ -6,7 +6,7 @@
                 <%= image_tag url_for_file_column "picture", "image", "thumb" %>
             </a>
             <ul class="picture-options">
-                <li><%= link_to 'Set Main', :action => 'set_main_picture', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
+                <li><%= link_to 'Set Main', :action => 'set_primary_picture', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
                 <li><%= link_to 'Delete', :action => 'picture_delete', :id => @memorial, :picture => @picture %></li>
             </ul>
         </div>
