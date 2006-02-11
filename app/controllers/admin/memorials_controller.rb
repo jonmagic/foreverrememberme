@@ -54,7 +54,26 @@ class Admin::MemorialsController < ApplicationController
       you_are_no_admin
     end      
   end
-
+  
+  def change_expiration
+    @memorial = Memorial.find(params[:id])
+  end
+  
+  def update_expiry
+    is_admin
+    if @is_admin == 1    
+      @memorial = Memorial.find(params[:id])
+      if @memorial.update_attributes(params[:memorial])
+        flash[:notice] = 'Expiration was successfully updated.'
+        redirect_to :action => 'show', :id => @memorial
+      else
+        render :action => 'list'
+      end
+    else
+      you_are_no_admin
+    end    
+  end
+  
   def edit
     is_admin
     if @is_admin == 1    
@@ -72,7 +91,7 @@ class Admin::MemorialsController < ApplicationController
         flash[:notice] = 'Memorial was successfully updated.'
         redirect_to :action => 'show', :id => @memorial
       else
-        render :action => 'edit'
+        render :action => 'show'
       end
     else
       you_are_no_admin

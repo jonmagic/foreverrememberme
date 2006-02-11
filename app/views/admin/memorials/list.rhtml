@@ -2,9 +2,9 @@
 
 <table>
     <thead>
-        <td>Name</td>
-        <td>Created By</td>
-        <td>Created At</td>
+        <td>Name (click to view memorial)</td>
+        <td>Created By (click to view user)</td>
+        <td>Expires On (click date to change)</td>
         <td>Actions</td>
     </thead>
 <%
@@ -20,7 +20,7 @@ for memorial in @memorials.reverse
             <a href="/admin/users/show/<%= memorial.user.id %>"><%= memorial.user.login %></a>
         </td>
         <td>
-            <%= memorial.created_at %>
+            <%= link_to memorial.expires_at, :action => 'change_expiration', :id => memorial.id %>
         </td>        
         <td>
             <%= link_to 'Show', :action => 'show', :id => memorial %>

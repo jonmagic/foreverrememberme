@@ -36,7 +36,7 @@
             <%= link_to "Manage Users", :controller => "users", :action => "index" %> | 
             <%= link_to "Manage Memorials", :controller => 'memorials', :action => 'index' %> |
             You are logged in as <%= @session[:user].login %>, <%= link_to "Logout", :controller => '/user', :action => 'logout' %>
-        </span>
+        </span> | <span style="color: green"><%= flash[:notice] %></span>
         <hr />
         <%= @content_for_layout %>
         <hr class="clearer">

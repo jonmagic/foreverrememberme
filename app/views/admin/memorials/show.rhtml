@@ -1,4 +1,5 @@
 <span class="show-name"><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></span>    
+<p>Created By User <%= @memorial.user.firstname %> <%= @memorial.user.lastname %></p>
 <div class="floatright"><%= show_primary_picture(@memorial) %></div>
 <p></p>
 <p class="show-message"><%= @memorial.message %></p>
