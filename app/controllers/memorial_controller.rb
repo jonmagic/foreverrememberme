@@ -101,12 +101,13 @@ class MemorialController < ApplicationController
   end
   
   def picture_delete
+    p = Picture.find(params[:picture])
     @memorial = Memorial.find(params[:id])
     Picture.find(params[:picture]).destroy
     redirect_to :action => "show", :id => @memorial
   end
   
-  def picture_update
+  def set_main_picture
     p = Picture.find(params[:picture])
     p.memorial.image = params[:image]
     p.memorial.save
