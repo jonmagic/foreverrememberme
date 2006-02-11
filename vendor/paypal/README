@@ -1,0 +1,75 @@
+== Welcome to Paypal/ruby
+
+This library is here to aid with integrating Paypal payments into ruby on rails 
+applications or similar. To set this up you will need to log into your paypal 
+business account and tell paypal where to send the IPN ( Instant payment notifications ). 
+
+== Download
+
+* Preferred method of installation is using rubygems. gem install --source http://dist.leetsoft.com paypal
+* Alternatively you can get the library packaged at http://dist.leetsoft.com/pkg/
+
+== Requirements
+
+* Valid paypal business account. 
+* The money library from http://dist.leetsoft.com/api/money
+
+== Installation 
+
+1) Either install the rubygem for this library ( rake install from source 
+   or gem install --source <url> paypal    using gems directly )
+   
+2) Create a new controller which handels the paypal related tasks.  
+    script/generate controller payment   
+    
+3) Add the Paypal::Helpers to the newly created controller.
+    module PaymentHelper
+      include Paypal::Helpers
+    end
+4) Create a paypal_ipn ( or similar ) action like the one in the "Example rails controller" appendix. 
+
+Within the new payment controller you can now create pages from which users can be sent to paypal. You always 
+have to sent users to paypal using a HTTP Post so a standard link won't work (well OK but you need some javascript for that). The +Paypal::Helper+ namespace has some examples of how such a forward page may look. 
+
+== Testing the integration
+
+Under https://developer.paypal.com/ you can signup for a paypal developer account.
+This allows you to set up "sandboxed" accounts which work and act like real accounts 
+with the difference that no money is exchanged. Its a good idea to sign up for a 
+sandbox account to use while the application is running in development mode. 
+
+
+== Example rails controller
+
+    class BackendController < ApplicationController
+
+      # Simplification, please write better code then this...
+      def paypal_ipn
+       notify = Paypal::Notification.new(request.raw_post)
+
+       if notify.acknowledge 
+         order = Order.find(notify.item_id)
+         order.success = (notify.complete? and order.total == notify.amount) ? 'success' : 'failure'
+         order.save
+       end
+
+       render :nothing => true
+      end
+    end
+
+== Example paypal forward page
+
+   <%= paypal_form_tag %>
+     <%= paypal_setup "Item 500", Money.us_dollar(50000), "bob@bigbusiness.com", :notify_url => url_for(:path_only => false, :action => 'paypal_ipn') %>  
+
+     Please press here to pay $500US using paypal. <br/>
+     <%= submit_tag "Go to paypal >>" %>
+
+   <% end_form_tag %> 
+
+== Changelog
+
+2005-07-22 -- 0.9.1
+* support for cancel_url as well as notify_url. This means you can now set the IPN callback address from the paypal_setup method and 
+  you don't have to do that in the paypal admin interface!
+* Removed the actual form tag from the paypal_setup generated code to conform better with docs 
