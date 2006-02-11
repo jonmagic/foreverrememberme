@@ -16,6 +16,9 @@ class UserController < ApplicationController
     end
   end
   
+  def test_back
+  end
+  
   def signup
     @user = User.new(@params[:user])
 
