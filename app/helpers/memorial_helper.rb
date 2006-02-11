@@ -3,7 +3,7 @@ module MemorialHelper
     source = if memorial.image.blank? 
               '/images/noimage.jpg'
              else
-               memorial.image
+               memorial.image
              end
     image_tag(source, :width => width, :class => "picture-memorial")
   end
