@@ -32,7 +32,6 @@ class UserController < ApplicationController
   end
     
   def welcome
-    # it does nothing!
   end
   
 end
