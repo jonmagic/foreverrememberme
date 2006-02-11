@@ -51,6 +51,8 @@ class MemorialController < ApplicationController
 
   def create
     @memorial = Memorial.new(params[:memorial])
+    @memorial.user_id = @session[:user].id
+    @memorial.views = 0
     if @memorial.save
       flash[:notice] = 'Memorial was successfully created.'
       redirect_to :action => 'show', :id => @memorial
@@ -101,9 +103,11 @@ class MemorialController < ApplicationController
   end
   
   def picture_delete
-    p = Picture.find(params[:picture])
     @memorial = Memorial.find(params[:id])
-    Picture.find(params[:picture]).destroy
+    p = Picture.find(params[:picture])
+    p.memorial.image = "NULL"
+    p.memorial.save
+    p.destroy
     redirect_to :action => "show", :id => @memorial
   end
   

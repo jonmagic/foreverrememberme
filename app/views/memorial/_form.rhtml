@@ -24,14 +24,4 @@
 <p><label for="memorial_date_of_death">Date of death</label><br/>
 <%= date_select 'memorial', 'date_of_death', :start_year => 1900  %></p>
 
-<%= hidden_field 'memorial', 'created_at'  %>
-
-<%= hidden_field 'memorial', 'updated_at'  %>
-
-<%= hidden_field 'memorial', 'user_id', 'value' => @session[:user].id  %>
-
-<%= hidden_field 'memorial', 'image', 'value' => '/images/noimage.jpg' %>
-
-<%= hidden_field 'memorial', 'views', 'value' => @memorial.views %>
-
 <!--[eoform:memorial]-->

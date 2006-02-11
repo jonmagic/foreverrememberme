@@ -2,7 +2,7 @@
 <% for memorial in @memorials %>
 	<div class="recentmemorial">
     	<a href="/memorial/show/<%= memorial.id %>">
-			<img alt="<%= memorial.image %>" width="128" class="" src="<%= memorial.image %>" />
+			<%= show_memorial_image(memorial, 128) %>
 			<span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
 		</a>
 	</div>

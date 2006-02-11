@@ -1,4 +1,4 @@
 <h3><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></h3>    
-<img alt="<%= @memorial.image %>" width="300" class="picture-memorial" src="<%= @memorial.image %>" />
+<%= show_memorial_image(@memorial) %>
 <p></p>
 <p><%= @memorial.message %></p>

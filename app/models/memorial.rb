@@ -14,7 +14,8 @@ class Memorial < ActiveRecord::Base
   end
   
   def self.most_recent
-    find_by_sql(["SELECT * from memorials LIMIT 5"])
+#     find_by_sql(["SELECT * from memorials LIMIT 5"])
+    find :all, :limit => 5, :order => "created_at DESC" 
   end
 
 end
