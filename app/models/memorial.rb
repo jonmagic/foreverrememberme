@@ -2,6 +2,7 @@ class Memorial < ActiveRecord::Base
   validates_presence_of [ :firstname, :lastname, :hometown, :date_of_birth, :date_of_death ]
   has_many :comments
   has_many :pictures
+  belongs_to :primary_picture, :class_name => "Picture", :foreign_key => 'primary_picture_id'
   belongs_to :user
   
   def self.search(query)

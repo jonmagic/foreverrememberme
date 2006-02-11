@@ -97,7 +97,13 @@ class MemorialController < ApplicationController
 # My lovely Picture methods, just nice little ones to make pictures do things...
   
   def picture_upload
-    Memorial.find(params[:id]).pictures.create(params[:picture])
+    m = Memorial.find(params[:id])
+    p = Picture.create(params[:picture])
+    if m.primary_picture.nil?
+      m.primary_picture = p
+    end
+    m.pictures << p
+    m.save    
     flash[:notice] = "Added Your Picture."
     redirect_to :action => "show", :id => params[:id]
   end
@@ -105,16 +111,15 @@ class MemorialController < ApplicationController
   def picture_delete
     @memorial = Memorial.find(params[:id])
     p = Picture.find(params[:picture])
-    p.memorial.image = "NULL"
-    p.memorial.save
     p.destroy
     redirect_to :action => "show", :id => @memorial
   end
   
   def set_main_picture
+    m = Memorial.find(params[:id])
     p = Picture.find(params[:picture])
-    p.memorial.image = params[:image]
-    p.memorial.save
+    m.primary_picture = p
+    m.save
     redirect_to :action => 'show', :id => p.memorial.id
   end
   
