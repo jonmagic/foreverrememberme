@@ -19,6 +19,11 @@ class Memorial < ActiveRecord::Base
     find :all, :limit => 5, :order => "created_at DESC" 
   end
 
+  def full_name
+    "#{firstname} #{lastname}"
+  end
+  
+
 
   def expired?
     expires_at < Time.now

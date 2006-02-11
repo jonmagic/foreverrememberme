@@ -1,8 +1,16 @@
 module MemorialHelper
   def extend_memorial_link(memorial)
-    '<a href="#">extend this memorial for 10 years</a>'
+    link_to 'extend this memorial for 10 years', :action => 'extend', :id => memorial.id
   end
   
+  def extended_date(memorial)
+    date = if memorial.expired?
+              Time.now + 10.years
+            else
+              memorial.expires_at + 10.years
+            end
+    date.strftime "%B %d, %Y"
+  end
   
   def show_primary_picture(memorial, width=300)    
     source = if memorial.primary_picture.nil?

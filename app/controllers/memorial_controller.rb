@@ -1,5 +1,7 @@
 class MemorialController < ApplicationController
-  before_filter :login_required, :except => [ :index, :features, :faq, :privacypolicy, :show, :search, :comment ]
+  before_filter :login_required, :except => [ :index, :features, :faq, :privacypolicy, 
+                                              :show, :search, :comment, :extend_return, 
+                                              :extend_ipn ]
   layout 'memorial'
 
 # Public methods, every one can use them
@@ -36,6 +38,15 @@ class MemorialController < ApplicationController
     flash[:notice] = "Added Your Comment."
     redirect_to :action => "show", :id => params[:id]
   end  
+  
+  def extend_ipn
+    # stub
+  end
+  
+  def extend_return
+    # stub
+  end
+  
   
 # Management methods, all protected by user account
 
@@ -80,7 +91,11 @@ class MemorialController < ApplicationController
       render :action => 'edit'
     end
   end
-
+  
+  def extend_memorial
+    @memorial = Memorial.find(params[:id])
+  end
+  
   def destroy_memorial
     Memorial.find(params[:id]).destroy
     redirect_to :action => 'manage'
