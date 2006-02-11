@@ -1,0 +1,9 @@
+<% if memorial.expired? %>
+<p class="expired">This memorial has expired! Visitors will no longer be able to view this memorial.</p>
+<%= extend_memorial_link memorial %>
+<% elsif memorial.expires_soon? %>
+<p>This memorial will expire on <%= memorial.expires_at.to_formatted_s :long %>.</p>
+<%= extend_memorial_link memorial %>
+<% else %>
+<p>This memorial will expire on <%= memorial.expires_at.to_formatted_s :long %>.</p>
+<% end %>
