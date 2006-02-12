@@ -1,10 +1,15 @@
 <div id="searchbox">
-        <h3>Search for your loved one:</h3>
-            <%= start_form_tag({:controller => 'memorial',  :action => 'search'}) %>
-            <div title="Search" id="searchform" class="form">
-                 <input type="text" id="q" name="q" value="" size="28" />
-                 <%= submit_tag "Search" %>
-            </div>
-            <%= end_form_tag %>
-        <p class="small">Examples: "John Doe" or "Lamb" or "Las Vegas"</p>
+	<h3>Search for your loved one:</h3>
+	    <%= start_form_tag({:controller => 'memorial',  :action => 'search'}) %>
+	    <div title="Search" id="searchform" class="form">
+			<p><label for="memorial_firstname">Firstname</label><br/>
+	        <input type="text" id="firstname" name="firstname" value="" size="28" /></p>
+			<p><label for="memorial_firstname">Lastname</label><br/>
+	        <input type="text" id="lastname" name="lastname" value="" size="28" /></p>
+			<p><label for="memorial_firstname">Hometown</label><br/>	
+	        <input type="text" id="hometown" name="hometown" value="" size="28" /></p>
+	        <%= submit_tag "Search" %>
+	    </div>
+	    <%= end_form_tag %>
+	<p class="small">Examples: "John Doe" or "Lamb" or "Las Vegas"</p>
 </div>

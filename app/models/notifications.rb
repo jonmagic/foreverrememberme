@@ -8,10 +8,10 @@ class Notifications < ActionMailer::Base
     @body["lastname"] = user.lastname
   end
 
-  def anniversary(sent_at = Time.now)
+  def anniversary(user, memorial)
     @recipients = user.login
     @from       = 'info@foreverrememberme.com'
-    @subject    = 'Thank you for signing up at Forever Remember Me'
+    @subject    = 'Remembering #{@memorial.fullname} today.'
   end
 
   def renew_memorial(sent_at = Time.now)

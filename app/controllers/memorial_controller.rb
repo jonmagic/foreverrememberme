@@ -30,7 +30,7 @@ class MemorialController < ApplicationController
   end
 
   def search
-    @memorials = Memorial.search(params[:q])
+    @memorials = Memorial.search(params[:firstname, :lastname, :hometown])
   end
   
   def comment
