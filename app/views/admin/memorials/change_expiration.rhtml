@@ -1,0 +1,6 @@
+<br /><span class="bigger"><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></span><br />
+<p>Created By User <%= @memorial.user.firstname %> <%= @memorial.user.lastname %></p>
+<%= start_form_tag :action => 'update_expiry', :id => @memorial %>
+  <%= date_select 'memorial', 'expires_at', :end_year => 2040  %>
+  <%= submit_tag "Change Expiration" %>
+<%= end_form_tag %>
