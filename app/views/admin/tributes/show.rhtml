@@ -3,6 +3,8 @@
   <b><%= column.human_name %>:</b> <%=h @tribute.send(column.name) %>
 </p>
 <% end %>
+<%= image_tag url_for_file_column("picture", "image", "thumb") %>
+<br /><br />
 
 <%= link_to 'Edit', :action => 'edit', :id => @tribute %> |
 <%= link_to 'Back', :action => 'list' %>

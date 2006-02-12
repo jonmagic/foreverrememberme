@@ -1,6 +1,6 @@
 <h1>Editing tribute</h1>
 
-<%= start_form_tag :action => 'update', :id => @tribute %>
+<%= start_form_tag ({:action => 'update', :id => @tribute}, :multipart => true) %>
   <%= render :partial => 'form' %>
   <%= submit_tag 'Edit' %>
 <%= end_form_tag %>

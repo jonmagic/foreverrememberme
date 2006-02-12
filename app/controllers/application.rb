@@ -15,3 +15,9 @@ class ApplicationController < ActionController::Base
   end
 
 end
+
+class StringIO
+  def blank?
+    self.read.blank?
+  end
+end

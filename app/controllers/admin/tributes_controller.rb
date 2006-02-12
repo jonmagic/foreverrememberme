@@ -14,6 +14,7 @@ class Admin::TributesController < ApplicationController
 
   def show
     @tribute = Tribute.find(params[:id])
+    @picture = @tribute.picture
   end
 
   def new
@@ -42,7 +43,12 @@ class Admin::TributesController < ApplicationController
 
   def update
     @tribute = Tribute.find(params[:id])
-    if @tribute.update_attributes(params[:tribute])
+    @tribute.title = (params[:tribute][:title])
+    @tribute.description = (params[:tribute][:description])
+    unless params[:picture]["image"].blank?
+       @tribute.picture = Picture.create(params[:picture])
+    end
+    if @tribute.save
       flash[:notice] = 'Tribute was successfully updated.'
       redirect_to :action => 'show', :id => @tribute
     else
