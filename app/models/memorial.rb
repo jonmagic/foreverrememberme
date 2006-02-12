@@ -15,8 +15,7 @@ class Memorial < ActiveRecord::Base
   end
   
   def self.most_recent
-#     find_by_sql(["SELECT * from memorials LIMIT 5"])
-    find :all, :limit => 5, :order => "created_at DESC" 
+    find :all, :limit => 5, :order => "created_at DESC", :conditions => ["expires_at > ?", Time.now.to_formatted_s(:db)] 
   end
 
   def full_name

@@ -24,9 +24,16 @@ class MemorialController < ApplicationController
   
   def show
     @memorial = Memorial.find(params[:id])
-    @memorial.views += 1
-    @memorial.save
     is_owner
+    if @memorial.expired? 
+      if @owner == 1
+        flash[:notice] = "This memorial has expired. Only you will be able to view it. Purchase and extension to allows other to view it."
+      else
+        flash[:notice] = "The requested memorial has expired and cannot be shown."
+        redirect_to :action => "index"
+      end
+    end
+    @memorial.increment!('views')
   end
 
   def search
@@ -166,12 +173,8 @@ class MemorialController < ApplicationController
   private
   
   def is_owner
-    if !@session[:user].nil?
-      if @memorial.user_id == @session[:user].id
-        @owner = 1
-      else
-        @owner = 0
-      end
+    if !@session[:user].nil? and @memorial.user_id == @session[:user].id
+      @owner = 1
     else
       @owner = 0
     end
