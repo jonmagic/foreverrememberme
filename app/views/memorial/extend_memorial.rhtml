@@ -2,7 +2,7 @@
 
 <p>This is where the extension is explained.</p>
 
-<p>$49.95 will extend <%= @memorial.full_name %>'s till <%= extended_date @memorial %></p>
+<p>$<%= preference('extension_price') %> will extend <%= @memorial.full_name %>'s till <%= extended_date @memorial %></p>
 
 <%= paypal_form_tag %>
   <%= paypal_setup @memorial.id, preference('extension_price'), preference('paypal_email'),

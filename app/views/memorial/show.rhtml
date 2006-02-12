@@ -8,6 +8,14 @@
     <%= render :partial => "memorial_details", :object => @memorial %>
 </div>
 
+<div class="medium-right-column floatright clearright">
+	<div class="formattedbox">
+		<%= link_to "Add a tribute to this memorial", :action => "add_tribute", :id => @memorial.id %>
+	</div>
+	<%= debug @memorial.tributes %>
+	
+</div>
+
 <% if @owner > 0 %>
 	<div class="medium-left-column">
 	    <%= render :partial => "memorial", :object => @memorial %>

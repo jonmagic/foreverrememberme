@@ -75,6 +75,8 @@ visibility: hidden;
 .floatright {
 	float: right;
 }
+.clearleft  { clear:  left; }
+.clearright { clear: right; }
 
 .center {
 	text-align: center;
@@ -190,6 +192,7 @@ html>body .medium-left-column {
 .medium-right-column {
 	width: 320px;
 	padding: 10px;
+	margin-bottom:1em;
 	margin-right: 5px;
 	text-align: left;
 	background: #F1FDFD;

@@ -1,0 +1,26 @@
+<h1>Add a tribute to <%= @memorial.full_name %>'s memorial.</h1>
+
+<p>This is where tributes are explained.</p>
+
+<hr />
+
+
+<% for tribute in @tributes %>
+	<% @picture = tribute.picture %>
+	
+	<h3><%= tribute.title %></h3>
+	<%= image_tag url_for_file_column("picture", "image", "medium") %><br />	
+	<%= tribute.description %>
+	
+	<%= paypal_form_tag %>
+	  <%= paypal_setup "#{tribute.id}-#{@memorial.id}", preference('tribute_price'), preference('paypal_email'),
+			:notify_url => url_for(:only_path => false, :action => 'tribute_ipn', :id => @memorial.id ), 
+			:return_url => url_for(:only_path => false, :action => 'tribute_payment_return', :id => "success"), 
+			:cancel_url => url_for(:only_path => false, :action => 'tribute_payment_return', :id => "canceled"), 
+			:item_name => "\"#{tribute.title}\" tribute for #{@memorial.full_name}'s memorial'"
+		  %>
+	  <%= submit_tag "Buy this tribute for $#{preference('tribute_price')}" %>
+	</form>	
+	
+	<hr />
+<% end %>
