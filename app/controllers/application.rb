@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   model :user
 
   def admin_required
-    if !@session[:user].nil? and @session[:user].role == 0
+    if !@session[:user].nil? and @session[:user].role == 'admin'
       return true
     end
     flash[:notice] = "You are not an Admin."
