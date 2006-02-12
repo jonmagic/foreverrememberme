@@ -1,0 +1,8 @@
+<% for column in StaticPage.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @static_page.send(column.name) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', :action => 'edit', :id => @static_page %> |
+<%= link_to 'Back', :action => 'list' %>

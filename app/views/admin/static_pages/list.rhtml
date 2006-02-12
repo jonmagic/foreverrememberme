@@ -1,0 +1,27 @@
+<h1>Listing static_pages</h1>
+
+<table>
+  <tr>
+  <% for column in StaticPage.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for static_page in @static_pages %>
+  <tr>
+  <% for column in SystemSetting.content_columns %>
+    <td><%=h static_page.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => static_page %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => static_page %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => static_page }, :confirm => 'Are you sure?' %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @static_page_pages.current.previous } if @static_page_pages.current.previous %>
+<%= link_to 'Next page', { :page => @static_page_pages.current.next } if @static_page_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New static_page', :action => 'new' %>

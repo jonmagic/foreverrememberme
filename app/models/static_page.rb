@@ -1,0 +1,3 @@
+class StaticPage < SystemSetting
+  
+end
