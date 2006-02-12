@@ -64,6 +64,7 @@ class MemorialController < ApplicationController
     @memorial = Memorial.new(params[:memorial])
     @memorial.user_id = @session[:user].id
     @memorial.views = 0
+    @memorial.expires_at = Time.now + 10.days
     if @memorial.save
       flash[:notice] = 'Memorial was successfully created.'
       redirect_to :action => 'show', :id => @memorial

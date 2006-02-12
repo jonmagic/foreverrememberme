@@ -4,6 +4,7 @@
     	<a href="/memorial/show/<%= memorial.id %>">
 			<%= show_primary_picture(memorial, 128) %>
 			<span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
+			<p><%= dob_to_dod(memorial) %></p>
 		</a>
 	</div>
 <% end %>

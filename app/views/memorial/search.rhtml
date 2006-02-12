@@ -17,7 +17,7 @@
 	%>
 	    <div class="line<%= odd_or_even %>" style="padding: 5px;">
 	            <a href="/memorial/show/<%= memorial.id %>">        
-		            <img alt="<%= memorial.image %>" width="128" class="picture-thumb floatleft" src="<%= memorial.image %>" />
+		            <div class="picture-thumb floatleft"><%= show_primary_picture(memorial, 128) %></div>
 		        </a>
 		    <div style="margin-left:140px">
 	                <a href="/memorial/show/<%= memorial.id %>">

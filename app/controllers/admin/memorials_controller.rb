@@ -102,6 +102,7 @@ class Admin::MemorialsController < ApplicationController
     is_admin
     if @is_admin == 1    
       Memorial.find(params[:id]).destroy
+      flash[:notice] = 'Memorial and all associated objects were destroyed'
       redirect_to :action => 'list'
     else
       you_are_no_admin

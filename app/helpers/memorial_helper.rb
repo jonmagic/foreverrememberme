@@ -21,6 +21,12 @@ module MemorialHelper
     image_tag(source, :width => width, :class => "picture-memorial")
   end
   
+  def dob_to_dod(memorial)
+    dob = memorial.date_of_birth.strftime "%Y" 
+    dod = memorial.date_of_death.strftime "%Y"
+    "#{dob} to #{dod}"
+  end
+  
   def url_for_primary_picture(object, method, suffix=nil)
     relative_path = object.send("#{method}_relative_path", suffix)
     return nil unless relative_path
