@@ -5,6 +5,11 @@
 <%= text_field 'static_page', 'name'  %></p>
 
 <p><label for="static_page_value">Value</label><br/>
-<%= text_area 'static_page', 'value'  %></p>
+	<div class="memorial-textarea">
+	    <textarea dojoType="Editor" id="static_page_value" name="static_page[value]" items="blockGroup;|;textGroup;|;listGroup;|;justifyGroup">   
+	        <% if !@static_page.nil? %><%= @static_page.value %><% end %>
+	    </textarea>
+	</div></p>
+
 <!--[eoform:static_page]-->
 

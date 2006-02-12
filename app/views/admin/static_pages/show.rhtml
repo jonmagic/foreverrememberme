@@ -1,6 +1,6 @@
 <% for column in StaticPage.content_columns %>
 <p>
-  <b><%= column.human_name %>:</b> <%=h @static_page.send(column.name) %>
+  <b><%= column.human_name %>:</b> <%= @static_page.send(column.name) %>
 </p>
 <% end %>
 

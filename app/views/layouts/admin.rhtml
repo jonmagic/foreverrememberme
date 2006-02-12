@@ -38,6 +38,7 @@
             <%= link_to "Memorials", :controller => 'memorials', :action => 'index' %> |
             <%= link_to "Tributes", :controller => 'tributes', :action => 'index' %> |
             <%= link_to "Static Pages", :controller => 'static_pages', :action => 'index' %> |
+        	<%= link_to "Statistics", :controller => 'statistics', :action => 'overview' %> |
             You are logged in as <%= @session[:user].login %>, <%= link_to "Logout", :controller => '/user', :action => 'logout' %>
         </span> | <span style="color: green"><%= flash[:notice] %></span>
         <hr />

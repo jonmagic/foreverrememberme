@@ -18,6 +18,7 @@ class Admin::StaticPagesController < ApplicationController
 
   def new
     @static_page = StaticPage.new
+    @static_page.value = "Delete this text and begin typing here."    
   end
 
   def create
