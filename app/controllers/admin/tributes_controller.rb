@@ -1,16 +1,11 @@
 class Admin::TributesController < ApplicationController
+  before_filter :login_required
+  before_filter :admin_required
+  layout 'admin'
+  
   def index
     list
     render :action => 'list'
-  end
-
-  def upload_picture
-  end
-
-  def delete_picture
-  end
-
-  def update_picture
   end
 
   def list
@@ -23,10 +18,16 @@ class Admin::TributesController < ApplicationController
 
   def new
     @tribute = Tribute.new
+    @tribute.description = "Delete this text and begin typing here."    
+  end
+  
+  def picture
+    @tribute = Tribute.find(params[:id])
   end
 
   def create
     @tribute = Tribute.new(params[:tribute])
+    @tribute.picture = Picture.create(params[:picture])
     if @tribute.save
       flash[:notice] = 'Tribute was successfully created.'
       redirect_to :action => 'list'

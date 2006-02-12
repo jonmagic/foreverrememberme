@@ -4,7 +4,15 @@
 <p><label for="tribute_title">Title</label><br/>
 <%= text_field 'tribute', 'title'  %></p>
 
-<p><label for="tribute_description">Description</label><br/>
-<%= text_field 'tribute', 'description'  %></p>
-<!--[eoform:tribute]-->
+<p><label for="tribute_description"></label>
+<div class="memorial-textarea">
+    <textarea dojoType="Editor" id="tribute_description" name="tribute[description]" items="textGroup;|;listGroup;|;justifyGroup">   
+        <% if !@tribute.nil? %><%= @tribute.description %><% end %>
+    </textarea>
+</div></p>
+<br /><br />
 
+<p><label for="tribute_image">Choose An Image:</label><br/>
+<%= file_column_field "picture", "image" %></p>
+
+<!--[eoform:tribute]-->

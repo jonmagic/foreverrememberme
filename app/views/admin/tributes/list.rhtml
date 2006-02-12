@@ -10,10 +10,11 @@
 <% for tribute in @tributes %>
   <tr>
   <% for column in Tribute.content_columns %>
-    <td><%=h tribute.send(column.name) %></td>
+    <td><%= tribute.send(column.name) %></td>
   <% end %>
     <td><%= link_to 'Show', :action => 'show', :id => tribute %></td>
     <td><%= link_to 'Edit', :action => 'edit', :id => tribute %></td>
+    <td><%= link_to 'Picture', :action => 'picture', :id => tribute %></td>
     <td><%= link_to 'Destroy', { :action => 'destroy', :id => tribute }, :confirm => 'Are you sure?' %></td>
   </tr>
 <% end %>
