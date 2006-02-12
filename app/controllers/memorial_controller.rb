@@ -35,12 +35,7 @@ class MemorialController < ApplicationController
         redirect_to :action => "index"
       end
     end
-    @memorial.increment!('views')
-    if @memorial.pictures.size <= preference('allowed_number_of_photos').to_i
-      @display_upload = 1
-    else
-      @display_upload = 0
-    end      
+    @memorial.increment!('views')     
   end
 
   def search
