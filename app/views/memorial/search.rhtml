@@ -20,9 +20,10 @@
 		            <div class="picture-thumb floatleft"><%= show_primary_picture(memorial, 128) %></div>
 		        </a>
 		    <div style="margin-left:140px">
-	                <a href="/memorial/show/<%= memorial.id %>">
-	                    <span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
-	                </a>
+                <a href="<%= url_for_memorial memorial %>">
+                    <span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
+				</a><br />
+				<span><%= memorial.hometown %></span>
 	    		<p><%= truncate(memorial.message, 80) %></p>
 	    		<div class="clearer"></div>
 	        </div>

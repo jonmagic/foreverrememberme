@@ -1,6 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   include SystemSettingsHelper
+  include LinkAndUrlHelper
 
   def flash_div *keys
     keys.collect { |key| content_tag(:div, flash[key],

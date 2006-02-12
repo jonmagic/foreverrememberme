@@ -17,7 +17,7 @@ class Admin::MemorialsController < ApplicationController
   end
   
   def search
-      @memorials = Memorial.search(params[:q])
+      @memorials = Memorial.admin_memorial_search(params[:q])
   end
 
   def change_expiration

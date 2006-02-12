@@ -25,7 +25,7 @@ class MemorialController < ApplicationController
   end  
   
   def show
-    @memorial = Memorial.find(params[:id])
+    @memorial = Memorial.find(params[:id][/^(\d+)/])
     is_owner
     if @memorial.expired? 
       if @owner == 1

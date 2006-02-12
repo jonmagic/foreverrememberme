@@ -11,6 +11,16 @@ class Memorial < ActiveRecord::Base
     find(:all, :conditions => conditions, :order => "created_at DESC" )
   end
   
+  def self.admin_memorial_search(query)
+    if !query.to_s.strip.empty?
+      tokens = query.split.collect {|c| "%#{c.downcase}%"}
+      find_by_sql(["SELECT * from memorials WHERE #{ (["(LOWER(firstname) LIKE ? OR LOWER(lastname) LIKE ? OR LOWER(hometown) LIKE ?)"] * tokens.size).join(" AND ") } ORDER by created_at DESC", *tokens.collect { |token| [token] * 3 }.flatten])
+    else
+      []
+    end
+  end  
+  
+  
   def self.most_recent
     find :all, :limit => 5, :order => "created_at DESC", :conditions => ["expires_at > ?", Time.now.to_formatted_s(:db)] 
   end

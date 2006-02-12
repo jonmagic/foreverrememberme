@@ -7,7 +7,7 @@ for memorial in @memorials.reverse
 	 	<div class="floatright"><%= link_to 'Edit', :action => 'edit', :id => memorial %>
 		</div>
         <span class="listdetailsname">
-            <a href="/memorial/show/<%= memorial.id %>">
+            <a href="<%= url_for_memorial memorial %>">
                 <%= memorial.firstname %> <b><%= memorial.lastname %></b>
             </a>
         </span>

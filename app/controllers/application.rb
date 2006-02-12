@@ -3,6 +3,7 @@ require_dependency "login_system"
 class ApplicationController < ActionController::Base
   include LoginSystem
   include SystemSettingsHelper
+  include LinkAndUrlHelper  
   model :user
 
   def admin_required
