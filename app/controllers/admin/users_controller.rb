@@ -4,8 +4,8 @@ class Admin::UsersController < ApplicationController
   layout 'admin'
 
   def index
-    list
-    render :action => 'list'
+    search
+    render :action => 'search'
   end
 
   def list
@@ -15,6 +15,10 @@ class Admin::UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
+  
+  def search
+    @users = User.search(params[:q])
+  end  
 
   def destroy
     User.find(params[:id]).destroy

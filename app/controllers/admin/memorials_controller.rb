@@ -4,18 +4,22 @@ class Admin::MemorialsController < ApplicationController
   layout 'admin'
   
   def index
-    list
-    render :action => 'list'
+    search
+    render :action => 'search'
   end
 
   def list
-    @memorial_pages, @memorials = paginate :memorials, :per_page => 10
+    @memorial_pages, @memorials = paginate :memorials, :per_page => 20
   end
 
   def show
     @memorial = Memorial.find(params[:id])
   end
   
+  def search
+      @memorials = Memorial.search(params[:q])
+  end
+
   def change_expiration
     @memorial = Memorial.find(params[:id])
   end

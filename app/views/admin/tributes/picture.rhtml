@@ -1,0 +1,9 @@
+<h3><%= @tribute.title %></h3>
+<p><%= @tribute.description %>
+<%= form_tag ({:action => "upload_picture", :id => @tribute}, :multipart => true) %>
+<div title="Upload Pictures" id="picturefreakinupload" class="form">
+    <p><label for="tribute_image">Choose An Image:</label><br/>
+    <%= file_column_field "picture", "image" %></p>
+  <%= submit_tag "Upload" %>
+ </div>
+<%= end_form_tag %>

@@ -1,0 +1,33 @@
+<h2>Search Users</h2>
+
+<%= render_partial 'searchbox' %><br />
+
+<table>
+    <thead>
+        <td>Login</td>
+        <td>First & Last Name</td>
+        <td>Created At</td>
+        <td>Actions</td>
+    </thead>
+<%
+odd_or_even = 0
+for user in @users.reverse
+	odd_or_even = 1 - odd_or_even
+%>
+
+    <tr class="listline<%= odd_or_even %>">
+        <td>
+            <a href="/admin/users/show/<%= user.id %>"><%= user.login %></a>
+        </td>
+        <td>
+            <a href="/admin/users/show/<%= user.id %>"><%= user.firstname %> <b><%= user.lastname %></b></a>
+        </td>
+        <td>
+            <%= user.created_at %>
+        </td>        
+        <td>
+            <%= link_to 'Show', :action => 'show', :id => user %>
+            <%= link_to 'Destroy', { :action => 'destroy', :id => user }, :confirm => 'Are you sure?' %>
+        </td>
+    </tr>
+<% end %>

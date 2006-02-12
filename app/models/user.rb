@@ -10,6 +10,16 @@ class User < ActiveRecord::Base
   @@salt = 'bluewhaleslovehypocrites'
   cattr_accessor :salt
 
+  # My nice little search function for the admin console
+  def self.search(query)
+    if !query.to_s.strip.empty?
+      tokens = query.split.collect {|c| "%#{c.downcase}%"}
+      find_by_sql(["SELECT * from users WHERE #{ (["(LOWER(firstname) LIKE ? OR LOWER(lastname) LIKE ? OR LOWER(login) LIKE ?)"] * tokens.size).join(" AND ") } ORDER by created_at DESC", *tokens.collect { |token| [token] * 3 }.flatten])
+    else
+      []
+    end
+  end  
+
   # Authenticate a user. 
   #
   # Example:

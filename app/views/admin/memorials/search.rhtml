@@ -1,0 +1,32 @@
+<h2>Search Memorials</h2>
+
+<%= render_partial 'searchbox' %><br />
+
+<table>
+    <thead>
+        <td>Name (click to view memorial)</td>
+        <td>Created By (click to view user)</td>
+        <td>Expires On (click date to change)</td>
+        <td>Actions</td>
+    </thead>
+<%
+odd_or_even = 0
+for memorial in @memorials.reverse
+	odd_or_even = 1 - odd_or_even
+%>
+    <tr class="listline<%= odd_or_even %>">
+        <td>
+            <a href="/admin/memorials/show/<%= memorial.id %>"><%= memorial.firstname %> <b><%= memorial.lastname %></b></a>
+        </td>
+        <td>
+            <a href="/admin/users/show/<%= memorial.user.id %>"><%= memorial.user.login %></a>
+        </td>
+        <td>
+            <%= link_to memorial.expires_at, :action => 'change_expiration', :id => memorial.id %>
+        </td>        
+        <td>
+            <%= link_to 'Show', :action => 'show', :id => memorial %>
+            <%= link_to 'Destroy', { :action => 'destroy', :id => memorial }, :confirm => 'Are you sure?' %>
+        </td>
+    </tr>
+<% end %>
