@@ -1,0 +1,27 @@
+<h1>Listing system_settings</h1>
+
+<table>
+  <tr>
+  <% for column in SystemSetting.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for system_setting in @system_settings %>
+  <tr>
+  <% for column in SystemSetting.content_columns %>
+    <td><%=h system_setting.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => system_setting %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => system_setting %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => system_setting }, :confirm => 'Are you sure?' %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @system_setting_pages.current.previous } if @system_setting_pages.current.previous %>
+<%= link_to 'Next page', { :page => @system_setting_pages.current.next } if @system_setting_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New system_setting', :action => 'new' %>

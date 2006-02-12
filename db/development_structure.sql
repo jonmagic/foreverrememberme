@@ -19,7 +19,9 @@ CREATE TABLE `memorials` (
   `created_at` datetime default NULL,
   `updated_at` datetime default NULL,
   `user_id` int(11) default NULL,
-  `image` varchar(80) default NULL,
+  `views` int(12) default NULL,
+  `expires_at` datetime default NULL,
+  `primary_picture_id` int(11) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -30,6 +32,17 @@ CREATE TABLE `pictures` (
   `created_at` datetime default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE `schema_info` (
+  `version` int(11) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE `system_settings` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
+  `value` text,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL auto_increment,
@@ -43,3 +56,4 @@ CREATE TABLE `users` (
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+INSERT INTO schema_info (version) VALUES (4)

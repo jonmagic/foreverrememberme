@@ -1,6 +1,9 @@
+require 'paypal'
 module MemorialHelper
+  include Paypal::Helpers
+  
   def extend_memorial_link(memorial)
-    link_to 'extend this memorial for 10 years', :action => 'extend', :id => memorial.id
+    link_to 'extend this memorial for 10 years', :action => 'extend_memorial', :id => memorial.id
   end
   
   def extended_date(memorial)
