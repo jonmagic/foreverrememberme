@@ -1,3 +1,5 @@
+require 'ostruct'
+
 class MemorialController < ApplicationController
   before_filter :login_required, :except => [ :index, :features, :faq, :privacypolicy, 
                                               :show, :search, :comment, :extend_return, 
@@ -37,7 +39,20 @@ class MemorialController < ApplicationController
   end
 
   def search
-    @memorials = Memorial.search(params[:firstname, :lastname, :hometown])
+    if params[:id] == 'query'
+      args = { 'firstname'=>params[:search][:firstname], 
+               'lastname'=> params[:search][:lastname], 
+               'hometown'=> params[:search][:hometown]
+              }
+      args = args.delete_if {|k, v| v.blank? }
+      if args.blank?
+        flash[:warning] = "You must enter at least one search term."
+        redirect_to :action => "search", :id => nil
+        return false
+      end
+      @search = OpenStruct.new(args.to_hash)
+      @memorials = Memorial.search(args)
+    end
   end
   
   def comment

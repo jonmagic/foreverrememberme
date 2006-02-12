@@ -5,13 +5,10 @@ class Memorial < ActiveRecord::Base
   belongs_to :primary_picture, :class_name => "Picture", :foreign_key => 'primary_picture_id'
   belongs_to :user
   
-  def self.search(query)
-    if !query.to_s.strip.empty?
-      tokens = query.split.collect {|c| "%#{c.downcase}%"}
-      find_by_sql(["SELECT * from memorials WHERE #{ (["(LOWER(firstname) LIKE ? OR LOWER(lastname) LIKE ? OR LOWER(hometown) LIKE ?)"] * tokens.size).join(" AND ") } ORDER by created_at DESC", *tokens.collect { |token| [token] * 3 }.flatten])
-    else
-      []
-    end
+  def self.search(args)
+    conditions = ["expires_at > ? AND " + args.map {|k, v| "LOWER(#{k}) LIKE ?"}.join(" OR "),
+                  Time.now.to_formatted_s(:db), *args.values.map {|v| "%#{v}%"}]
+    find(:all, :conditions => conditions, :order => "created_at DESC" )
   end
   
   def self.most_recent
