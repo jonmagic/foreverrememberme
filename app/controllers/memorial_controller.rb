@@ -29,13 +29,18 @@ class MemorialController < ApplicationController
     is_owner
     if @memorial.expired? 
       if @owner == 1
-        flash[:notice] = "This memorial has expired. Only you will be able to view it. Purchase and extension to allows other to view it."
+        flash[:warning] = "This memorial has expired. Only you will be able to view it. Purchase and extension to allows other to view it."
       else
-        flash[:notice] = "The requested memorial has expired and cannot be shown."
+        flash[:warning] = "The requested memorial has expired and cannot be shown."
         redirect_to :action => "index"
       end
     end
     @memorial.increment!('views')
+    if @memorial.pictures.size <= preference('allowed_number_of_photos').to_i
+      @display_upload = 1
+    else
+      @display_upload = 0
+    end      
   end
 
   def search
@@ -160,13 +165,17 @@ class MemorialController < ApplicationController
   
   def picture_upload
     m = Memorial.find(params[:id])
-    p = Picture.create(params[:picture])
-    if m.primary_picture.nil?
-      m.primary_picture = p
+    if m.pictures.size <= preference('allowed_number_of_photos').to_i
+      p = Picture.create(params[:picture])
+      if m.primary_picture.nil?
+        m.primary_picture = p
+      end
+      m.pictures << p
+      m.save    
+      flash[:notice] = "Added Your Picture."
+    else
+      flash[:warning] = "You cannot exceed #{preference('allowed_number_of_photos')} photos."
     end
-    m.pictures << p
-    m.save    
-    flash[:notice] = "Added Your Picture."
     redirect_to :action => "show", :id => params[:id]
   end
   
