@@ -7,10 +7,9 @@
 <%= paypal_form_tag %>
   <%= paypal_setup @memorial.id, preference('extension_price'), preference('paypal_email'),
 		:notify_url => url_for(:only_path => false, :action => 'extend_ipn'), 
-		:return_url => url_for(:only_path => false, :action => 'extend_return', :id => "success"), 
-		:cancel_url => url_for(:only_path => false, :action => 'extend_return', :id => "canceled"), 
+		:return_url => url_for(:only_path => false, :action => 'extend_payment_return', :id => "success"), 
+		:cancel_url => url_for(:only_path => false, :action => 'extend_payment_return', :id => "canceled"), 
 		:item_name => "Memorial date extension for #{@memorial.full_name}"
 	  %>
   <%= submit_tag "Pay: $#{preference('extension_price')}" %>
 </form>
-a

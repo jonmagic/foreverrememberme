@@ -40,11 +40,35 @@ class MemorialController < ApplicationController
   end  
   
   def extend_ipn
-    # stub
+    notify = Paypal::Notification.new(request.raw_post)
+    memorial = Memorial.find(notify.item_id)
+
+    if notify.acknowledge
+      begin
+        if notify.complete? and preference('extension_price').to_money == notify.amount
+          memorial.expires_at = if memorial.expired?
+                                  Time.now + 10.years
+                                else
+                                  memorial.expires_at + 10.years
+                                end
+        else
+          logger.error("Failed to verify Paypal's notification, please investigate")
+        end
+      rescue => e
+        raise
+      ensure
+        memorial.save
+      end
+    end
+    render :nothing => true
   end
   
-  def extend_return
-    # stub
+  def extend_payment_return
+    @memorial = Memorial.find(params[:item_number])
+    if params[:payment_status] != 'Completed'
+      flash[:notice] = "We're sorry you canceled" if params[:id] == 'canceled'
+      redirect_to :action => "manage"
+    end
   end
   
   
