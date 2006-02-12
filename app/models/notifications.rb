@@ -1,21 +1,17 @@
 class Notifications < ActionMailer::Base
 
-  def signup(sent_at = Time.now)
-    @subject    = 'Notifications#signup'
-    @body       = {}
-    @recipients = ''
-    @from       = ''
-    @sent_on    = sent_at
-    @headers    = {}
+  def signup(user)
+    @recipients = user.login
+    @from       = 'info@foreverrememberme.com'
+    @subject    = 'Thank you for signing up at Forever Remember Me'
+    @body["firstname"] = user.firstname
+    @body["lastname"] = user.lastname
   end
 
   def anniversary(sent_at = Time.now)
-    @subject    = 'Notifications#anniversary'
-    @body       = {}
-    @recipients = ''
-    @from       = ''
-    @sent_on    = sent_at
-    @headers    = {}
+    @recipients = user.login
+    @from       = 'info@foreverrememberme.com'
+    @subject    = 'Thank you for signing up at Forever Remember Me'
   end
 
   def renew_memorial(sent_at = Time.now)
