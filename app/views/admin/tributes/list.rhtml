@@ -1,20 +1,24 @@
-<h1>Listing tributes</h1>
+<h2>Listing tributes</h2>
 
 <table>
-  <tr>
-  <% for column in Tribute.content_columns %>
-    <th><%= column.human_name %></th>
-  <% end %>
-  </tr>
+	<thead>
+	   <td>Title</td>
+	   <td>Description</td>
+	   <td>Actions</td>
+	</thead>
   
-<% for tribute in @tributes %>
-  <tr>
+<%
+odd_or_even = 0
+for tribute in @tributes
+	odd_or_even = 1 - odd_or_even
+%>
+  <tr class="listline<%= odd_or_even %>">
   <% for column in Tribute.content_columns %>
     <td><%= tribute.send(column.name) %></td>
   <% end %>
-    <td><%= link_to 'Show', :action => 'show', :id => tribute %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => tribute %></td>
-    <td><%= link_to 'Destroy', { :action => 'destroy', :id => tribute }, :confirm => 'Are you sure?' %></td>
+    <td><%= link_to 'Show', :action => 'show', :id => tribute %>
+    <%= link_to 'Edit', :action => 'edit', :id => tribute %>
+    <%= link_to 'Destroy', { :action => 'destroy', :id => tribute }, :confirm => 'Are you sure?' %></td>
   </tr>
 <% end %>
 </table>

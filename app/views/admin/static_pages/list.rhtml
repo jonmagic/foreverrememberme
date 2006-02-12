@@ -1,20 +1,24 @@
-<h1>Listing static_pages</h1>
+<h2>Listing static_pages</h2>
 
 <table>
-  <tr>
-  <% for column in StaticPage.content_columns %>
-    <th><%= column.human_name %></th>
-  <% end %>
-  </tr>
+	<thead>
+	   <td>Name</td>
+	   <td>Content</td>
+	   <td>Actions</td>
+	</thead>
   
-<% for static_page in @static_pages %>
-  <tr>
+<%
+odd_or_even = 0
+for static_page in @static_pages
+	odd_or_even = 1 - odd_or_even
+%>
+  <tr class="listline<%= odd_or_even %>">
   <% for column in SystemSetting.content_columns %>
     <td><%=h static_page.send(column.name) %></td>
   <% end %>
-    <td><%= link_to 'Show', :action => 'show', :id => static_page %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => static_page %></td>
-    <td><%= link_to 'Destroy', { :action => 'destroy', :id => static_page }, :confirm => 'Are you sure?' %></td>
+    <td><%= link_to 'Show', :action => 'show', :id => static_page %>
+    <%= link_to 'Edit', :action => 'edit', :id => static_page %>
+    <%= link_to 'Destroy', { :action => 'destroy', :id => static_page }, :confirm => 'Are you sure?' %></td>
   </tr>
 <% end %>
 </table>

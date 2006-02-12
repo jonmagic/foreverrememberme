@@ -33,8 +33,11 @@
         <h1><u>Admin Console:</u></h1>
         <hr />
         <span>
-            <%= link_to "Manage Users", :controller => "users", :action => "index" %> | 
-            <%= link_to "Manage Memorials", :controller => 'memorials', :action => 'index' %> |
+			Manage: 
+            <%= link_to "Users", :controller => "users", :action => "index" %> | 
+            <%= link_to "Memorials", :controller => 'memorials', :action => 'index' %> |
+            <%= link_to "Tributes", :controller => 'tributes', :action => 'index' %> |
+            <%= link_to "Static Pages", :controller => 'static_pages', :action => 'index' %> |
             You are logged in as <%= @session[:user].login %>, <%= link_to "Logout", :controller => '/user', :action => 'logout' %>
         </span> | <span style="color: green"><%= flash[:notice] %></span>
         <hr />

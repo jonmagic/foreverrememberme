@@ -3,6 +3,7 @@ require 'digest/sha1'
 # this model expects a certain database layout and its based on the name/login pattern. 
 class User < ActiveRecord::Base
   has_many :memorials
+  validates_format_of :login, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
 
   # Please change the salt to something else, 
   # Every application should use a different one 
