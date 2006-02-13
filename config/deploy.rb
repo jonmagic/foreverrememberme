@@ -112,11 +112,9 @@ task :long_deploy do
 end
 
 desc "This task sets up all my particular symlinks"
-
 task :after_symlink do
-  run "rm -rf #{release_path}/config"
-  run "cp -r ~/pro_config/production_v1/config #{release_path}/"
-  run "rm #{release_path}/public/picture"
+  run "rm -f #{release_path}/config/database.yml"
+  run "cp ~/pro_config/production_v1/config/database.yml #{release_path}/config/"
   run "ln -s ~/files/picture #{release_path}/public/picture"
 end
 
