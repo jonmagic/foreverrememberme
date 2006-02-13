@@ -7,6 +7,11 @@ task :deploy do
   system "switchtower -vvvv -r config/deploy -a deploy"
 end
 
+task :long_deploy do
+  system "switchtower -vvvv -r config/deploy -a long_deploy"
+end
+
+
 desc "Rollback to the release before the current release in production"
 task :rollback do
   system "switchtower -vvvv -r config/deploy -a rollback"
