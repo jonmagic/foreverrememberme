@@ -6,6 +6,9 @@ body {
 	font-size: 80%;
 }
 
+a, a:link, a:visited { color: #000; }
+a:hover { color: #000; text-decoration: none; }
+
 .floatright {
 	float: right;
 }
@@ -14,9 +17,41 @@ body {
 	float: left;
 }
 
+/************ Site Links *************/
+
+#forever_links ul {
+	width: 770px;
+	padding: 5px 0;
+	margin: 0;
+	white-space : nowrap;
+	text-align: center;
+}
+
+#forever_links ul li {
+	display: inline;
+}
+
+#forever_links a {
+	font-size: 1em;
+	font-weight: bold;	
+	padding: 5px 15px;
+	border-top: 3px solid #fff;	
+	border-left: 3px solid #fff;
+	border-right: 3px solid #fff;
+	border-bottom: 3px solid #282F27;	
+	background-color: #eee;
+}
+
+#forever_links a:hover {	
+	background-color: #fff;
+	border-left: 3px solid #ccc;
+	border-right: 3px solid #282F27;
+}
+
 /************ Book **************/
 #book {
 	width: 800px;
+	margin: 20px 0 0 0;
 	background: url("../images/bookpage.jpg") repeat-y;
 }
 
