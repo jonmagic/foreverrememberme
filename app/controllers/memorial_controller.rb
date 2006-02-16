@@ -6,7 +6,7 @@ class MemorialController < ApplicationController
                                               :extend_ipn, :add_tribute, :tribute_ipn, 
                                               :tribute_payment_return ]
                                               
-  layout 'memorial', :only => :show
+  layout 'application', :except => :show
 
 # Public methods, every one can use them
 
@@ -27,12 +27,10 @@ class MemorialController < ApplicationController
   end
 
   def view
-    render :action => "show", :layout => "admin"
   end
   
-  
   def show
-    @memorial = Memorial.find(params[:id][/^(\d+)/])
+    @memorial = Memorial.find(params[:id][/^(\d+)/])    
     is_owner
     if @memorial.expired? 
       if @owner == 1
@@ -43,6 +41,7 @@ class MemorialController < ApplicationController
       end
     end
     @memorial.increment!('views')    
+     render :action => "view", :layout => "showmemorial"
   end
 
   def search
