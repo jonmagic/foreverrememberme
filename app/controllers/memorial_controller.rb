@@ -5,6 +5,8 @@ class MemorialController < ApplicationController
                                               :show, :search, :comment, :extend_return, 
                                               :extend_ipn, :add_tribute, :tribute_ipn, 
                                               :tribute_payment_return ]
+                                              
+  layout 'memorial', :only => :show
 
 # Public methods, every one can use them
 
@@ -22,7 +24,12 @@ class MemorialController < ApplicationController
   
   def privacypolicy
     @memorials = Memorial.most_recent
-  end  
+  end
+
+  def view
+    render :action => "show", :layout => "admin"
+  end
+  
   
   def show
     @memorial = Memorial.find(params[:id][/^(\d+)/])
@@ -35,7 +42,7 @@ class MemorialController < ApplicationController
         redirect_to :action => "index"
       end
     end
-    @memorial.increment!('views')     
+    @memorial.increment!('views')    
   end
 
   def search

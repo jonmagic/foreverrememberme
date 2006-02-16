@@ -1,39 +1,19 @@
-<div class="medium-right-column floatright">
-    <% if @owner > 0 %>
-        <%= render :partial => "userbox" %><br />           
-        <%= render :partial => "manage_this_memorial" %><br />      
-        <%= render :partial => "manage_your_memorials" %><br />
-	    <%= render :partial => "uploadpictures", :object => @memorial %>   
-    <% end %>
-    <%= render :partial => "memorial_details", :object => @memorial %>
+<div id="main_content">
+	<%= render :partial => "memorial", :object => @memorial %>
 </div>
 
-<div class="medium-right-column floatright clearright">
-	<div class="formattedbox">
-		<%= link_to "Add a tribute to this memorial", :action => "add_tribute", :id => @memorial.id %>
-	</div>
-	<%= debug @memorial.tributes %>
-	
+<div id="extra_info">
+	<%= render :partial => "memorial_details", :object => @memorial %>
 </div>
 
-<% if @owner > 0 %>
-	<div class="medium-left-column">
-	    <%= render :partial => "memorial", :object => @memorial %>
-	    <h3>Pictures</h3>
-	    <%= render :partial => "owner_picture_view", :object => @memorial %>
-	</div>
-<% end %>
-
-<% if @owner < 1 %>
-	<div class="medium-left-column">
-	    <%= render :partial => "memorial", :object => @memorial %>
-	    <h3>Pictures</h3>
-
-	</div>
-	<div class="full-width-column">
+<div id="pictures">
+	<% if @owner < 1 %>
 		<%= render :partial => "public_picture_view", :object => @memorial %>
-	</div>
-<% end %>
+	<% else %>
+		<%= render :partial => "owner_picture_view", :object => @memorial %>
+	<% end %>
+</div>
 
-<br />
-<%= render :partial => "comments", :object => @memorial %>
+<div id="comments">
+	<%= render :partial => "comments", :object => @memorial %>
+</div>

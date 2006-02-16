@@ -1,16 +1,12 @@
-<div title="Main Picture Select" id="selectyourmainpicture" class="form">
 <% for @picture in @memorial.pictures %>
-    <div class="picture-thumbwrapper">
-        <div class="picture-background">
-            <a href="<%= url_for_file_column "picture", "image", "large" %>" rel="external">
-                <%= image_tag url_for_file_column "picture", "image", "thumb" %>
-            </a>
-            <ul class="picture-options">
-                <li><%= link_to 'Set Main', :action => 'set_primary_picture', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
-                <li><%= link_to 'Delete', :action => 'picture_delete', :id => @memorial, :picture => @picture %></li>
-            </ul>
-        </div>
-    </div>
+  <div class="thumb">
+    <a href="<%= url_for_file_column "picture", "image", "large" %>" rel="external">
+        <%= image_tag url_for_file_column "picture", "image", "thumb" %>
+    </a>
+     <ul class="options">
+         <li><%= link_to 'Set Main', :action => 'set_primary_picture', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
+         <li><%= link_to 'Delete', :action => 'picture_delete', :id => @memorial, :picture => @picture %></li>
+     </ul>
+  </div>
 <% end %>
-<div class="clearer"></div>
-</div>
+<%= render :partial => "uploadpictures", :object => @memorial %>

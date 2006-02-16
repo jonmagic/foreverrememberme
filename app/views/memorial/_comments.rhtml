@@ -1,4 +1,16 @@
-<div class="medium-right-column floatright">
+<div class="comments">
+	<h3>Comments</h3>
+	<% for comments in @memorial.comments %>
+		Name: <%= comments.name %><br />
+		Note: <%= comments.note %><br />
+		<% if @owner > 0 %>
+	        <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => comments %></span><br />
+	    <% end %>
+	    <br />
+	<% end %>
+</div>
+
+<div class="leave_comment">
 	<h3>Leave a comment:</h3>
   	<%= form_tag :action => "comment", :id => @memorial %>
   	    <div title="Comments" id="commentform" class="form">
@@ -10,15 +22,4 @@
       		<%= submit_tag "Post Comment" %>
       	</div>
   	</form>
-</div>
-<div class="medium-left-column">
-	<h3>Comments</h3>
-	<% for comments in @memorial.comments %>
-		Name: <%= comments.name %><br />
-		Note: <%= comments.note %><br />
-		<% if @owner > 0 %>
-	        <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => comments %></span><br />
-	    <% end %>
-	    <br />
-	<% end %>
 </div>

@@ -4,17 +4,15 @@
 <p>Then click the Upload button and wait for the picture to upload. Once it is uploaded it should appear on the left hand side of this page as a thumbnail.</p>
 <p>You can click on the thumbnail to open the picture full size.</p>
 <p>You can also set the image as the main image for this memorial by selecting the radio button below the image and then click the Set Main Picture button.</p>
-	<div id="uploadpictures">
-	    <div style="padding:10px">
-	        <%= form_tag ({:action => "picture_upload", :id => @memorial}, :multipart => true) %>
-	        <div title="Upload Pictures" id="picturefreakinupload" class="form">
-	            <p><label for="memorial_image">Choose An Image:</label><br/>
-	            <%= file_column_field "picture", "image", :size => "25" %></p>
-	            <%= hidden_field 'picture', 'memorial_id', 'value' => @memorial.id  %>
-	          <%= submit_tag "Upload" %>
-	         </div>
-	        <%= end_form_tag %>
-	    </div>
+	<div class="upload">
+       <%= form_tag ({:action => "picture_upload", :id => @memorial}, :multipart => true) %>
+       <div title="Upload Pictures" id="picturefreakinupload" class="form">
+           <p><label for="memorial_image">Choose An Image:</label><br/>
+           <%= file_column_field "picture", "image", :size => "25" %></p>
+           <%= hidden_field 'picture', 'memorial_id', 'value' => @memorial.id  %>
+         <%= submit_tag "Upload" %>
+        </div>
+       <%= end_form_tag %>
 	</div>
 <% else %>
 <p>I'm sorry, but you have reached your upload limit. Currently we only allow <%= preference('allowed_number_of_photos') %> photos to be uploaded.</p>

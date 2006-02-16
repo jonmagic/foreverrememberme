@@ -1,5 +1,4 @@
-<p class="floatright"><%= dob_to_dod(@memorial) %></p>
-<h3><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></h3>    
+<h2 class="title_name"><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></h2>
+<p class="dob_to_dod"><%= dob_to_dod(@memorial) %></p>
 <%= show_primary_picture(@memorial) %>
-<p></p>
-<p><%= @memorial.message %></p>
+<p class="message"><%= @memorial.message %></p>
