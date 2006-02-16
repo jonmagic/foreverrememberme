@@ -1,5 +1,4 @@
 class UserController < ApplicationController
-  layout  'memorial'
 
   def login
     case @request.method

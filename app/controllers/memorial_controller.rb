@@ -5,7 +5,6 @@ class MemorialController < ApplicationController
                                               :show, :search, :comment, :extend_return, 
                                               :extend_ipn, :add_tribute, :tribute_ipn, 
                                               :tribute_payment_return ]
-  layout 'memorial'
 
 # Public methods, every one can use them
 
