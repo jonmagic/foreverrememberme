@@ -1,12 +1,9 @@
+<h2 class="title_name"><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></h2>
 <div id="main_content">
 	<%= render :partial => "memorial", :object => @memorial %>
 </div>
 
-<div id="extra_info">
-	<%= render :partial => "memorial_details", :object => @memorial %>
-</div>
-
-<div id="pictures">
+<div id="pictures" style="display:none;">
 	<% if @owner < 1 %>
 		<%= render :partial => "public_picture_view", :object => @memorial %>
 	<% else %>
@@ -14,6 +11,6 @@
 	<% end %>
 </div>
 
-<div id="comments">
+<div id="comments" style="display:none;">
 	<%= render :partial => "comments", :object => @memorial %>
 </div>

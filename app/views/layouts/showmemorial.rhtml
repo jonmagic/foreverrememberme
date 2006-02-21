@@ -19,13 +19,13 @@
 
  		<%= stylesheet_link_tag 'memorial' %>
 
-        <%= javascript_include_tag "prototype" %> 		
-        <%= javascript_include_tag "external" %>
-		
+        <%= javascript_include_tag "prototype" %>
+        <%= javascript_include_tag "effects" %>
+        <%= javascript_include_tag "memorial_effects" %>
 	</head>
 	
 <body>
-	<div id="forever_links">
+	<div id="linkbar_top" class="forever_links">
 		<ul>
 			<li><%= link_to "Home", :action => 'index' %></li>			
 			<li><%= link_to "Search", :action => 'search' %></li>
@@ -35,13 +35,32 @@
 			<li><%= link_to "Manage", :action => 'manage' %></li>
 			<li><%= link_to "Contact Us", :action => 'index' %></li>
 		</ul>						
+	</div>	
+	<div id="bookmarks">
+		<a href="javascript:Effect.Unhide('main_content');javascript:Effect.Hide('pictures');javascript:Effect.Hide('comments');" class="memorial_bookmark">Memorial</a>
+		<a href="javascript:Effect.Unhide('pictures');javascript:Effect.Hide('main_content');javascript:Effect.Hide('comments');" class="pictures_bookmark">Pictures</a>
+		<a href="javascript:Effect.Unhide('comments');javascript:Effect.Hide('main_content');javascript:Effect.Hide('pictures');" class="comments_bookmark">Comments</a>
 	</div>
 	<div id="book">
-		<div id="topedge">
+		<div id="topedge">			
 		</div>
 		<div id="page">
 			<%= @content_for_layout %>
+			<br />
+		</div>
+		<div id="bottomedge">
 		</div>
 	</div>
+	<div id="linkbar_bottom" class="forever_links">
+		<ul>
+			<li><%= link_to "Home", :action => 'index' %></li>			
+			<li><%= link_to "Search", :action => 'search' %></li>
+			<li><%= link_to "Features", :action => 'features' %></li>
+			<li><%= link_to "F.A.Q.", :action => 'faq' %></li>					
+			<li><%= link_to "Create", :action => 'new' %></li>
+			<li><%= link_to "Manage", :action => 'manage' %></li>
+			<li><%= link_to "Contact Us", :action => 'index' %></li>
+		</ul>						
+	</div>	
 </body>
 </html>

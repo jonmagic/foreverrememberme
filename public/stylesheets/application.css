@@ -86,7 +86,7 @@ visibility: hidden;
 #wrapper1 {
 	margin: 0 auto;
 	width: 750px;
-	padding: 1px;
+	padding: 0;
 	border: 3px solid #282F27;
 }
 
@@ -169,7 +169,7 @@ html>body #wide-left-column {
 	margin-right: 5px;
 	text-align: center;
 	background: #F1FDFD;
-	border: 1px solid #666;
+	border: 1px solid #282F27;
 	voice-family: "\"}\"";
 	voice-family: inherit;	
 }
@@ -253,6 +253,7 @@ html>body .full-width-column {
 .footing {
 	padding: 10px;
 	background: url("../images/grey-stripes.gif");
+	border: 1px solid #282F27;	
 }
 
 /* ------ flash ------*/

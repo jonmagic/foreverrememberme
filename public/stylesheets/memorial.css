@@ -19,54 +19,110 @@ a:hover { color: #000; text-decoration: none; }
 
 /************ Site Links *************/
 
-#forever_links ul {
-	width: 770px;
-	padding: 5px 0;
-	margin: 0;
-	white-space : nowrap;
+#linkbar_top {
+	position: absolute;
+	top: 0;
+	left: 48px;
+	height: 50px;
+	width:700px;
+	background: url("../images/linkbarbg-top.gif") no-repeat;
+}
+
+.forever_links ul {
+	margin: 10px 0;
+	padding: 0;
 	text-align: center;
 }
 
-#forever_links ul li {
+.forever_links li {
 	display: inline;
 }
 
-#forever_links a {
-	font-size: 1em;
-	font-weight: bold;	
-	padding: 5px 15px;
-	border-top: 3px solid #fff;	
-	border-left: 3px solid #fff;
-	border-right: 3px solid #fff;
-	border-bottom: 3px solid #282F27;	
-	background-color: #eee;
+.forever_links a {
+	padding: 5px 10px;	
+	font-size: 1.2em;
 }
 
-#forever_links a:hover {	
-	background-color: #fff;
-	border-left: 3px solid #ccc;
-	border-right: 3px solid #282F27;
+.forever_links a:hover {
+	background-color: #EDF5F8;
+	border-top: 2px solid #D1EAF3;
+	border-bottom: 2px solid #D1EAF3;	
 }
+
+#linkbar_bottom {
+	margin: 0 0 0 48px;
+	padding: 5px 0 0 0;
+	height: 45px;
+	width:700px;
+	background: url("../images/linkbarbg-bottom.gif") no-repeat;
+}
+
 
 /************ Book **************/
 #book {
+	margin: 80px 0 0 0;
 	width: 800px;
-	margin: 20px 0 0 0;
-	background: url("../images/bookpage.jpg") repeat-y;
 }
 
 #topedge {
 	height: 100px;
-	background: url("../images/booktop.jpg") no-repeat;
+	background: url("../images/booktop.gif") no-repeat;
 }
 
 #page {
-	margin-top: -30px;
-	padding: 0 150px 0 100px;
+	margin-top: -20px;
+	padding: 0 0 0 100px;
+	background: url("../images/bookpage.gif") repeat-y;	
 }
 
+#bottomedge {
+	margin-top: -20px;	
+	height: 100px;
+	background: url("../images/bookbottom.gif") no-repeat;	
+}
+
+/************ Bookmarks *************/
+#bookmarks {
+}
+
+.memorial_bookmark {
+	position: absolute;
+	top: 60px;
+	left: 200px;
+	height: 38px;
+	width: 118px;
+	padding: 9px 40px;
+	background: url("../images/bookmark.gif") no-repeat;	
+	font-size: 1.1em;	
+}
+
+.pictures_bookmark {
+	position: absolute;
+	top: 61px;
+	left: 400px;
+	height: 38px;
+	width: 118px;
+	padding: 9px 40px;
+	background: url("../images/bookmark.gif") no-repeat;	
+	font-size: 1.1em;	
+}
+
+.comments_bookmark {
+	position: absolute;
+	top: 62px;
+	left: 590px;
+	height: 38px;
+	width: 118px;
+	padding: 9px 40px;
+	background: url("../images/bookmark.gif") no-repeat;	
+	font-size: 1.1em;	
+}
 
 /************ Memorial **************/
+#main_content {
+	width: 590px;
+}
+
 h2.title_name {
 	margin: 0;
 	padding: 0;
@@ -84,10 +140,19 @@ p.dob_to_dod {
 
 /************ Pictures **************/
 #pictures {
-	display: none;
+	width: 590px;
 }
 
 /************ Comments **************/
 #comments {
-	display: none;
+	width: 590px;	
+}
+
+/************ Footer ***************/
+#footer {
+	width: 400px;
+	padding: 10px;
+	background: url("../images/grey-stripes.gif");
+	border: 1px solid #282F27;	
+	text-align: center;
 }

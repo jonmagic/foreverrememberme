@@ -1,4 +1,6 @@
-<h2 class="title_name"><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></h2>
 <p class="dob_to_dod"><%= dob_to_dod(@memorial) %></p>
 <div class="mainpic floatleft"><%= show_primary_picture(@memorial) %></div>
 <p class="message"><%= @memorial.message %></p>
+<div id="extra_info">
+	<%= render :partial => "memorial_details", :object => @memorial %>
+</div>
