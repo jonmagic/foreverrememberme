@@ -73,7 +73,7 @@ a:hover { color: #000; text-decoration: none; }
 #book {
 	z-index: 0;
 	position: absolute;
-	top: 80px;
+	top: 100px;
 	width: 800px;
 }
 
@@ -95,61 +95,58 @@ a:hover { color: #000; text-decoration: none; }
 }
 
 /************ Bookmarks *************/
-#bookmark-memorial {
+#bookmark-memorial a {
 	z-index: 4;
 	position: absolute;
-	top: 57px;
-	left: 200px;
-}
-
-#bookmark-memorial a {
+	top: 10px;
+	left: 200px;	
 	display: block;
-	width: 105px;
-	height: 39px;
+	width: 220px;
+	height: 110px;
 	text-indent: -1000px;
 	background: url("../images/bookmark-memorial-down.gif") no-repeat;	
 }
 
 #bookmark-memorial a:hover {
+	z-index: 7;
+	height: 329px;
 	background: url("../images/bookmark-memorial-up.gif") no-repeat;	
 }
 
-#bookmark-pictures {
-	z-index: 4;
-	position: absolute;
-	top: 56px;
-	left: 350px;
-}
-
 #bookmark-pictures a {
+	z-index: 5;
+	position: absolute;
+	top: 9px;
+	left: 350px;	
 	display: block;
-	width: 105px;
-	height: 39px;
+	width: 220px;
+	height: 110px;
 	text-indent: -1000px;
-	background: url("../images/bookmark-pictures-down.gif") no-repeat;	
+	background: url("../images/bookmark-memorial-down.gif") no-repeat;	
 }
 
 #bookmark-pictures a:hover {
-	background: url("../images/bookmark-pictures-up.gif") no-repeat;	
-}
-
-#bookmark-comments {
-	z-index: 4;
-	position: absolute;
-	top: 55px;
-	left: 500px;
+	z-index: 8;
+	height: 329px;
+	background: url("../images/bookmark-memorial-up.gif") no-repeat;	
 }
 
 #bookmark-comments a {
+	z-index: 6;
+	position: absolute;
+	top: 8px;
+	left: 500px;
 	display: block;
-	width: 105px;
-	height: 39px;
+	width: 220px;
+	height: 110px;
 	text-indent: -1000px;
-	background: url("../images/bookmark-comments-down.gif") no-repeat;	
+	background: url("../images/bookmark-memorial-down.gif") no-repeat;	
 }
 
 #bookmark-comments a:hover {
-	background: url("../images/bookmark-comments-up.gif") no-repeat;	
+	z-index: 9;
+	height: 329px;
+	background: url("../images/bookmark-memorial-up.gif") no-repeat;	
 }
 
 /************* Userbox **************/
