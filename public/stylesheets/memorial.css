@@ -154,6 +154,7 @@ a:hover { color: #000; text-decoration: none; }
 
 /************* Userbox **************/
 #userbox {
+	z-index: 4;	
 	position:absolute;
 	top: 130px;
 	left: 420px;
@@ -187,10 +188,25 @@ p.dob_to_dod {
 	margin: 0 20px 20px 0;
 }
 
+#details {
+	margin: 10px 20px 10px 10px;
+	padding: 10px;
+	background-color: #D7D4CD;	
+}
+
+.memorial-hr {
+	margin-right: 130px;
+}
+
+.views {
+	width: 570px;
+	text-align: center;
+}
+
 /************ Pictures **************/
 #pictures {
 	width: 590px;
-	min-height: 400px;
+	min-height: 300px;
 }
 
 .thumb {
@@ -230,7 +246,7 @@ ul.options {
 /************ Comments **************/
 #comments {
 	width: 590px;
-	min-height: 400px;		
+	min-height: 300px;		
 }
 
 #comments h3 {

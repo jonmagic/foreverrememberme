@@ -15,3 +15,16 @@
 	<%= render :partial => "comments", :object => @memorial %>
 </div>
 <div class="clearer"></div>
+<hr class="memorial-hr" />
+<h3>Tributes</h3>
+<% for tribute in @memorial.tributes %>
+	<% @picture = tribute.picture %>
+	<%= image_tag url_for_file_column("picture", "image", "thumb") %><br />	
+<% end %>
+<p>( <%= link_to "Click here to add a tribute", :controller => "memorial", :action => "add_tribute", :id => @memorial %> )</p>
+<hr class="memorial-hr" />
+<div class="views">
+	<p><b><%= @memorial.views %></b> visits have been made to this Memorial.</p>
+</div>
+<br />
+<br />
