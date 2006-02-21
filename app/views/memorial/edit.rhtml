@@ -1,4 +1,4 @@
-<div class="column-right">
+<div class="floatright medium-right-column">
     <h2>Step 2: Editing Memorial</h2>
     <p>Start by entering in the first and last name of the deceased.</p>
     <p>Then you can use an obituary or any other appropriate message in the message area. Often you can call the paper that ran the obituary and they will e-mail you the original text. Then you can just copy and paste the text into the message area.</p>
@@ -7,7 +7,7 @@
     <p>Finally we can create our Memorial. Later we will add pictures, but for now just click the Create button.</p>
 </div>
 
-<div class="column-left">
+<div class="floatleft medium-left-column">
     <div id="newmemorial">
         <div style="padding:10px">
             <h3>New Memorial</h3>
@@ -15,10 +15,13 @@
                 <%= render_partial 'form' %>
                 <%= submit_tag 'Edit' %>
             <%= end_form_tag %>
-            </div>
         </div>
     </div>
+	<p>
+	<%= link_to 'Show', :action => 'show', :id => @memorial %> |
+	<%= link_to 'Back', :action => 'manage' %>
+	</p>
+</div>
 
-            <hr />
-<%= link_to 'Show', :action => 'show', :id => @memorial %> |
-<%= link_to 'Back', :action => 'manage' %>
+<div class="clearer"></div>
+

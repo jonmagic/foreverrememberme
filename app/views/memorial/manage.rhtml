@@ -1,6 +1,9 @@
 <div class="medium-right-column floatright">
-    <%= render_partial 'userbox' %><br />    
-    <%= render_partial 'manage_your_memorials' %>
+    <%= render_partial 'userbox' %><br />
+	<h3>Manage Memorials</h3>
+	<ul>
+    	<li><%= link_to 'Add Memorial', :action => 'new' %></li>
+	</ul>
 </div>
 <div class="medium-left-column">
     <h3>Proceeding to Step 2</h3>

@@ -37,16 +37,19 @@
 		</ul>						
 	</div>	
 	<div id="bookmarks">
-		<a href="javascript:Effect.Unhide('main_content');javascript:Effect.Hide('pictures');javascript:Effect.Hide('comments');" class="memorial_bookmark">Memorial</a>
-		<a href="javascript:Effect.Unhide('pictures');javascript:Effect.Hide('main_content');javascript:Effect.Hide('comments');" class="pictures_bookmark">Pictures</a>
-		<a href="javascript:Effect.Unhide('comments');javascript:Effect.Hide('main_content');javascript:Effect.Hide('pictures');" class="comments_bookmark">Comments</a>
+		<div id="bookmark-memorial"><a href="javascript:Effect.Hide('pictures');javascript:Effect.Hide('comments');javascript:Effect.Unhide('main_content');">Memorial</a>
+		</div>
+		<div id="bookmark-pictures"><a href="javascript:Effect.Hide('main_content');javascript:Effect.Hide('comments');javascript:Effect.Unhide('pictures');">Pictures</a>
+		</div>
+		<div id="bookmark-comments"><a href=
+	"javascript:Effect.Hide('main_content');javascript:Effect.Hide('pictures');javascript:Effect.Unhide('comments');">Comments</a>
+		</div>
 	</div>
 	<div id="book">
 		<div id="topedge">			
 		</div>
 		<div id="page">
 			<%= @content_for_layout %>
-			<br />
 		</div>
 		<div id="bottomedge">
 		</div>

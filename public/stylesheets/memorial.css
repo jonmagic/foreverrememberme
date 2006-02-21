@@ -93,40 +93,58 @@ a:hover { color: #000; text-decoration: none; }
 }
 
 /************ Bookmarks *************/
-#bookmarks {
-}
-
-.memorial_bookmark {
+#bookmark-memorial {
 	position: absolute;
-	top: 60px;
+	top: 58px;
 	left: 200px;
-	height: 38px;
-	width: 118px;
-	padding: 9px 40px;
-	background: url("../images/bookmark.gif") no-repeat;	
-	font-size: 1.1em;	
 }
 
-.pictures_bookmark {
-	position: absolute;
-	top: 61px;
-	left: 400px;
-	height: 38px;
-	width: 118px;
-	padding: 9px 40px;
-	background: url("../images/bookmark.gif") no-repeat;	
-	font-size: 1.1em;	
+#bookmark-memorial a {
+	display: block;
+	width: 105px;
+	height: 39px;
+	text-indent: -1000px;
+	background: url("../images/bookmark-memorial-down.gif") no-repeat;	
 }
 
-.comments_bookmark {
+#bookmark-memorial a:hover {
+	background: url("../images/bookmark-memorial-up.gif") no-repeat;	
+}
+
+#bookmark-pictures {
 	position: absolute;
-	top: 62px;
-	left: 590px;
-	height: 38px;
-	width: 118px;
-	padding: 9px 40px;
-	background: url("../images/bookmark.gif") no-repeat;	
-	font-size: 1.1em;	
+	top: 58px;
+	left: 350px;
+}
+
+#bookmark-pictures a {
+	display: block;
+	width: 105px;
+	height: 39px;
+	text-indent: -1000px;
+	background: url("../images/bookmark-pictures-down.gif") no-repeat;	
+}
+
+#bookmark-pictures a:hover {
+	background: url("../images/bookmark-pictures-up.gif") no-repeat;	
+}
+
+#bookmark-comments {
+	position: absolute;
+	top: 58px;
+	left: 500px;
+}
+
+#bookmark-comments a {
+	display: block;
+	width: 105px;
+	height: 39px;
+	text-indent: -1000px;
+	background: url("../images/bookmark-comments-down.gif") no-repeat;	
+}
+
+#bookmark-comments a:hover {
+	background: url("../images/bookmark-comments-up.gif") no-repeat;	
 }
 
 /************ Memorial **************/
