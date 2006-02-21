@@ -71,7 +71,9 @@ a:hover { color: #000; text-decoration: none; }
 
 /************ Book **************/
 #book {
-	margin: 80px 0 0 0;
+	z-index: 0;
+	position: absolute;
+	top: 80px;
 	width: 800px;
 }
 
@@ -94,8 +96,9 @@ a:hover { color: #000; text-decoration: none; }
 
 /************ Bookmarks *************/
 #bookmark-memorial {
+	z-index: 4;
 	position: absolute;
-	top: 58px;
+	top: 57px;
 	left: 200px;
 }
 
@@ -112,8 +115,9 @@ a:hover { color: #000; text-decoration: none; }
 }
 
 #bookmark-pictures {
+	z-index: 4;
 	position: absolute;
-	top: 58px;
+	top: 56px;
 	left: 350px;
 }
 
@@ -130,8 +134,9 @@ a:hover { color: #000; text-decoration: none; }
 }
 
 #bookmark-comments {
+	z-index: 4;
 	position: absolute;
-	top: 58px;
+	top: 55px;
 	left: 500px;
 }
 
