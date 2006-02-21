@@ -1,5 +1,9 @@
+<h3>Pictures</h3>
+<p>NOTE: You can set the image as the main image for this memorial by clicking the Set Main button.</p>
+<div class="uploadform floatright"><%= render :partial => "uploadpictures", :object => @memorial %></div>
+<div class="pictures floatleft">
 <% for @picture in @memorial.pictures %>
-  <div class="thumb">
+  <div class="thumb floatleft owner_thumb">
     <a href="<%= url_for_file_column "picture", "image", "large" %>" rel="external">
         <%= image_tag url_for_file_column "picture", "image", "thumb" %>
     </a>
@@ -9,4 +13,4 @@
      </ul>
   </div>
 <% end %>
-<%= render :partial => "uploadpictures", :object => @memorial %>
+</div>

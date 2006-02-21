@@ -4,6 +4,8 @@ body {
 	padding: 0;
 	font-family: Verdana,"Geneva CE",sans-serif;
 	font-size: 80%;
+	color: #4C373E;	
+	background: #eee url("../images/blue-green-stripes.jpg");	
 }
 
 a, a:link, a:visited { color: #000; }
@@ -15,6 +17,14 @@ a:hover { color: #000; text-decoration: none; }
 
 .floatleft {
 	float: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.clearer {
+	clear: both;
 }
 
 /************ Site Links *************/
@@ -41,6 +51,7 @@ a:hover { color: #000; text-decoration: none; }
 .forever_links a {
 	padding: 5px 10px;	
 	font-size: 1.2em;
+	color: #000;
 }
 
 .forever_links a:hover {
@@ -121,6 +132,7 @@ a:hover { color: #000; text-decoration: none; }
 /************ Memorial **************/
 #main_content {
 	width: 590px;
+	min-height: 400px;	
 }
 
 h2.title_name {
@@ -141,11 +153,61 @@ p.dob_to_dod {
 /************ Pictures **************/
 #pictures {
 	width: 590px;
+	min-height: 400px;
+}
+
+.thumb {
+	margin: 10px;
+	padding: 10px;
+	background-color: #D7D4CD;	
+}
+
+.owner_thumb {
+	text-align: center;
+	width: 100px;
+	height: 100px;
+}
+
+#pictures h3 {
+	margin: 20px 0 20px 0;
+	text-align: center;
+}
+
+.uploadform {
+	width: 250px;
+	padding: 20px;
+	background-color: #D7D4CD;	
+}
+
+.pictures {
+	width: 280px;
+}
+
+ul.options {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 
 /************ Comments **************/
 #comments {
-	width: 590px;	
+	width: 590px;
+	min-height: 400px;		
+}
+
+#comments h3 {
+	margin: 20px 0 20px 0;
+}
+
+.comment {
+	float: left;
+}
+
+.leave_comment {
+	float: right;
+	padding: 20px;
+	background-color: #D7D4CD;
 }
 
 /************ Footer ***************/

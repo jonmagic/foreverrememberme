@@ -1,15 +1,4 @@
-<div class="comments">
-	<h3>Comments</h3>
-	<% for comments in @memorial.comments %>
-		Name: <%= comments.name %><br />
-		Note: <%= comments.note %><br />
-		<% if @owner > 0 %>
-	        <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => comments %></span><br />
-	    <% end %>
-	    <br />
-	<% end %>
-</div>
-
+<h3>Comments</h3>
 <div class="leave_comment">
 	<h3>Leave a comment:</h3>
   	<%= form_tag :action => "comment", :id => @memorial %>
@@ -23,3 +12,16 @@
       	</div>
   	</form>
 </div>
+<div class="comments">
+	<% for comments in @memorial.comments %>
+		Name: <%= comments.name %><br />
+		Note: <%= comments.note %><br />
+		<% if @owner > 0 %>
+	        <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => comments %></span><br />
+	    <% end %>
+	    <br />
+	<% end %>
+</div>
+
+
+<div class="clearer"></div>
