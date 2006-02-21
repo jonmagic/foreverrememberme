@@ -122,13 +122,13 @@ a:hover { color: #000; text-decoration: none; }
 	width: 220px;
 	height: 110px;
 	text-indent: -1000px;
-	background: url("../images/bookmark-memorial-down.gif") no-repeat;	
+	background: url("../images/bookmark-pictures-down.gif") no-repeat;	
 }
 
 #bookmark-pictures a:hover {
 	z-index: 8;
 	height: 329px;
-	background: url("../images/bookmark-memorial-up.gif") no-repeat;	
+	background: url("../images/bookmark-pictures-up.gif") no-repeat;	
 }
 
 #bookmark-comments a {
@@ -140,13 +140,13 @@ a:hover { color: #000; text-decoration: none; }
 	width: 220px;
 	height: 110px;
 	text-indent: -1000px;
-	background: url("../images/bookmark-memorial-down.gif") no-repeat;	
+	background: url("../images/bookmark-comments-down.gif") no-repeat;	
 }
 
 #bookmark-comments a:hover {
 	z-index: 9;
 	height: 329px;
-	background: url("../images/bookmark-memorial-up.gif") no-repeat;	
+	background: url("../images/bookmark-comments-up.gif") no-repeat;	
 }
 
 /************* Userbox **************/
