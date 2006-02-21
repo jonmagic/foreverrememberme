@@ -147,6 +147,20 @@ a:hover { color: #000; text-decoration: none; }
 	background: url("../images/bookmark-comments-up.gif") no-repeat;	
 }
 
+/************* Userbox **************/
+#userbox {
+	position:absolute;
+	top: 130px;
+	left: 420px;
+	width: 270px;
+	background-color: #D7D4CD;	
+}
+
+#userbox p {
+	margin: 0;
+	padding: 5px 10px;
+}
+
 /************ Memorial **************/
 #main_content {
 	width: 590px;

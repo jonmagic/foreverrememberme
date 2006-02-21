@@ -45,6 +45,15 @@
 	"javascript:Effect.Hide('main_content');javascript:Effect.Hide('pictures');javascript:Effect.Unhide('comments');">Comments</a>
 		</div>
 	</div>
+	<div id="userbox">
+        <% if !@session[:user].nil? %>
+            <p>Welcome <%= @session[:user].firstname %> - <a href="/user/logout">Logout</a></p>
+			<ul>
+				<li><%= link_to "Edit This Memorial", :controller => "memorial", :action => "edit", :id => @memorial %></li>
+				<li><%= link_to "Manage Your Memorials", :controller => "memorial", :action => "manage" %></li>
+			</ul>
+        <% end %>		
+	</div>
 	<div id="book">
 		<div id="topedge">			
 		</div>
