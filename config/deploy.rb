@@ -116,6 +116,7 @@ task :after_symlink do
   run "rm -f #{release_path}/config/database.yml"
   run "cp ~/pro_config/production_v1/config/database.yml #{release_path}/config/"
   run "ln -s ~/files/picture #{release_path}/public/picture"
+  run "ln -s ~/files/music #{release_path}/public/music"
 end
 
 desc "Don't restart the web server"

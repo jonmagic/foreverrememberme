@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist version="0" xmlns="http://xspf.org/ns/0/">
+<trackList>
+<track>
+<location>http://www.foreverrememberme.com/music/chicane.mp3</location>
+<annotation>Chicane</annotation>
+</track>
+</trackList>
+</playlist>
