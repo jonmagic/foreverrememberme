@@ -34,6 +34,8 @@
 			<li><%= link_to "Create", :action => 'new' %></li>
 			<li><%= link_to "Manage", :action => 'manage' %></li>
 			<li><%= link_to "Contact Us", :action => 'index' %></li>
+			<li><a name="music">Music:</a></li>
+			<li><%= render :partial => "musicplayer" %></li>
 		</ul>						
 	</div>	
 	<div id="bookmarks">
@@ -45,19 +47,12 @@
 	"javascript:Effect.Hide('main_content');javascript:Effect.Hide('pictures');javascript:Effect.Unhide('comments');">Comments</a>
 		</div>
 	</div>
-	<div id="userbox">
-        <% if !@session[:user].nil? %>
-            <p>Welcome <%= @session[:user].firstname %> - <a href="/user/logout">Logout</a></p>
-			<ul>
-				<li><%= link_to "Edit This Memorial", :controller => "memorial", :action => "edit", :id => @memorial %></li>
-				<li><%= link_to "Manage Your Memorials", :controller => "memorial", :action => "manage" %></li>
-			</ul>
-        <% end %>		
-	</div>
 	<div id="book">
-		<div id="topedge">			
+		<div id="topedge">
+			<br />
+			<%= flash_div :warning, :notice %>
 		</div>
-		<div id="page">
+		<div id="page">			
 			<%= @content_for_layout %>
 		</div>
 		<div id="bottomedge">

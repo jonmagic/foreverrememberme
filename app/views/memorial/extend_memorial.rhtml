@@ -1,8 +1,12 @@
-<h1>Extend <%= @memorial.full_name %>'s memorial for ten years.</h1>
+<div id="thin-right-column" class="floatright">
+	<p style="text-align:left;">If you are concerned about online payments and would like to pay with a check please print this page and mail it with a check for $<%= preference('extension_price') %> to J & W Drake Enterprises LLC, 6990 Dobson Rd., Jonesville MI 49250.	
+</div>
+<div id="wide-left-column" class="">
+<h3>Extend <%= @memorial.full_name %>'s memorial for ten years.</h3>
 
-<p>This is where the extension is explained.</p>
+<p>You can extend this memorial, making it viewable by anyone, for ten years by clicking the button below. You will be led through a simple, secure, payment process courtesy of PayPal, one of the most respected Merchants on the World Wide Web.</p>
 
-<p>$<%= preference('extension_price') %> will extend <%= @memorial.full_name %>'s till <%= extended_date @memorial %></p>
+<p>Extending <%= @memorial.full_name %>'s Memorial until <%= extended_date @memorial %> costs only $<%= preference('extension_price') %>.</p>
 
 <%= paypal_form_tag %>
   <%= paypal_setup @memorial.id, preference('extension_price'), preference('paypal_email'),
@@ -13,3 +17,4 @@
 	  %>
   <%= submit_tag "Pay: $#{preference('extension_price')}" %>
 </form>
+</div>

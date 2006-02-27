@@ -1,0 +1,16 @@
+<div id="thin-right-column" class="floatright">
+	<p>Take this moment to leave your name and a note with this tribute.</p>
+</div>
+<div id="wide-left-column" class="">
+<h3>Thank you for leaving a tribute for <%= @memorial.full_name %></h3>
+<p>Enter your name and a message below.</p>
+<p>Example: This is a note from John Smith, thank you for being such a great friend to me, we will all miss you. Our love and prayers go out to the family.</p><br />
+	<%= form_tag :action => 'add_tribute_note' %>            
+		<p><label for="tribute_note"></label><div class="memorial-textarea">
+		    <textarea dojoType="Editor" id="tribute_note" name="tribute[note]" items="textGroup;|;listGroup;|;justifyGroup">   
+				<%= @tribute.note %>
+		    </textarea>
+		</div></p><br /><br />
+	<%= submit_tag "Leave Note" %>
+	<%= end_form_tag %>
+</div>

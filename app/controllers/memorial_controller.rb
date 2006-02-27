@@ -34,7 +34,7 @@ class MemorialController < ApplicationController
     is_owner
     if @memorial.expired? 
       if @owner == 1
-        flash[:warning] = "This memorial has expired. Only you will be able to view it. Purchase and extension to allows other to view it."
+        flash[:warning] = "This memorial has expired. Only you will be able to view it. Purchase an extension to allow others to view it."
       else
         flash[:warning] = "The requested memorial has expired and cannot be shown."
         redirect_to :action => "index"
@@ -69,6 +69,7 @@ class MemorialController < ApplicationController
 
   def add_tribute
     @memorial = Memorial.find(params[:id])
+    @memorials = Memorial.most_recent
     @tributes = Tribute.find_all
   end
 
@@ -97,13 +98,14 @@ class MemorialController < ApplicationController
   
   def tribute_payment_return
     @memorial = Memorial.find(params[:item_number][/(\d+)$/]) #pulls the memorial id from the end of the item_id
-    if params[:payment_status] == 'Completed'
-      flash[:notice] = "Your Tribute has been added"
-      redirect_to :action => "show", :id => @memorial.id
-    else
+    if params[:payment_status] != 'Completed'
       flash[:notice] = "We're sorry you canceled" if params[:id] == 'canceled'
       redirect_to :action => "add_tribute", :id => @memorial.id
     end
+  end
+  
+  def add_tribute_note  
+        
   end
 
   

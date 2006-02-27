@@ -1,17 +1,14 @@
-<h1>Add a tribute to <%= @memorial.full_name %>'s memorial.</h1>
-
-<p>This is where tributes are explained.</p>
-
+<div id="thin-right-column" class="floatright">
+	<p style="text-align:left;">You can add a note to this tribute immediately after your payment is confirmed.</p>
+</div>
+<div id="wide-left-column" class="">
+<h3>Add a tribute to <%= @memorial.full_name %>'s memorial.</h3>
+<br />
 <hr />
-
-
 <% for tribute in @tributes %>
 	<% @picture = tribute.picture %>
-	
-	<h3><%= tribute.title %></h3>
-	<%= image_tag url_for_file_column("picture", "image", "medium") %><br />	
-	<%= tribute.description %>
-	
+	<div class="floatleft tributepic"><%= image_tag url_for_file_column("picture", "image", "medium") %></div><br />	<h3><%= tribute.title %></h3>
+	<p><%= tribute.description %></p>
 	<%= paypal_form_tag %>
 	  <%= paypal_setup "#{tribute.id}-#{@memorial.id}", preference('tribute_price'), preference('paypal_email'),
 			:notify_url => url_for(:only_path => false, :action => 'tribute_ipn', :id => @memorial.id ), 
@@ -20,7 +17,7 @@
 			:item_name => "\"#{tribute.title}\" tribute for #{@memorial.full_name}'s memorial'"
 		  %>
 	  <%= submit_tag "Buy this tribute for $#{preference('tribute_price')}" %>
-	</form>	
+	</form>
 	
-	<hr />
+	<hr style="clear:both" />
 <% end %>

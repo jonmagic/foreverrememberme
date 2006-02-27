@@ -245,6 +245,13 @@ html>body .full-width-column {
 	font-weight: bold;
 }
 
+/*********** Tribute pages ************/
+.tributepic {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #282F27;	
+}
+
 /************** Footer ***************/
 #footer {
 	padding: 20px 30px;

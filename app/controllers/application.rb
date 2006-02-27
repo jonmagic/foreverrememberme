@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       return true
     end
     flash[:notice] = "You are not an Admin."
-    redirect_to :controller => '/memorial', :action => 'index'
+    redirect_to :controller => 'user', :action => 'login'
     return false  
   end
 
