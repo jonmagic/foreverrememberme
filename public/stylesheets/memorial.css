@@ -152,11 +152,9 @@ a:hover { color: #000; text-decoration: none; }
 
 /************* Userbox **************/
 #userbox {
-	z-index: 4;	
-	position:absolute;
-	top: 170px;
-	left: 420px;
-	width: 270px;
+	width: 550px;
+	margin: 0 10px 10px;
+	padding: 10px;
 	background-color: #D7D4CD;	
 }
 
