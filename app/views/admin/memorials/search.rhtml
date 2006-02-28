@@ -22,7 +22,7 @@ for memorial in @memorials.reverse
             <a href="/admin/users/show/<%= memorial.user.id %>"><%= memorial.user.login %></a>
         </td>
         <td>
-            <%= link_to memorial.expires_at, :action => 'change_expiration', :id => memorial.id %>
+            <%= link_to memorial.expires_at, :action => 'change_expiration', :id => memorial %>
         </td>        
         <td>
             <%= link_to 'Show', :action => 'show', :id => memorial %>
