@@ -16,4 +16,6 @@ config.action_controller.perform_caching             = false
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
 
-Paypal::Notification.ipn_url = 'http://www.paypal.com/cgi-bin/webscr'
+
+# Development should use the sandbox for now.
+# Paypal::Notification.ipn_url = 'http://www.paypal.com/cgi-bin/webscr'
