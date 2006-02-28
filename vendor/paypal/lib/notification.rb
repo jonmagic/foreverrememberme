@@ -46,7 +46,7 @@ module Paypal
     #   Paypal::Notification.ipn_url = http://www.paypal.com/cgi-bin/webscr
     #
     cattr_accessor :ipn_url
-    @@ipn_url = 'http://www.paypal.com/cgi-bin/webscr'
+    @@ipn_url = 'http://www.sandbox.paypal.com/cgi-bin/webscr'
 
     # Creates a new paypal object. Pass the raw html you got from paypal in. 
     # In a rails application this looks something like this
