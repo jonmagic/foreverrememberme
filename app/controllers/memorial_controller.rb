@@ -11,7 +11,7 @@ class MemorialController < ApplicationController
 # Public methods, every one can use them
 
   def index
-    @memorials = Memorial.most_recent
+    @featured_memorials = Memorial.most_recent
   end
   
   def features

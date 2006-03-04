@@ -172,8 +172,6 @@ html>body #wide-left-column {
 	padding: 10px;
 	margin-right: 5px;
 	text-align: center;
-	background: #F1FDFD;
-	border: 1px solid #282F27;
 	voice-family: "\"}\"";
 	voice-family: inherit;	
 }
@@ -221,12 +219,32 @@ html>body .full-width-column {
 }
 
 /************ Page Specific Content Stuff **********/
-.recentmemorial {
-	margin-bottom: 10px;
-	padding: 5px;
-	border: 1px dashed #666;
-	background: #eee;
+ul#featured_memorials {
+	margin:0;
+	padding:0;
+	list-style:none;
 }
+
+ul#featured_memorials li {
+	margin-bottom: 10px;
+	padding: 10px 5px 5px 5px;
+	border: 2px solid #606060;
+	background-color: #f0f0f0;
+}
+
+ul#featured_memorials li:hover {
+	background-color: #F1FDFD;
+	font-weight: bold;	
+}
+
+ul#featured_memorials a {
+	text-decoration: none;
+}
+
+ul#featured_memorials a:hover {
+}
+
+.featured_memorial
 
 .line0 {
 	border-top: 1px solid #666;
@@ -265,7 +283,7 @@ ul#index-buttons li {
 }
 
 ul#index-buttons li:hover {
-	background-color: #eee;
+	background-color: #f0f0f0;
 }
 
 .index_button_pics {

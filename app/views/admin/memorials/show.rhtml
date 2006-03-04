@@ -3,7 +3,7 @@
 <div class="floatright"><%= show_primary_picture(@memorial) %></div>
 <p></p>
 <p class="show-message"><%= @memorial.message %></p>
-<%= link_to 'Search Memorials', :action => 'list' %> | 
+<%= link_to 'Search Memorials', :action => 'search' %> | 
 <%= link_to 'Edit Memorial', :action => 'edit', :id => @memorial %> |
 <%= link_to "Extend Memorial", :action => 'change_expiration', :id => @memorial %>
 <br />
