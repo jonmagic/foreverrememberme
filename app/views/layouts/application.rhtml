@@ -35,17 +35,14 @@
 	            <h1 class="heading"><%= link_to "Forever Remember Me", { :controller => "memorial", :action => 'index' } %></h1>
 	            <div class="banner"><a href="/memorial"><%= image_tag 'banner.jpg' %></a></div>
 	        </div>
-			<div id="linkbar">
-				<ul>
-					<li>Menu >></li>
-					<li><%= link_to "Search", :controller => 'memorial', :action => 'search' %></li>
-					<li><%= link_to "Features", :controller => 'memorial', :action => 'features' %></li>
-					<li><%= link_to "F.A.Q.", :controller => 'memorial', :action => 'faq' %></li>					
-					<li><%= link_to "Create", :controller => 'memorial', :action => 'new' %></li>
-					<li><%= link_to "Manage", :controller => 'memorial', :action => 'manage' %></li>
-					<li><%= link_to "Contact Us", :controller => 'memorial', :action => 'index' %></li>
-				</ul>
-			</div>
+			<ul id="linkbar">
+				<li><%= image_tag "icons/page_find", :alt => "Search", :class => "linkbar_pics" %><h5><%= link_to "Search", :controller => 'memorial', :action => 'search' %></h5></li>
+				<li><%= image_tag "icons/text_list_bullets", :alt => "Features", :class => "linkbar_pics" %><h5><%= link_to "Features", :controller => 'memorial', :action => 'features' %></h5></li>
+				<li><%= image_tag "icons/help", :alt => "F.A.Q.", :class => "linkbar_pics" %><h5><%= link_to "F.A.Q.", :controller => 'memorial', :action => 'faq' %></h5></li>					
+				<li><%= image_tag "icons/pencil", :alt => "Create", :class => "linkbar_pics" %><h5><%= link_to "Create", :controller => 'memorial', :action => 'new' %></h5></li>
+				<li><%= image_tag "icons/table_multiple", :alt => "Manage", :class => "linkbar_pics" %><h5><%= link_to "Manage", :controller => 'memorial', :action => 'manage' %></h5></li>
+				<li><%= image_tag "icons/user_comment", :alt => "Contact Us", :class => "linkbar_pics" %><h5><%= link_to "Contact Us", :controller => 'memorial', :action => 'index' %></h5></li>
+			</ul>
 	        <div id="container">
 				<%= flash_div :warning, :notice %>
 	            <div id="content">

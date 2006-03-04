@@ -112,43 +112,42 @@ visibility: hidden;
 }
 
 /************** Linkbar ***************/
-#linkbar {
-	padding: 5px;	
-	width: 750px;
-	background: #F1FDFD;
+ul#linkbar {
+	margin:0 0 15px 0;
+	padding:5px;
+	list-style:none;
 	border-top: 3px solid #282F27;
-	border-bottom: 3px solid #282F27;
-	voice-family: "\"}\"";
-	voice-family: inherit;
+	border-bottom: 3px solid #282F27;	
 }
 
-html>body #linkbar {
-	width: 740px;
-	margin-bottom: 20px;
+ul#linkbar h5 {
+	display:inline;
 }
 
-#linkbar ul {
-	padding: 0;
-	margin: 0;
-	white-space : nowrap;
+ul#linkbar li {
+	margin:0;
+	padding:8px 10px 5px 10px;
+	display:inline;
 }
 
-#linkbar ul li {
-	display: inline;
+ul#linkbar li:hover {
+	background-color: #f0f0f0;
 }
 
-#linkbar a {
-	font-size: 1.3em;
-	font-weight: bold;	
-	padding: 5px 15px;
-	border-left: 3px solid #F1FDFD;
-	border-right: 3px solid #F1FDFD;
+ul#linkbar a {
+	margin:0;
+	padding:0;
+	font-size:1.1em;
+	text-decoration:none;	
+	color: #505050;	
 }
 
-#linkbar a:hover {	
-	background: #fff;
-	border-left: 3px solid #282F27;
-	border-right: 3px solid #282F27;
+ul#linkbar a:hover {
+	color: #000;	
+}
+
+.linkbar_pics {
+	margin-right: 5px;
 }
 
 /************** Content ***************/
