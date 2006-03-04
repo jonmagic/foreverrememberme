@@ -5,6 +5,12 @@
 <div id="wide-left-column" class="">
 	<%= image_tag "quote.jpg" %>
 	<p>This website is for those who wish to remember someone by dedicating a memorial describing their life in words, photos, and sharing thoughts with others. This is a place to remember those we love who have passed on. We hope with this website to help family and friends cope with their loss. This is a website anyone can use with ease. In just a few minutes you can create a unique website memorial for your loved one. Its easy and friendly to do.</p>
-	<p>You can create a memorial for free for the first 10 days. Just follow the steps listed below to create a memorial. Have friends and family take a look at it and make any changes you would like. Remember, you have total control to change, edit, or add to your website memorial. If you would like to continue having your website memorial on our site after 10 days you will be notified as to the small cost involved that will allow your website memorial to be on our site for the next 10 years.</p>
-
+<ul id="index-buttons">
+	<li><%= image_tag "icons/page_find", :alt => "Search", :class => "index_button_pics" %><h5><%= link_to "Easy To Use Search", :action => "search" %></h5><p>Search by first name, last name, or hometown.</p></li>
+	<li><%= image_tag "icons/text_list_bullets", :alt => "Features", :class => "index_button_pics" %><h5><%= link_to "Full Featured", :action => "features" %></h5><p>Memorials are feature packed, yet simple and elegant.</p></li>
+	<li><%= image_tag "icons/help", :alt => "F.A.Q.", :class => "index_button_pics" %><h5><%= link_to "Do You Have Questions?", :action => "faq" %></h5><p>We have answers to most questions, from signing up to memorial creation.</p></li>
+	<li><%= image_tag "icons/pencil", :alt => "Create", :class => "index_button_pics" %><h5><%= link_to "Adding A New Memorial", :action => "new" %></h5><p>Adding a memorial with pictures and music is so simple, anyone can do it.</p></li>
+	<li><%= image_tag "icons/table_multiple", :alt => "Manage", :class => "index_button_pics" %><h5><%= link_to "Updating Memorials", :action => "manage" %></h5><p>Adding more pictures or updating the memorial text is as easy as logging in and clicking Edit.</p></li>
+	<li><%= image_tag "icons/user_comment", :alt => "Contact Us", :class => "index_button_pics" %><h5><%= link_to "Further Assistance", :action => "contactus" %></h5><p>Still have unanswered questions, please don't hesitate to contact us.</p></li>
+</ul>
 </div>

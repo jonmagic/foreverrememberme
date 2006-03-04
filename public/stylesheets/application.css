@@ -40,6 +40,11 @@ h4 {
 	margin: 0;
 }
 
+h5 {
+	font-size: 1.2em;
+	margin: 0;
+}
+
 p { 
 	margin: 0 0 1em 0;
 }
@@ -231,6 +236,42 @@ html>body .full-width-column {
 
 .line1 {
 	background: #F1FDFD;
+}
+
+ul#index-buttons a {
+	font-size: 1.1em;
+	color: #606060;
+	text-decoration: none;
+}
+
+ul#index-buttons a:hover {
+	color: #303030;
+}
+
+ul#index-buttons {
+	margin: 0;
+	padding: 5px;
+	list-style: none;
+}
+
+ul#index-buttons p {
+	margin: 0;
+}
+
+ul#index-buttons li {
+	margin-top: 10px;
+	padding: 8px;
+	background-color: #F1FDFD;
+	border: 1px solid #282F27;
+}
+
+ul#index-buttons li:hover {
+	background-color: #eee;
+}
+
+.index_button_pics {
+	float: left;
+	padding: 0 8px 20px 0;
 }
 
 /*********** Formatted Box ***********/
