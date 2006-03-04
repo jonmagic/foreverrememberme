@@ -137,7 +137,7 @@ ul#linkbar li:hover {
 ul#linkbar a {
 	margin:0;
 	padding:0;
-	font-size:1.1em;
+	font-size:1em;
 	text-decoration:none;	
 	color: #505050;	
 }
@@ -294,13 +294,13 @@ ul#index-buttons li:hover {
 
 /************** Footer ***************/
 #footer {
-	padding: 20px 30px;
+	padding: 20px 10px 10px 10px;
+
 }
 
 .footing {
-	padding: 10px;
-	background: url("../images/grey-stripes.gif");
-	border: 1px solid #282F27;	
+	padding: 15px 0 0 0;
+	border-top: 1px solid #303030;	
 }
 
 /* ------ flash ------*/
