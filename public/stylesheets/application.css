@@ -117,7 +117,7 @@ ul#linkbar {
 	padding:5px;
 	list-style:none;
 	border-top: 3px solid #282F27;
-	border-bottom: 3px solid #282F27;	
+	border-bottom: 1px solid #ccc;
 }
 
 ul#linkbar h5 {
@@ -312,13 +312,12 @@ ul#index-buttons li:hover {
 
 /************** Footer ***************/
 #footer {
-	padding: 20px 10px 10px 10px;
-
+	padding: 6px 0 10px 0;
+	border-top: 1px solid #ccc;	
 }
 
 .footing {
 	padding: 15px 0 0 0;
-	border-top: 1px solid #303030;	
 }
 
 /* ------ flash ------*/
