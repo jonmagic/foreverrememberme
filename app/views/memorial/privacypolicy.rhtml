@@ -1,13 +1,6 @@
 <div id="thin-right-column" class="floatright">
-	<h3>Recent Memorials</h3>
-	<% for memorial in @memorials %>
-		<div class="recentmemorial">
-        	<a href="/memorial/show/<%= memorial.id %>">
-				<img alt="<%= memorial.image %>" width="128" class="" src="<%= memorial.image %>" />
-				<span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
-			</a>
-		</div>
-    <% end %>
+	<%= render :partial => "featured_memorials" %>
+	Music Player: <%= render :partial => "musicplayer" %>
 </div>
 <div id="wide-left-column" class="">
 	<h3 class="center">Privacy Policy</h3>

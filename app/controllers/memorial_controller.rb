@@ -15,15 +15,15 @@ class MemorialController < ApplicationController
   end
   
   def features
-    @memorials = Memorial.most_recent
+    @featured_memorials = Memorial.most_recent
   end
 
   def faq
-    @memorials = Memorial.most_recent
+    @featured_memorials = Memorial.most_recent
   end
   
   def privacypolicy
-    @memorials = Memorial.most_recent
+    @featured_memorials = Memorial.most_recent
   end
 
   def view

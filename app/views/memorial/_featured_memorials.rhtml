@@ -1,0 +1,12 @@
+<h3>Featured</h3>
+<ul id="featured_memorials">
+<% for memorial in @featured_memorials %>
+	<li>
+    	<a href="<%= url_for_memorial memorial %>">
+			<%= show_primary_picture(memorial, 128) %>
+			<span><%= memorial.firstname %> <b><%= memorial.lastname %></b></span>
+			<p><%= dob_to_dod(memorial) %></p>
+		</a>
+	</li>
+<% end %>
+</ul>
