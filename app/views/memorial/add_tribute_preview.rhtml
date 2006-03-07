@@ -1,0 +1,21 @@
+<div class="single-column">
+<h1>Preview your tribute for <%= @memorial.full_name %>'s memorial.</h1>
+
+<br/>
+<%= paypal_form_tag %>
+  <%= paypal_setup @tribute, preference('tribute_price'), preference('paypal_email'),
+		:notify_url => url_for(:only_path => false, :action => 'tribute_ipn', :id => @tribute.id ), 
+		:return_url => url_for(:only_path => false, :action => 'tribute_payment_return', :id => "success"), 
+		:cancel_url => url_for(:only_path => false, :action => 'tribute_payment_return', :id => "canceled"), 
+		:item_name => "\"#{@tribute.image.title}\" tribute for #{@memorial.full_name}'s memorial'"
+	  %>
+  <p><%= submit_tag "Buy this tribute for $#{preference('tribute_price')}" %></p>
+</form>
+
+<div class="tribute preview">
+	<% @picture = @tribute.image.picture %>
+	<%= image_tag url_for_file_column("picture", "image", "thumb") %><br />
+	<%= @tribute.note %>
+	<b>from:</b> <%= @tribute.name %>	
+</div>
+</div>

@@ -218,6 +218,31 @@ html>body .full-width-column {
 	width: 750px;
 }
 
+div.single-column {
+	padding:0 15px;
+}
+
+.col {
+	width:48%
+}
+
+/* ------ form specific ------*/
+/* ------ added by xian for the add tribute page ------*/
+
+fieldset {
+	padding:10px 0;
+	border:none;
+	border-top:1px solid #ccc;
+}
+
+legend {
+	color:#999;
+	text-transform:uppercase;
+	font-size:.9em;
+	padding-right:5px;
+}
+
+legend b { color:#888;}
 /************ Page Specific Content Stuff **********/
 ul#featured_memorials {
 	margin:0;
@@ -305,15 +330,32 @@ ul#index-buttons li:hover {
 
 /*********** Tribute pages ************/
 .tributepic {
-	margin: 10px;
-	padding: 10px;
-	border: 1px solid #282F27;	
+	padding:1em;
+	border-bottom:1px solid #ddd;
+	cursor:pointer;
 }
 
+.tributepic:hover img {
+	border-color: #666;
+}
+
+.tributepic h3 {
+	margin-bottom:0;
+}
+.tributepic p {
+	margin:0;
+	margin-left:25px;
+}
+.tributepic img {
+	position:relative;
+	left:23px;	
+	border:2px solid white;
+}
 /************** Footer ***************/
 #footer {
 	padding: 6px 0 10px 0;
 	border-top: 1px solid #ccc;	
+	margin-top:2em;
 }
 
 .footing {

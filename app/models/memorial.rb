@@ -4,7 +4,8 @@ class Memorial < ActiveRecord::Base
   has_many :pictures, :dependent => true
   belongs_to :primary_picture, :class_name => "Picture", :foreign_key => 'primary_picture_id'
   belongs_to :user
-  has_and_belongs_to_many :tributes
+  has_many :tributes
+  has_many :active_tributes, :class_name => "Tribute", :conditions => 'activated_at IS NOT NULL'
   
   def self.search(args)
     conditions = ["expires_at > ? AND " + args.map {|k, v| "LOWER(#{k}) LIKE ?"}.join(" OR "),

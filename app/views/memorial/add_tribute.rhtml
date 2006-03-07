@@ -1,23 +1,59 @@
-<div id="thin-right-column" class="floatright">
-	<p style="text-align:left;">You can add a note to this tribute immediately after your payment is confirmed.</p>
+<div class="single-column">
+<h1>Add a tribute to <%= @memorial.full_name %>'s memorial.</h1>
+<p style="text-align:left;">Tributes cost $<%= preference('tribute_price') %>.</p>
+
+
+<%= start_form_tag :action => 'add_tribute_preview', :id => @memorial.id %>
+
+<div class="col floatleft">
+<fieldset>
+<legend><b>1:</b> Write your tribute</legend>
+	<p><label for="tribute_note"></label><div class="memorial-textarea">
+	    <textarea dojoType="Editor" id="tribute_note" name="tribute[note]" items="textGroup;|;listGroup;|;justifyGroup" rows="12" columns="25">   
+			<%= @tribute.note %>
+	    </textarea>
+	</div></p>
+	<label for="tribute_name">Your Name: </label><%= text_field 'tribute', 'name'  %><br/>
+ <br /><br />
+</fieldset>
 </div>
-<div id="wide-left-column" class="">
-<h3>Add a tribute to <%= @memorial.full_name %>'s memorial.</h3>
-<br />
-<hr />
-<% for tribute in @tributes %>
-	<% @picture = tribute.picture %>
-	<div class="floatleft tributepic"><%= image_tag url_for_file_column("picture", "image", "medium") %></div><br />	<h3><%= tribute.title %></h3>
-	<p><%= tribute.description %></p>
-	<%= paypal_form_tag %>
-	  <%= paypal_setup "#{tribute.id}-#{@memorial.id}", preference('tribute_price'), preference('paypal_email'),
-			:notify_url => url_for(:only_path => false, :action => 'tribute_ipn', :id => @memorial.id ), 
-			:return_url => url_for(:only_path => false, :action => 'tribute_payment_return', :id => "success"), 
-			:cancel_url => url_for(:only_path => false, :action => 'tribute_payment_return', :id => "canceled"), 
-			:item_name => "\"#{tribute.title}\" tribute for #{@memorial.full_name}'s memorial'"
-		  %>
-	  <%= submit_tag "Buy this tribute for $#{preference('tribute_price')}" %>
-	</form>
-	
-	<hr style="clear:both" />
-<% end %>
+
+<div class="col floatright">
+<fieldset>
+<legend><b>2:</b> Select a tribute image</ledgend>
+	<% for image in @tribute_images %>
+	<div class="tributepic">
+		<h3><%= radio_button 'tribute', 'image_id', image.id %> 
+			<label for="tribute_image"><%= image.title %></label>
+		</h3>
+		<p><%= image.description %></p>
+
+		<% @picture = image.picture %>
+		<%= image_tag url_for_file_column("picture", "image", "medium") %>
+		
+	</div>
+	<% end %>
+</fieldset>
+
+<%= submit_tag "Preview Your tribute." %>
+
+</div>
+
+</form>
+</div>
+
+<script type="text/javascript" language="javascript">
+// <![CDATA[
+var radio_click = {
+	init : function() {
+	    $A(document.getElementsByClassName('tributepic')).each(function(trib) {
+			Event.observe(trib, 'click', radio_click.select_button, false);	
+		});
+	},
+	select_button : function() {
+		$A(this.getElementsByTagName('input')).first().checked = true;
+	}
+}
+radio_click.init();
+// ]]>
+</script>

@@ -3,8 +3,8 @@ require 'ostruct'
 class MemorialController < ApplicationController
   before_filter :login_required, :except => [ :index, :features, :faq, :privacypolicy, 
                                               :show, :search, :comment, :extend_return, 
-                                              :extend_ipn, :add_tribute, :tribute_ipn, 
-                                              :tribute_payment_return ]
+                                              :extend_ipn, :add_tribute, :add_tribute_preview, 
+                                              :tribute_ipn, :tribute_payment_return ]
                                               
   layout 'application', :except => :show
 
@@ -69,45 +69,44 @@ class MemorialController < ApplicationController
 
   def add_tribute
     @memorial = Memorial.find(params[:id])
-    @memorials = Memorial.most_recent
-    @tributes = Tribute.find_all
+    @tribute_images = TributeImage.find_all
+    @tribute = Tribute.new
   end
+
+  def add_tribute_preview
+    @memorial = Memorial.find(params[:id])
+    @tribute = Tribute.new(params[:tribute])
+    @memorial.tributes << @tribute
+  end
+
 
   def tribute_ipn
     notify = Paypal::Notification.new(request.raw_post)
-    # The item number is passed to paypal in the form of "tribute.id-memorial.id"
-    # i.e. "12-34"
-    memorial = Memorial.find(notify.item_id[/(\d+)$/]) #pulls the memorial id from the end of the item_id
-    tribute = Tribute.find(notify.item_id[/^(\d+)/])  #pulls the tribute id from the begining of the item_id
+    tribute = Tribute.find(notify.item_id)
 
     if notify.acknowledge
       begin
         if notify.complete? and preference('tribute_price').to_money == notify.amount
-          memorial.tributes << tribute
+          tribute.activated_at = Time.now
         else
           logger.error("Failed to verify Paypal's notification, please investigate")
         end
       rescue => e
         raise
       ensure
-        memorial.save
+        tribute.save
       end
     end
     render :nothing => true
   end
   
   def tribute_payment_return
-    @memorial = Memorial.find(params[:item_number][/(\d+)$/]) #pulls the memorial id from the end of the item_id
+    @memorial = Tribute.find(params[:item_number]).memorial
     if params[:payment_status] != 'Completed'
       flash[:notice] = "We're sorry you canceled" if params[:id] == 'canceled'
       redirect_to :action => "add_tribute", :id => @memorial.id
     end
   end
-  
-  def add_tribute_note  
-        
-  end
-
   
   def extend_ipn
     notify = Paypal::Notification.new(request.raw_post)

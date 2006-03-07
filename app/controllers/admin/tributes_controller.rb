@@ -9,26 +9,26 @@ class Admin::TributesController < ApplicationController
   end
 
   def list
-    @tribute_pages, @tributes = paginate :tributes, :per_page => 10
+    @tribute_pages, @tributes = paginate :tribute_images, :per_page => 10
   end
 
   def show
-    @tribute = Tribute.find(params[:id])
+    @tribute = TributeImage.find(params[:id])
     @picture = @tribute.picture
   end
 
   def new
-    @tribute = Tribute.new
+    @tribute = TributeImage.new
     @tribute.description = "Delete this text and begin typing here."    
   end
   
   def picture
-    @tribute = Tribute.find(params[:id])
+    @tribute = TributeImage.find(params[:id])
   end
 
   def create
-    @tribute = Tribute.new(params[:tribute])
-    @tribute.picture = Picture.create(params[:picture])
+    @tribute = TributeImage.new(params[:tribute])
+    @tribute.picture = TributeImage.create(params[:picture])
     if @tribute.save
       flash[:notice] = 'Tribute was successfully created.'
       redirect_to :action => 'list'
@@ -38,11 +38,11 @@ class Admin::TributesController < ApplicationController
   end
 
   def edit
-    @tribute = Tribute.find(params[:id])
+    @tribute = TributeImage.find(params[:id])
   end
 
   def update
-    @tribute = Tribute.find(params[:id])
+    @tribute = TributeImage.find(params[:id])
     @tribute.title = (params[:tribute][:title])
     @tribute.description = (params[:tribute][:description])
     unless params[:picture]["image"].blank?
@@ -57,7 +57,7 @@ class Admin::TributesController < ApplicationController
   end
 
   def destroy
-    Tribute.find(params[:id]).destroy
+    TributeImage.find(params[:id]).destroy
     redirect_to :action => 'list'
   end
 end
