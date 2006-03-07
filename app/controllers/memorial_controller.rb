@@ -70,7 +70,7 @@ class MemorialController < ApplicationController
   def add_tribute
     @memorial = Memorial.find(params[:id])
     @tribute_images = TributeImage.find_all
-    @tribute = Tribute.new
+    @tribute = Tribute.new(:image_id => @tribute_images.first.id)
   end
 
   def add_tribute_preview
