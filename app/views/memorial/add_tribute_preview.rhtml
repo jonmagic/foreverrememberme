@@ -1,7 +1,5 @@
 <div class="single-column">
-<h1>Preview your tribute for <%= @memorial.full_name %>'s memorial.</h1>
-
-<br/>
+<h3>Preview your tribute for <%= @memorial.full_name %>'s memorial.</h3>
 <%= paypal_form_tag %>
   <%= paypal_setup @tribute, preference('tribute_price'), preference('paypal_email'),
 		:notify_url => url_for(:only_path => false, :action => 'tribute_ipn', :id => @tribute.id ), 
@@ -11,11 +9,11 @@
 	  %>
   <p><%= submit_tag "Buy this tribute for $#{preference('tribute_price')}" %></p>
 </form>
-
+<br />
 <div class="tribute preview">
 	<% @picture = @tribute.image.picture %>
-	<%= image_tag url_for_file_column("picture", "image", "thumb") %><br />
-	<%= @tribute.note %>
+	<div class="floatleft padding"><%= image_tag url_for_file_column("picture", "image", "thumb") %></div>
+	<%= @tribute.note %><br />
 	<b>from:</b> <%= @tribute.name %>	
 </div>
 </div>

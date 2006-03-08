@@ -80,6 +80,11 @@ visibility: hidden;
 .floatright {
 	float: right;
 }
+
+.padding {
+	padding: 5px;
+}
+
 .clearleft  { clear:  left; }
 .clearright { clear: right; }
 
