@@ -18,4 +18,4 @@ config.action_mailer.raise_delivery_errors = false
 
 
 # Development should use the sandbox for now.
-# Paypal::Notification.ipn_url = 'http://www.paypal.com/cgi-bin/webscr'
+Paypal::Notification.ipn_url = 'http://www.paypal.com/cgi-bin/webscr'
