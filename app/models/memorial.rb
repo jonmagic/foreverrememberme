@@ -24,7 +24,7 @@ class Memorial < ActiveRecord::Base
   
   
   def self.most_recent
-    find :all, :limit => 5, :order => "created_at DESC", :conditions => ["expires_at > ?", Time.now.to_formatted_s(:db)] 
+    find :all, :limit => 2, :order => "created_at DESC", :conditions => ["expires_at > ?", Time.now.to_formatted_s(:db)] 
   end
 
   def full_name

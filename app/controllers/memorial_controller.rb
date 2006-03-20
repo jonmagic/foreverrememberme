@@ -4,7 +4,8 @@ class MemorialController < ApplicationController
   before_filter :login_required, :except => [ :index, :features, :faq, :privacypolicy, 
                                               :show, :search, :comment, :extend_return, 
                                               :extend_ipn, :add_tribute, :add_tribute_preview, 
-                                              :tribute_ipn, :tribute_payment_return ]
+                                              :tribute_ipn, :tribute_payment_return, 
+                                              :send_contactus_notification, :contactus ]
                                               
   layout 'application', :except => :show
 
@@ -65,7 +66,19 @@ class MemorialController < ApplicationController
     Memorial.find(params[:id]).comments.create(params[:comment])
     flash[:notice] = "Added Your Comment."
     redirect_to :action => "show", :id => params[:id]
-  end  
+  end
+  
+  def contactus
+    @featured_memorials = Memorial.most_recent
+  end
+  
+  def send_contactus_notification
+    @notification = params[:notification]
+    Notifications::deliver_contactus(@notification)    
+    flash[:notice] = "Thank you for contacting us, we will get back with you as soon as possible."
+    redirect_to :action => "index"
+  end
+  
 
   def add_tribute
     @memorial = Memorial.find(params[:id])
@@ -131,7 +144,7 @@ class MemorialController < ApplicationController
     end
     render :nothing => true
   end
-  
+
   def extend_payment_return
     @memorial = Memorial.find(params[:item_number])
     if params[:payment_status] != 'Completed'
@@ -139,8 +152,7 @@ class MemorialController < ApplicationController
       redirect_to :action => "manage"
     end
   end
-  
-  
+
 # Management methods, all protected by user account
 
   def manage

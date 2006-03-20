@@ -13,9 +13,8 @@ for tribute in @tributes
 	odd_or_even = 1 - odd_or_even
 %>
   <tr class="listline<%= odd_or_even %>">
-  <% for column in Tribute.content_columns %>
-    <td><%= tribute.send(column.name) %></td>
-  <% end %>
+	<td><%= tribute.title %></td>
+	<td><%= link_to tribute.description, :action => 'show', :id => tribute.id %></td>
     <td><%= link_to 'Show', :action => 'show', :id => tribute %>
     <%= link_to 'Edit', :action => 'edit', :id => tribute %>
     <%= link_to 'Destroy', { :action => 'destroy', :id => tribute }, :confirm => 'Are you sure?' %></td>

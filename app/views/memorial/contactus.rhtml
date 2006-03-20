@@ -1,0 +1,24 @@
+<div id="thin-right-column" class="floatright">
+	<%= render :partial => "featured_memorials" %>
+	Music Player: <%= render :partial => "musicplayer" %>
+</div>
+<div id="wide-left-column" class="">
+	<h3>Contact Us Form</h3>
+	<%= form_tag :action => 'send_contactus_notification' %>
+
+		<p><label for="notification_firstname">Firstname</label><br/>
+		<%= text_field 'notification', 'firstname'  %></p>
+
+		<p><label for="notification_lastname">Lastname</label><br/>
+		<%= text_field 'notification', 'lastname'  %></p>
+
+		<p><label for="notification_email">E-mail</label><br/>
+		<%= text_field 'notification', 'email'  %></p>
+		
+		<p><label for="notification_message">Message</label><br/>
+		<%= text_area 'notification', 'message'  %></p>	
+
+	  <%= submit_tag "Submit" %>
+
+	<%= end_form_tag %>
+</div>

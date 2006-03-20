@@ -1,8 +1,5 @@
-<% for column in Tribute.content_columns %>
-<p>
-  <b><%= column.human_name %>:</b> <%=h @tribute.send(column.name) %>
-</p>
-<% end %>
+<h4><%= @tribute.title %></h4>
+<p><%= @tribute.description %></p>
 <%= image_tag url_for_file_column("picture", "image", "thumb") %>
 <br /><br />
 

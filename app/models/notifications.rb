@@ -32,12 +32,13 @@ class Notifications < ActionMailer::Base
     @headers    = {}
   end
 
-  def complaint(sent_at = Time.now)
-    @subject    = 'Notifications#complaint'
-    @body       = {}
-    @recipients = ''
-    @from       = ''
-    @sent_on    = sent_at
-    @headers    = {}
+  def contactus(sent_at = Time.now)
+    @recipients         = 'info@foreverrememberme.com'
+    @from               = notification.email
+    @subject            = 'ForeverRememberMe.com ContactUs Help Request'
+    @body["message"]    = notification.message
+    @body["firstname"]  = notification.firstname
+    @body["lastname"]   = notification.lastname
+    @body["email"]      = notification.email
   end
 end

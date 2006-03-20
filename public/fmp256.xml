@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<playlist version="1" xmlns = "http://xspf.org/ns/0/">
+<extension>
+ <init autoplay="1" shuffle="0" volume="75" />
+</extension>
+<trackList>
+ <track>
+   <location>http://www.foreverrememberme.com/music/canon-in-d.mp3</location>
+ </track>
+</trackList>
+</playlist>
