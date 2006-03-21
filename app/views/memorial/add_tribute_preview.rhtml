@@ -6,7 +6,7 @@
 	<%= end_form_tag %>
 <% else %>
 	<%= paypal_form_tag %>
-	  <%= paypal_setup @tribute, preference('tribute_price'), preference('paypal_email'),
+	  <%= paypal_setup @tribute.id, preference('tribute_price'), preference('paypal_email'),
 			:notify_url => url_for(:only_path => false, :action => 'tribute_ipn', :id => @tribute.id ), 
 			:return_url => url_for(:only_path => false, :action => 'tribute_added', :id => "success"), 
 			:cancel_url => url_for(:only_path => false, :action => 'tribute_added', :id => "canceled"), 
