@@ -5,7 +5,7 @@ class MemorialController < ApplicationController
                                               :show, :search, :comment, :extend_return, 
                                               :extend_ipn, :add_tribute, :add_tribute_preview, 
                                               :tribute_ipn, :tribute_payment_return, 
-                                              :send_contactus_notification, :contactus ]
+                                              :send_contactus_feedback, :contactus ]
                                               
   layout 'application', :except => :show
 
