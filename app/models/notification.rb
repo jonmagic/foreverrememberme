@@ -1,4 +1,4 @@
-class Notifications < ActionMailer::Base
+class Notification < ActionMailer::Base
 
   def signup(user)
     @recipients = user.login
@@ -32,13 +32,11 @@ class Notifications < ActionMailer::Base
     @headers    = {}
   end
 
-  def contactus(sent_at = Time.now)
+  def contactus(feedback)
     @recipients         = 'info@foreverrememberme.com'
-    @from               = notification.email
+    @from               = feedback.email
     @subject            = 'ForeverRememberMe.com ContactUs Help Request'
-    @body["message"]    = notification.message
-    @body["firstname"]  = notification.firstname
-    @body["lastname"]   = notification.lastname
-    @body["email"]      = notification.email
+    @body["message"]    = feedback.message
+    @body["email"]      = feedback.email
   end
 end

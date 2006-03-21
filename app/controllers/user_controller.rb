@@ -24,7 +24,7 @@ class UserController < ApplicationController
     if @request.post? and @user.save
       @session[:user] = User.authenticate(@user.login, @params[:user][:password])
       flash['notice']  = "Signup successful"
-      Notifications::deliver_signup(@user)
+      Notification::deliver_signup(@user)
       redirect_back_or_default :controller => "memorial", :action => "manage"
     end      
   end  

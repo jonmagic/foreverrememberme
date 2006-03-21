@@ -70,13 +70,20 @@ class MemorialController < ApplicationController
   
   def contactus
     @featured_memorials = Memorial.most_recent
+    @feedback = Feedback.new
   end
   
-  def send_contactus_notification
-    @notification = params[:notification]
-    Notifications::deliver_contactus(@notification)    
-    flash[:notice] = "Thank you for contacting us, we will get back with you as soon as possible."
-    redirect_to :action => "index"
+  def send_contactus_feedback
+    @feedback = Feedback.new(params[:feedback])
+    if @feedback.save
+      Notification::deliver_contactus(@feedback)
+      flash[:notice] = "Thank you for contacting us."
+      redirect_to :action => "index"
+    else
+      @featured_memorials = Memorial.most_recent      
+      render :action => 'contactus'
+    end
+
   end
   
 
