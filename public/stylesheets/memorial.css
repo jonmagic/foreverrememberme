@@ -5,7 +5,7 @@ body {
 	font-family: Verdana,"Geneva CE",sans-serif;
 	font-size: 80%;
 	color: #4C373E;	
-	background: #eee url("../images/blue-green-stripes.jpg");	
+	background: #000 url("../images/bg4.jpg") repeat-x;
 }
 
 a, a:link, a:visited { color: #000; }
