@@ -4,7 +4,7 @@ class MemorialController < ApplicationController
   before_filter :login_required, :except => [ :index, :features, :faq, :privacypolicy, 
                                               :show, :search, :comment, :extend_return, 
                                               :extend_ipn, :add_tribute, :add_tribute_preview, 
-                                              :tribute_ipn, :tribute_payment_return, 
+                                              :tribute_ipn, :tribute_added, 
                                               :send_contactus_feedback, :contactus ]
                                               
   layout 'application', :except => :show
@@ -120,11 +120,17 @@ class MemorialController < ApplicationController
     render :nothing => true
   end
   
-  def tribute_payment_return
-    @memorial = Tribute.find(params[:item_number]).memorial
-    if params[:payment_status] != 'Completed'
-      flash[:notice] = "We're sorry you canceled" if params[:id] == 'canceled'
-      redirect_to :action => "add_tribute", :id => @memorial.id
+  def tribute_added
+    if preference('tribute_price').to_f == 0 and tribute = Tribute.find(params[:id])
+      tribute.activated_at = Time.now
+      tribute.save
+      @memorial = tribute.memorial
+    else
+      @memorial = Tribute.find(params[:item_number]).memorial
+      if params[:payment_status] != 'Completed'
+        flash[:notice] = "We're sorry you canceled" if params[:id] == 'canceled'
+        redirect_to :action => "add_tribute", :id => @memorial.id
+      end
     end
   end
   

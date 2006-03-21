@@ -1,14 +1,20 @@
 <div class="single-column">
 <h3>Preview your tribute for <%= @memorial.full_name %>'s memorial.</h3>
-<%= paypal_form_tag %>
-  <%= paypal_setup @tribute, preference('tribute_price'), preference('paypal_email'),
-		:notify_url => url_for(:only_path => false, :action => 'tribute_ipn', :id => @tribute.id ), 
-		:return_url => url_for(:only_path => false, :action => 'tribute_payment_return', :id => "success"), 
-		:cancel_url => url_for(:only_path => false, :action => 'tribute_payment_return', :id => "canceled"), 
-		:item_name => "\"#{@tribute.image.title}\" tribute for #{@memorial.full_name}'s memorial'"
-	  %>
-  <p><%= submit_tag "Buy this tribute for $#{preference('tribute_price')}" %></p>
-</form>
+<% if preference('tribute_price').to_f == 0 %>
+	<%= form_tag :action => 'tribute_added', :id => @tribute.id %>
+		<p><%= submit_tag "Activate this tribute for free!" %></p>
+	<%= end_form_tag %>
+<% else %>
+	<%= paypal_form_tag %>
+	  <%= paypal_setup @tribute, preference('tribute_price'), preference('paypal_email'),
+			:notify_url => url_for(:only_path => false, :action => 'tribute_ipn', :id => @tribute.id ), 
+			:return_url => url_for(:only_path => false, :action => 'tribute_added', :id => "success"), 
+			:cancel_url => url_for(:only_path => false, :action => 'tribute_added', :id => "canceled"), 
+			:item_name => "\"#{@tribute.image.title}\" tribute for #{@memorial.full_name}'s memorial'"
+		  %>
+	  <p><%= submit_tag "Buy this tribute for $#{preference('tribute_price')}" %></p>
+	</form>
+<% end %>
 <br />
 <div class="tribute preview">
 	<% @picture = @tribute.image.picture %>

@@ -199,6 +199,13 @@ p.dob_to_dod {
 	text-align: center;
 }
 
+div.tribute {
+	margin-top:1.5em;
+}
+div.tribute img {
+	float:left; 
+	margin:0 .5em .5em 0;
+}
 /************ Pictures **************/
 #pictures {
 	width: 590px;
