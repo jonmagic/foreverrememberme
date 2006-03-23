@@ -1,6 +1,7 @@
 <%= error_messages_for 'memorial' %>
 
 <!--[form:memorial]-->
+
 <p><label for="memorial_firstname">Firstname</label><br/>
 <%= text_field 'memorial', 'firstname'  %></p>
 
@@ -9,7 +10,7 @@
 
 <p><label for="memorial_message"></label>
 <div class="memorial-textarea">
-    <textarea dojoType="Editor" id="memorial_message" name="memorial[message]" items="textGroup;|;listGroup;|;justifyGroup">   
+    <textarea dojoType="Editor" id="memorial_message" name="memorial[message]" items="textGroup;|;listGroup;|;justifyGroup;|;colorGroup">   
         <% if !@memorial.nil? %><%= @memorial.message %><% end %>
     </textarea>
 </div></p>
