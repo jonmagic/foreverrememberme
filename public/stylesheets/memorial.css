@@ -3,9 +3,9 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: Verdana,"Geneva CE",sans-serif;
-	font-size: 80%;
+	font-size: 85%;
 	color: #4C373E;	
-	background: #000 url("../images/bg4.jpg") repeat-x;
+	background: #000 url("../images/bg2.gif");
 }
 
 a, a:link, a:visited { color: #000; }
