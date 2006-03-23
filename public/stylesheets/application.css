@@ -15,7 +15,12 @@ a img {
 border-style: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	color:rgb(103,18,3);
+}
+
 h1 {
+	
 	padding: 0;
 	margin: 0;
 	font-size: 2em;
@@ -97,7 +102,7 @@ visibility: hidden;
 	margin: 0 auto;
 	width: 750px;
 	padding: 0;
-	border: 3px solid #282F27;
+	border: 3px solid #1a0704;
 }
 
 #wrapper2 {
@@ -121,7 +126,7 @@ ul#linkbar {
 	margin:0 0 15px 0;
 	padding:5px;
 	list-style:none;
-	border-top: 3px solid #282F27;
+	border-top: 3px solid #1a0704;
 	border-bottom: 1px solid #ccc;
 }
 
@@ -202,7 +207,7 @@ html>body .medium-left-column {
 	margin-bottom:1em;
 	margin-right: 5px;
 	text-align: left;
-	background: #F1FDFD;
+	background: #fffbf6;
 	border: 1px solid #666;
 	voice-family: "\"}\"";
 	voice-family: inherit;	
@@ -263,7 +268,7 @@ ul#featured_memorials li {
 }
 
 ul#featured_memorials li:hover {
-	background-color: #F1FDFD;
+	background-color: #fffbf6;
 	font-weight: bold;	
 }
 
@@ -282,7 +287,7 @@ ul#featured_memorials a:hover {
 }
 
 .line1 {
-	background: #F1FDFD;
+	background: #fffbf6;
 }
 
 ul#index-buttons a {
@@ -306,19 +311,23 @@ ul#index-buttons p {
 }
 
 ul#index-buttons li {
+	position:relative;
 	margin-top: 10px;
 	padding: 8px;
-	background-color: #F1FDFD;
-	border: 1px solid #282F27;
+	padding-left:32px;
+	background-color: #fffbf6;
+	border: 1px solid #ccc;
 }
 
+/*
 ul#index-buttons li:hover {
 	background-color: #f0f0f0;
 }
+*/
 
-.index_button_pics {
-	float: left;
-	padding: 0 8px 20px 0;
+ul#index-buttons li img {
+	position:absolute;
+	top:8px; left:8px;
 }
 
 /*********** Formatted Box ***********/
