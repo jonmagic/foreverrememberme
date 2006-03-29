@@ -2,8 +2,8 @@
 <p class="center">( Click on a picture to view it full size )</p>
 <% for @picture in @memorial.pictures %>
     <div class="thumb floatleft">
-	      <a href="<%= url_for_file_column "picture", "image", "large" %>" rel="external" target="_new">
-	          <%= image_tag url_for_file_column "picture", "image", "thumb"  %>
+	      <a href="<%= url_for_file_column "picture", "image", "large" %>" rel="lightbox[memorial]" target="_new">
+	          <img src='<%= url_for_file_column "picture", "image", "thumb" %>' rel='lightbox'>
 	      </a>
     </div>
 <% end %>

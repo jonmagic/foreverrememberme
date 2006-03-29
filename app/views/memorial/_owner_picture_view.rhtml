@@ -4,8 +4,8 @@
 <div class="pictures floatleft">
 <% for @picture in @memorial.pictures %>
   <div class="thumb floatleft owner_thumb">
-    <a href="<%= url_for_file_column "picture", "image", "large" %>" rel="external" target="_new">
-        <%= image_tag url_for_file_column "picture", "image", "thumb" %>
+    <a href="<%= url_for_file_column "picture", "image", "large" %>" rel="lightbox[memorial]" target="_new">
+        <img src="<%= url_for_file_column "picture", "image", "thumb" %>" rel="lightbox">
     </a>
      <ul class="options">
          <li><%= link_to 'Set Main', :action => 'set_primary_picture', :id => @memorial, :picture => @picture, :image => url_for_file_column("picture", "image", "medium" )%></li>
