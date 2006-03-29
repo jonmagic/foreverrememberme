@@ -314,9 +314,19 @@ ul#index-buttons li {
 	position:relative;
 	margin-top: 10px;
 	padding: 8px;
-	padding-left:32px;
 	background-color: #fffbf6;
 	border: 1px solid #ccc;
+}
+
+ul#index-buttons h5 {
+	position: relative;
+	left: 26px;
+}
+
+ul#index-buttons p {
+	position: relative;
+	left: 26px;
+	margin-right: 26px;
 }
 
 /*
