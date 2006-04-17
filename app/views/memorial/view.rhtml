@@ -1,13 +1,13 @@
-<div id="userbox">
-	<% if !@session[:user].nil? %>
-	   <p>Welcome <%= @session[:user].firstname %> - <a href="/user/logout">Logout</a></p>
-	<ul>
-		<li><%= link_to "Edit This Memorial", :controller => "memorial", :action => "edit", :id => @memorial %></li>
-		<li><%= link_to "Manage Your Memorials", :controller => "memorial", :action => "manage" %></li>
-		<li>You can view this memorial until <%= @memorial.expires_at.to_formatted_s :long %>, or <%= extend_memorial_link @memorial %>.</li>
-	</ul>
-	<% end %>
-</div>
+<% if !@session[:user].nil? %>
+	<div id="userbox">
+		   <p>Welcome <%= @session[:user].firstname %> - <a href="/user/logout">Logout</a></p>
+		<ul>
+			<li><%= link_to "Edit This Memorial", :controller => "memorial", :action => "edit", :id => @memorial %></li>
+			<li><%= link_to "Manage Your Memorials", :controller => "memorial", :action => "manage" %></li>
+			<li>You can view this memorial until <%= @memorial.expires_at.to_formatted_s :long %>, or <%= extend_memorial_link @memorial %>.</li>
+		</ul>
+	</div>
+<% end %>
 <h2 class="title_name"><%= @memorial.firstname %> <b><%= @memorial.lastname %></b></h2>
 <div id="main_content">
 	<%= render :partial => "memorial", :object => @memorial %>
@@ -37,6 +37,18 @@
 </div>
 <% end %>
 <p>( <%= link_to "Click here to add a tribute", :controller => "memorial", :action => "add_tribute", :id => @memorial %> )</p>
+<hr class="memorial-hr" />
+<h3>Comments</h3>
+<div class="comments">
+	<% for comments in @memorial.comments %>
+		Name: <%= comments.name %><br />
+		Note: <%= comments.note %><br />
+		<% if @owner > 0 %>
+	        <span><%= link_to 'Delete Comment', :action => 'comment_delete', :id => @memorial, :comment => comments %></span><br />
+	    <% end %>
+	    <br />
+	<% end %>
+</div>
 <hr class="memorial-hr" />
 <div class="views">
 	<p><b><%= @memorial.views %></b> visits have been made to this Memorial.</p>

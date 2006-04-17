@@ -102,16 +102,16 @@ a:hover { color: #000; text-decoration: none; }
 	top: 30px;
 	left: 200px;	
 	display: block;
-	width: 220px;
+	width: 200px;
 	height: 106px;
 	text-indent: -1000px;
-	background: url("../images/bookmark-memorial-down.gif") no-repeat;	
+	background: url("../images/bookmark-memorial.gif") 0 0 no-repeat;	
 }
 
 #bookmark-memorial a:hover {
 	z-index: 7;
 	height: 329px;
-	background: url("../images/bookmark-memorial-up.gif") no-repeat;	
+	background-position: -200px;
 }
 
 #bookmark-pictures a {
@@ -120,16 +120,16 @@ a:hover { color: #000; text-decoration: none; }
 	top: 29px;
 	left: 350px;	
 	display: block;
-	width: 220px;
+	width: 200px;
 	height: 106px;
 	text-indent: -1000px;
-	background: url("../images/bookmark-pictures-down.gif") no-repeat;	
+	background: url("../images/bookmark-pictures.gif") 0 0 no-repeat;	
 }
 
 #bookmark-pictures a:hover {
 	z-index: 8;
 	height: 329px;
-	background: url("../images/bookmark-pictures-up.gif") no-repeat;	
+	background-position: -200px;
 }
 
 #bookmark-comments a {
@@ -138,16 +138,16 @@ a:hover { color: #000; text-decoration: none; }
 	top: 28px;
 	left: 500px;
 	display: block;
-	width: 220px;
+	width: 200px;
 	height: 106px;
 	text-indent: -1000px;
-	background: url("../images/bookmark-comments-down.gif") no-repeat;	
+	background: url("../images/bookmark-comments.gif") 0 0 no-repeat;
 }
 
 #bookmark-comments a:hover {
 	z-index: 9;
 	height: 329px;
-	background: url("../images/bookmark-comments-up.gif") no-repeat;	
+	background-position: -200px;	
 }
 
 /************* Userbox **************/
@@ -258,6 +258,10 @@ ul.options {
 
 .comment {
 	float: left;
+}
+
+.comments {
+	width:620px;
 }
 
 .leave_comment {

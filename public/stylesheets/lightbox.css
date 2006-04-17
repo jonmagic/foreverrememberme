@@ -44,8 +44,8 @@
 	}
 #prevLink { left: 0; float: left; }
 #nextLink { right: 0; float: right; }
-#prevLink:hover, #prevLink:visited:hover { background: url(/images/lightbox/prev.gif) left 53% no-repeat; }
-#nextLink:hover, #nextLink:visited:hover { background: url(/images/lightbox/next.gif) right 53% no-repeat; }
+#prevLink, #prevLink:hover, #prevLink:visited:hover { background: url(/images/lightbox/prev.gif) left 53% no-repeat; }
+#nextLink, #nextLink:hover, #nextLink:visited:hover { background: url(/images/lightbox/next.gif) right 53% no-repeat; }
 
 
 #imageData{
