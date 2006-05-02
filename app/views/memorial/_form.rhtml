@@ -9,11 +9,11 @@
 <%= text_field 'memorial', 'lastname'  %></p>
 
 <p><label for="memorial_message"></label>
-<div class="memorial-textarea">
+<div class="memorial-textarea"><div class="memorial-textarea-shadow">
     <textarea dojoType="Editor" id="memorial_message" name="memorial[message]" items="textGroup;|;listGroup;|;justifyGroup;|;colorGroup">   
         <% if !@memorial.nil? %><%= @memorial.message %><% end %>
     </textarea>
-</div></p>
+</div></div></p>
 <br /><br />
 
 <p><label for="memorial_hometown">Hometown</label><br/>

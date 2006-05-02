@@ -340,6 +340,20 @@ ul#index-buttons li img {
 	top:8px; left:8px;
 }
 
+.memorial-textarea {
+	border-top:1px solid #7d7d7d;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-bottom:1px solid #ddd;			
+}
+
+.memorial-textarea-shadow {
+	border-top:1px solid #c3c3c3;
+	border-left:1px solid #f0f0f0;
+	border-right:1px solid #f0f0f0;
+	border-bottom:1px solid #fff;	
+}
+
 /*********** Formatted Box ***********/
 .formattedbox {
 	padding: 20px 20px 10px 20px;	
