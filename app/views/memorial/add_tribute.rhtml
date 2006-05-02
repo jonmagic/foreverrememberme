@@ -8,11 +8,9 @@
 <div class="col floatleft">
 <fieldset>
 <legend><b>1:</b> Write your tribute</legend>
-	<p><label for="tribute_note"></label><div class="memorial-textarea">
-	    <textarea dojoType="Editor" id="tribute_note" name="tribute[note]" items="textGroup;|;listGroup;|;justifyGroup" rows="12" columns="25">   
-			Delete this text and begin typing here.
-	    </textarea>
-	</div></p><br /><br />
+	<p><label for="tribute_note"></label><div class="memorial-textarea"><div class="memorial-textarea-shadow">
+	    <textarea dojoType="Editor" id="tribute_note" name="tribute[note]" items="textGroup;|;listGroup;|;justifyGroup" rows="12" columns="25"></textarea>
+	</div></div></p><br /><br />
 	<label for="tribute_name">Your Name: </label><%= text_field 'tribute', 'name'  %><br/>
  <br /><br />
 </fieldset>
