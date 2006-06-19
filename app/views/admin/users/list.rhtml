@@ -1,3 +1,5 @@
+<%= render_partial 'searchbox' %>
+
 <h2>Listing Users</h2>
 
 <table>
@@ -7,13 +9,13 @@
         <td>Created At</td>
         <td>Actions</td>
     </thead>
+
 <%
 odd_or_even = 0
-for user in @users.reverse
+for user in @users
 	odd_or_even = 1 - odd_or_even
 %>
-
-    <tr class="listline<%= odd_or_even %>">
+	<tr class="listline<%= odd_or_even %>">
         <td>
             <a href="/admin/users/show/<%= user.id %>"><%= user.login %></a>
         </td>
@@ -29,9 +31,6 @@ for user in @users.reverse
         </td>
     </tr>
 <% end %>
+</table>
 
-
-
-
-<%= link_to 'Previous page', { :page => @user_pages.current.previous } if @user_pages.current.previous %>
-<%= link_to 'Next page', { :page => @user_pages.current.next } if @user_pages.current.next %> 
+<br />View More Users: <%= pagination_links @user_pages, :params => { :action => @controller.action_name } %>

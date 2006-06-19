@@ -4,12 +4,12 @@ class Admin::MemorialsController < ApplicationController
   layout 'admin'
   
   def index
-    search
-    render :action => 'search'
+    list
+    render :action => 'list'
   end
 
   def list
-    @memorial_pages, @memorials = paginate :memorials, :per_page => 20
+    @memorial_pages, @memorials = paginate :memorials, :order => 'lastname ASC', :per_page => 20
   end
 
   def show

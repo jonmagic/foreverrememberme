@@ -1,3 +1,5 @@
+<%= render_partial 'searchbox' %>
+
 <h2>Listing Memorials</h2>
 
 <table>
@@ -9,7 +11,7 @@
     </thead>
 <%
 odd_or_even = 0
-for memorial in @memorials.reverse
+for memorial in @memorials
 	odd_or_even = 1 - odd_or_even
 %>
     <tr class="listline<%= odd_or_even %>">
@@ -29,8 +31,6 @@ for memorial in @memorials.reverse
     </tr>
 <% end %>
 
+</table>
 
-
-
-<%= link_to 'Previous page', { :page => @memorial_pages.current.previous } if @memorial_pages.current.previous %>
-<%= link_to 'Next page', { :page => @memorial_pages.current.next } if @memorial_pages.current.next %> 
+<br />View More Users: <%= pagination_links @memorial_pages, :params => { :action => @controller.action_name } %>

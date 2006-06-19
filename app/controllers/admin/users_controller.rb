@@ -4,12 +4,12 @@ class Admin::UsersController < ApplicationController
   layout 'admin'
 
   def index
-    search
-    render :action => 'search'
+    list
+    render :action => 'list'
   end
 
   def list
-    @user_pages, @users = paginate :users, :per_page => 10
+    @user_pages, @users = paginate :users, :order => 'lastname ASC', :per_page => 20
   end
 
   def show
