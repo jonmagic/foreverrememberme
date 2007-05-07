@@ -6,6 +6,7 @@
       		<h4>Note:</h4>
       		<textarea id="comment_note" name="comment[note]" rows="15" cols="34"></textarea>
       		<br />
+					<p><%= show_simple_captcha(:object=>"comment") %></p>
       		<%= submit_tag "Post Comment" %>
       	</div>
   	</form>

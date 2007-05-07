@@ -63,9 +63,14 @@ class MemorialController < ApplicationController
   end
   
   def comment
-    Memorial.find(params[:id]).comments.create(params[:comment])
-    flash[:notice] = "Added Your Comment."
-    redirect_to :action => "show", :id => params[:id]
+    comnt = Memorial.find(params[:id]).comments.build(params[:comment])
+    if comnt.save_with_captcha
+      flash[:notice] = "Added Your Comment."
+      redirect_to :action => "show", :id => params[:id]
+    else
+      flash[:notice] = "Your passphrase did not match the image. Please try again."
+      show
+    end
   end
   
   def contactus
