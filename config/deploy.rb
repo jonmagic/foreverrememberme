@@ -11,7 +11,7 @@
 # form the root of the application path.
 
 set :application, "4ever"
-set :repository, "https://store.sabretechllc.com/public/#{application}/trunk"
+set :repository, "http://store.sabretechllc.com/public/#{application}/trunk"
 
 # =============================================================================
 # ROLES
