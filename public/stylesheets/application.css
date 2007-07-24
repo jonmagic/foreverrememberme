@@ -367,6 +367,10 @@ ul#index-buttons li img {
 }
 
 /*********** Tribute pages ************/
+.tribute {
+	width:400px;
+}
+
 .tributepic {
 	padding:1em;
 	border-bottom:1px solid #ddd;
