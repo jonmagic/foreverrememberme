@@ -199,6 +199,7 @@ p.dob_to_dod {
 }
 
 div.tribute {
+	width:400px;
 	margin-top:1.5em;
 }
 div.tribute img {
