@@ -3,7 +3,7 @@
 <% for @picture in @memorial.pictures %>
     <div class="thumb floatleft">
 	      <a href="<%= url_for_file_column "picture", "image", "large" %>" rel="lightbox[memorial]" target="_new">
-	          <img src='<%= url_for_file_column "picture", "image", "thumb" %>'>
+	          <img src='<%= url_for_file_column "picture", "image", "thumb" %>' border="0">
 	      </a>
     </div>
 <% end %>
