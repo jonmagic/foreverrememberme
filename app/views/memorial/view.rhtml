@@ -27,15 +27,17 @@
 <div class="clearer"></div>
 <hr class="memorial-hr" />
 <h3>Tributes</h3>
-<% for tribute in @memorial.active_tributes %>
-<div class="tribute">
-	<% @picture = tribute.image.picture %>
-	<%= image_tag url_for_file_column("picture", "image", "thumb") %>
-	<%= tribute.note %><br />
-	<b>from:</b> <%= tribute.name %>
-	<div class="clearer"></div>	
+<div id="tribute_wrapper">
+	<% for tribute in @memorial.active_tributes %>
+		<div class="tribute">
+			<% @picture = tribute.image.picture %>
+			<%= image_tag url_for_file_column("picture", "image", "thumb") %>
+			<%= tribute.note %><br />
+			<b>from:</b> <%= tribute.name %>
+			<div class="clearer"></div>	
+		</div>
+	<% end %>
 </div>
-<% end %>
 <p>( <%= link_to "Click here to add a tribute", :controller => "memorial", :action => "add_tribute", :id => @memorial %> )</p>
 <hr class="memorial-hr" />
 <h3>Comments</h3>

@@ -367,8 +367,8 @@ ul#index-buttons li img {
 }
 
 /*********** Tribute pages ************/
-.tribute {
-	width:400px;
+#tribute_wrapper {
+	width:200px;
 }
 
 .tributepic {
