@@ -65,7 +65,7 @@
 var fileLoadingImage = "/images/lightbox/loading.gif";		
 var fileBottomNavCloseImage = "/images/lightbox/closelabel.gif";
 
-var overlayOpacity = 0.8;	// controls transparency of shadow overlay
+var overlayOpacity = 0.0;	// controls transparency of shadow overlay
 
 var animate = true;			// toggles resizing animations
 var resizeSpeed = 7;		// controls the speed of the image resizing animations (1=slowest and 10=fastest)
