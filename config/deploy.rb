@@ -117,6 +117,8 @@ task :after_symlink do
   run "cp ~/pro_config/production_v1/config/database.yml #{release_path}/config/"
   run "ln -s ~/files/picture #{release_path}/public/picture"
   run "ln -s ~/files/music #{release_path}/public/music"
+  run "chmod 755 ~/apps/current/public"
+  run "chmod 755 ~/apps/current/public/*"
 end
 
 desc "Don't restart the web server"
