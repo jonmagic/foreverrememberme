@@ -344,7 +344,8 @@ ul#index-buttons li img {
 	border-top:1px solid #7d7d7d;
 	border-left:1px solid #c3c3c3;
 	border-right:1px solid #c3c3c3;
-	border-bottom:1px solid #ddd;			
+	border-bottom:1px solid #ddd;	
+	padding-bottom:5px;		
 }
 
 .memorial-textarea-shadow {
