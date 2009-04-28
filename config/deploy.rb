@@ -29,7 +29,7 @@ role :db, domain, :primary => true
 # =============================================================================
 set :user_path, "/home/forever"
 set :deploy_to, "#{user_path}/apps"
-set :release_path, "#{deploy_to}/current"
+set :current_path, "#{deploy_to}/current"
 
 # =============================================================================
 # TASKS
@@ -40,10 +40,10 @@ after "deploy:update", "forever:update_configs"
 namespace :forever do
   desc "This task sets up all my particular symlinks"
   task :update_configs do
-    run "cp #{user_path}/pro_config/production_v1/config/database.yml #{release_path}/config/"
-    run "ln -s #{user_path}/files/picture #{release_path}/public/picture"
-    run "ln -s #{user_path}/files/music #{release_path}/public/music"
-    run "chmod 755 #{release_path}/public"
-    run "chmod 755 #{release_path}/public/*"
+    run "cp #{user_path}/pro_config/production_v1/config/database.yml #{current_path}/config/"
+    run "ln -s #{user_path}/files/picture #{current_path}/public/picture"
+    run "ln -s #{user_path}/files/music #{current_path}/public/music"
+    run "chmod 755 #{current_path}/public"
+    run "chmod 755 #{current_path}/public/*"
   end
 end
